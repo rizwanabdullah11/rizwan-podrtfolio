@@ -6,6 +6,9 @@ import Summary from '@/components/Summary/Summary';
 import Experience from '@/components/Experience/Experience';
 import Skills from '@/components/Skills/Skills';
 import Education from '@/components/Education/Education';
+import Projects from '@/components/Projects/Projects';
+import Contact from '@/components/Contact/Contact';
+import Footer from '@/components/Footer/Footer';
 
 export default function Portfolio() {
   return (
@@ -17,7 +20,10 @@ export default function Portfolio() {
         <Experience />
         <Skills />
         <Education />
+        <Projects />
+        <Contact />
       </div>
+      <Footer />
     </div>
   );
 }
