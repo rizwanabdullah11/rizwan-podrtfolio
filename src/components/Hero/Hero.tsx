@@ -1,6 +1,7 @@
 'use client';
 
 import { motion } from 'framer-motion';
+import Image from 'next/image';
 import { 
   Mail, 
   Phone, 
@@ -21,6 +22,9 @@ import {
   SiLinkedin
 } from 'react-icons/si';
 import { FaReact, FaMobile, FaServer, FaPhone } from 'react-icons/fa';
+import { Avatar, AvatarImage, AvatarFallback } from '@/components/ui/avatar';
+import { Badge } from '@/components/ui/badge';
+import RizwanImage from '@/assets/Rizwan.jpeg';
 
 export default function Hero() {
   const fadeInUp = {
@@ -40,7 +44,7 @@ export default function Hero() {
   return (
     <motion.section 
       id="home"
-      className="min-h-screen bg-gradient-to-br from-gray-50 via-white to-blue-50 dark:from-gray-900 dark:via-gray-800 dark:to-gray-900 pt-20 relative overflow-hidden"
+      className="min-h-screen bg-gradient-to-br from-gray-50 via-white to-teal-50 dark:from-gray-900 dark:via-gray-800 dark:to-gray-900 pt-20 relative overflow-hidden"
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       transition={{ duration: 0.8 }}
@@ -60,7 +64,7 @@ export default function Hero() {
           }}
         />
         <motion.div
-          className="absolute bottom-1/4 left-1/4 w-80 h-80 bg-gradient-to-br from-blue-400/20 to-cyan-500/20 rounded-full blur-3xl"
+          className="absolute bottom-1/4 left-1/4 w-80 h-80 bg-gradient-to-br from-emerald-400/20 to-cyan-500/20 rounded-full blur-3xl"
           animate={{
             scale: [1.2, 1, 1.2],
             rotate: [360, 180, 0],
@@ -73,24 +77,28 @@ export default function Hero() {
         />
       </div>
 
-      <div className="max-w-7xl mx-auto px-6 py-12 relative z-10">
-        <div className="grid lg:grid-cols-2 gap-12 items-center min-h-[80vh]">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12 relative z-10">
+        <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center min-h-[80vh]">
           {/* Left Content */}
           <motion.div
-            className="space-y-8"
+            className="space-y-6 sm:space-y-8 order-2 lg:order-1"
             initial={{ opacity: 0, x: -50 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
           >
             {/* Professional Badge */}
             <motion.div
-              className="inline-flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-teal-500/10 to-emerald-500/10 border border-teal-200 dark:border-teal-800 rounded-full"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.3, duration: 0.6 }}
             >
-              <div className="w-2 h-2 bg-teal-500 rounded-full animate-pulse"></div>
-              <span className="text-sm font-medium text-teal-700 dark:text-teal-300">Available for Senior Roles</span>
+              <Badge 
+                variant="outline" 
+                className="inline-flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-teal-500/10 to-emerald-500/10 border-teal-200 dark:border-teal-800 text-teal-700 dark:text-teal-300"
+              >
+                <div className="w-2 h-2 bg-teal-500 rounded-full animate-pulse"></div>
+                <span className="text-sm font-medium">Available for Opportunities</span>
+              </Badge>
             </motion.div>
 
             {/* Greeting */}
@@ -99,8 +107,8 @@ export default function Hero() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.4, duration: 0.6 }}
             >
-              <h1 className="text-5xl lg:text-7xl font-bold text-gray-900 dark:text-gray-100 leading-[0.9] tracking-tight">
-                Senior Developer
+              <h1 className="text-4xl sm:text-5xl lg:text-7xl font-bold text-gray-900 dark:text-gray-100 leading-tight lg:leading-[0.9] tracking-tight">
+                Software Engineer
                 <br />
                 <span className="bg-gradient-to-r from-teal-600 via-emerald-600 to-cyan-600 bg-clip-text text-transparent">
                   Rizwan Abdullah
@@ -136,7 +144,7 @@ export default function Hero() {
 
             {/* Tagline */}
             <motion.p
-              className="text-xl lg:text-2xl text-gray-600 dark:text-gray-400 max-w-2xl leading-relaxed font-light"
+              className="text-lg sm:text-xl lg:text-2xl text-gray-600 dark:text-gray-400 max-w-2xl leading-relaxed font-light"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.7, duration: 0.6 }}
@@ -147,13 +155,13 @@ export default function Hero() {
 
             {/* Stats Row */}
             <motion.div
-              className="grid grid-cols-3 gap-6 py-6"
+              className="grid grid-cols-2 sm:grid-cols-3 gap-4 sm:gap-6 py-4 sm:py-6"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.8, duration: 0.6 }}
             >
               {[
-                { number: '3+', label: 'Years Experience', sublabel: 'Senior Level' },
+                { number: '3+', label: 'Years Experience', sublabel: 'Professional' },
                 { number: '50+', label: 'Projects Delivered', sublabel: 'Enterprise & Startups' },
                 { number: '100%', label: 'Client Satisfaction', sublabel: 'Quality Focused' }
               ].map((stat, index) => (
@@ -165,10 +173,10 @@ export default function Hero() {
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ delay: 0.9 + index * 0.1, duration: 0.5 }}
                 >
-                  <div className="text-3xl lg:text-4xl font-bold text-gray-900 dark:text-gray-100 group-hover:text-teal-600 dark:group-hover:text-teal-400 transition-colors">
+                  <div className="text-2xl sm:text-3xl lg:text-4xl font-bold text-gray-900 dark:text-gray-100 group-hover:text-teal-600 dark:group-hover:text-teal-400 transition-colors">
                     {stat.number}
                   </div>
-                  <div className="text-sm font-medium text-gray-700 dark:text-gray-300 uppercase tracking-wider">
+                  <div className="text-xs sm:text-sm font-medium text-gray-700 dark:text-gray-300 uppercase tracking-wider">
                     {stat.label}
                   </div>
                   <div className="text-xs text-gray-500 dark:text-gray-500">
@@ -208,7 +216,7 @@ export default function Hero() {
 
           {/* Right Content - Enhanced Profile Area */}
           <motion.div
-            className="relative flex items-center justify-center"
+            className="relative flex items-center justify-center order-1 lg:order-2 mb-8 lg:mb-0"
             initial={{ opacity: 0, x: 50 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8, delay: 0.4 }}
@@ -242,7 +250,7 @@ export default function Hero() {
             </div>
 
             {/* Profile Content */}
-            <div className="relative z-10 text-center space-y-8">
+            <div className="relative z-10 text-center space-y-6 sm:space-y-8">
               {/* Enhanced Avatar with Tech Stack Orbit */}
               <motion.div
                 className="relative"
@@ -250,15 +258,24 @@ export default function Hero() {
                 animate={{ scale: 1 }}
                 transition={{ duration: 0.8, delay: 0.8, type: "spring", bounce: 0.4 }}
               >
-                {/* Main Avatar */}
+                {/* Main Avatar with Real Image */}
                 <motion.div
-                  className="w-56 h-56 lg:w-64 lg:h-64 mx-auto bg-gradient-to-br from-teal-500 via-emerald-600 to-cyan-600 rounded-full flex items-center justify-center shadow-2xl relative overflow-hidden"
+                  className="w-48 h-48 sm:w-56 sm:h-56 lg:w-64 lg:h-64 mx-auto rounded-full shadow-2xl relative overflow-hidden ring-4 ring-teal-500/50"
                   whileHover={{ scale: 1.05 }}
                 >
-                  <span className="text-6xl lg:text-7xl font-bold text-white">RA</span>
+                  <Avatar className="w-full h-full">
+                    <AvatarImage 
+                      src={RizwanImage.src} 
+                      alt="Rizwan Abdullah"
+                      className="object-cover"
+                    />
+                    <AvatarFallback className="text-6xl lg:text-7xl font-bold bg-gradient-to-br from-teal-500 via-emerald-600 to-cyan-600 text-white">
+                      RA
+                    </AvatarFallback>
+                  </Avatar>
                   
                   {/* Subtle Pattern Overlay */}
-                  <div className="absolute inset-0 bg-gradient-to-br from-white/10 to-transparent rounded-full"></div>
+                  <div className="absolute inset-0 bg-gradient-to-br from-teal-500/10 to-transparent rounded-full pointer-events-none"></div>
                 </motion.div>
 
                 {/* Orbiting Tech Icons */}
@@ -294,7 +311,7 @@ export default function Hero() {
               </motion.div>
 
               {/* Enhanced Certification Cards */}
-              <div className="grid grid-cols-1 gap-4 max-w-sm mx-auto">
+              <div className="grid grid-cols-1 gap-3 sm:gap-4 max-w-sm mx-auto px-4 sm:px-0">
                 <motion.div
                   className="bg-white/80 dark:bg-gray-800/80 backdrop-blur-sm rounded-2xl p-6 shadow-xl border border-gray-100 dark:border-gray-700"
                   initial={{ opacity: 0, y: 30 }}
@@ -309,7 +326,7 @@ export default function Hero() {
                       </div>
                       <div>
                         <h3 className="font-bold text-gray-900 dark:text-gray-100 text-sm">
-                          SENIOR DEVELOPER
+                          SOFTWARE ENGINEER
                         </h3>
                         <p className="text-xs text-gray-600 dark:text-gray-400">
                           React Native & Full Stack

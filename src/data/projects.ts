@@ -8,7 +8,7 @@ export const projects: Project[] = [
       "Implemented complete ViciDial solution for enterprise call center with 100+ agents and multi-campaign management",
       "Developed custom reporting dashboards, real-time monitoring, and automated lead distribution systems with CRM integration"
     ],
-    gradient: "from-emerald-500 to-teal-500",
+    gradient: "from-teal-500 to-emerald-500",
     isPrivate: true,
     featured: true
   },
@@ -19,7 +19,7 @@ export const projects: Project[] = [
       "Built secure mobile banking application with biometric authentication, real-time transactions, and offline capabilities",
       "Implemented push notifications, deep linking, and seamless integration with banking APIs for iOS and Android platforms"
     ],
-    gradient: "from-blue-500 to-indigo-500",
+    gradient: "from-emerald-500 to-cyan-500",
     isPrivate: true,
     featured: true
   },
@@ -31,7 +31,7 @@ export const projects: Project[] = [
       "Developed a comprehensive housing society management system with role-based access control for residents, management, and administrators",
       "Implemented features for property management, maintenance requests, billing systems, and community announcements with real-time notifications"
     ],
-    gradient: "from-blue-500 to-cyan-500",
+    gradient: "from-cyan-500 to-teal-500",
     featured: true
   },
   {
@@ -41,7 +41,7 @@ export const projects: Project[] = [
       "Developed full-featured e-commerce mobile app with product catalog, shopping cart, secure payments, and order tracking",
       "Integrated real-time inventory management, push notifications for order updates, and seamless checkout experience"
     ],
-    gradient: "from-purple-500 to-pink-500",
+    gradient: "from-teal-500 to-cyan-500",
     isPrivate: true
   },
   {
@@ -52,7 +52,7 @@ export const projects: Project[] = [
       "Built a sophisticated admin dashboard with comprehensive analytics and campaign management capabilities for marketing operations",
       "Integrated interactive data visualizations, performance metrics tracking, and user management systems with responsive design"
     ],
-    gradient: "from-purple-500 to-pink-500"
+    gradient: "from-emerald-500 to-teal-500"
   },
   {
     title: "ViciDial Custom Agent Interface",
@@ -61,7 +61,7 @@ export const projects: Project[] = [
       "Created custom agent interface for ViciDial with enhanced UI/UX, real-time call controls, and integrated CRM functionality",
       "Implemented advanced call routing, disposition management, and performance analytics with WebRTC integration"
     ],
-    gradient: "from-green-500 to-emerald-500",
+    gradient: "from-cyan-500 to-emerald-500",
     isPrivate: true
   },
   {
@@ -71,7 +71,7 @@ export const projects: Project[] = [
     description: [
       "Built modern admin interface with Shadcn UI, analytics, dark mode, charts"
     ],
-    gradient: "from-green-500 to-teal-500"
+    gradient: "from-teal-500 to-emerald-500"
   },
   {
     title: "Task Management With Video Call",
@@ -80,7 +80,7 @@ export const projects: Project[] = [
     description: [
       "Developed dashboards with task workflows, real-time chat, and video collaboration"
     ],
-    gradient: "from-indigo-500 to-purple-500"
+    gradient: "from-emerald-500 to-cyan-500"
   }
 ];
 

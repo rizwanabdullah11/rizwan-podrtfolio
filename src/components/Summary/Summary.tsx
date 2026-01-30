@@ -20,13 +20,13 @@ export default function Summary() {
       transition={{ duration: 0.6 }}
     >
       <motion.div 
-        className="relative bg-gradient-to-br from-white via-gray-50 to-blue-50 dark:from-gray-800 dark:via-gray-800 dark:to-gray-700 rounded-3xl shadow-2xl p-12 border border-gray-100 dark:border-gray-600 overflow-hidden"
+        className="relative bg-gradient-to-br from-white via-teal-50 to-emerald-50 dark:from-gray-800 dark:via-gray-800 dark:to-gray-700 rounded-2xl sm:rounded-3xl shadow-2xl p-6 sm:p-8 lg:p-12 border border-teal-100 dark:border-gray-600 overflow-hidden"
         whileHover={{ y: -5 }}
         transition={{ duration: 0.3 }}
       >
         {/* Background Pattern */}
         <div className="absolute top-0 right-0 w-64 h-64 bg-gradient-to-br from-teal-500/5 to-emerald-500/5 rounded-full blur-3xl"></div>
-        <div className="absolute bottom-0 left-0 w-48 h-48 bg-gradient-to-br from-blue-500/5 to-cyan-500/5 rounded-full blur-2xl"></div>
+        <div className="absolute bottom-0 left-0 w-48 h-48 bg-gradient-to-br from-emerald-500/5 to-cyan-500/5 rounded-full blur-2xl"></div>
         
         <div className="relative z-10">
           <div className="flex items-start gap-6 mb-8">
@@ -53,7 +53,7 @@ export default function Summary() {
           >
             <div className="space-y-6">
               <p className="text-xl text-gray-700 dark:text-gray-300 leading-relaxed font-light">
-                Senior Full Stack Developer with <span className="font-semibold text-teal-600 dark:text-teal-400">3+ years of enterprise experience</span> specializing in React Native mobile development and ViciDial telephony solutions.
+                Full Stack Software Engineer with <span className="font-semibold text-teal-600 dark:text-teal-400">3+ years of enterprise experience</span> specializing in React Native mobile development and ViciDial telephony solutions.
               </p>
               <p className="text-lg text-gray-600 dark:text-gray-400 leading-relaxed">
                 Expert in architecting scalable applications, leading development teams, and delivering high-performance solutions for Fortune 500 companies and innovative startups.
