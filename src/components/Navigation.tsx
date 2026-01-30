@@ -60,7 +60,7 @@ export default function Navigation() {
             </div>
             <div>
               <div className="text-xl font-bold text-gray-900 dark:text-gray-100">Rizwan</div>
-              <div className="text-xs text-gray-500 dark:text-gray-500 -mt-1">Senior Developer</div>
+              <div className="text-xs text-gray-500 dark:text-gray-500 -mt-1">Software Engineer</div>
             </div>
           </motion.div>
 

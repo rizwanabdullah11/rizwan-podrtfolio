@@ -28,18 +28,18 @@ export default function Experience() {
       viewport={{ once: true }}
     >
       <motion.div 
-        className="relative bg-gradient-to-br from-white via-indigo-50 to-purple-50 dark:from-gray-800 dark:via-gray-800 dark:to-gray-700 rounded-3xl shadow-2xl p-12 border border-indigo-100 dark:border-gray-600 overflow-hidden"
+        className="relative bg-gradient-to-br from-white via-emerald-50 to-teal-50 dark:from-gray-800 dark:via-gray-800 dark:to-gray-700 rounded-2xl sm:rounded-3xl shadow-2xl p-6 sm:p-8 lg:p-12 border border-emerald-100 dark:border-gray-600 overflow-hidden"
         whileHover={{ y: -5 }}
         transition={{ duration: 0.3 }}
       >
         {/* Background Elements */}
-        <div className="absolute top-0 right-0 w-72 h-72 bg-gradient-to-br from-indigo-500/5 to-purple-500/5 rounded-full blur-3xl"></div>
-        <div className="absolute bottom-0 left-0 w-56 h-56 bg-gradient-to-br from-blue-500/5 to-cyan-500/5 rounded-full blur-2xl"></div>
+        <div className="absolute top-0 right-0 w-72 h-72 bg-gradient-to-br from-emerald-500/5 to-teal-500/5 rounded-full blur-3xl"></div>
+        <div className="absolute bottom-0 left-0 w-56 h-56 bg-gradient-to-br from-teal-500/5 to-cyan-500/5 rounded-full blur-2xl"></div>
         
         <div className="relative z-10">
           <div className="flex items-start gap-6 mb-12">
             <motion.div
-              className="p-4 bg-gradient-to-br from-indigo-500 to-purple-600 rounded-2xl shadow-lg"
+              className="p-4 bg-gradient-to-br from-emerald-500 to-teal-600 rounded-2xl shadow-lg"
               whileHover={{ rotate: 360, scale: 1.1 }}
               transition={{ duration: 0.6 }}
             >
@@ -49,7 +49,7 @@ export default function Experience() {
               <h2 className="text-4xl font-bold bg-gradient-to-r from-gray-900 via-gray-800 to-gray-700 dark:from-gray-100 dark:via-gray-200 dark:to-gray-300 bg-clip-text text-transparent mb-2">
                 Professional Experience
               </h2>
-              <div className="w-24 h-1 bg-gradient-to-r from-indigo-500 to-purple-500 rounded-full"></div>
+              <div className="w-24 h-1 bg-gradient-to-r from-emerald-500 to-teal-500 rounded-full"></div>
             </div>
           </div>
           
