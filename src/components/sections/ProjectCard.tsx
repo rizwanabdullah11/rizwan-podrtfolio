@@ -4,7 +4,7 @@ import { motion } from 'framer-motion';
 import { ExternalLink, Code } from 'lucide-react';
 import { Project } from '@/data/types';
 import Button from '@/components/ui/Button';
-import { Card, CardHeader, CardTitle, CardDescription, CardContent } from '@/components/ui/card';
+import { Card, CardHeader, CardTitle, CardDescription, CardContent } from '@/components/ui/Card';
 import { Badge } from '@/components/ui/badge';
 
 interface ProjectCardProps {
