@@ -4,24 +4,17 @@ import { motion } from 'framer-motion';
 import Image from 'next/image';
 import { 
   Mail, 
-  Phone, 
-  MapPin, 
-  Github, 
-  Linkedin, 
   Code,
   Globe,
   Award,
-  Briefcase,
   FolderOpen
 } from 'lucide-react';
 import { 
   SiReact, 
   SiNodedotjs,
-  SiTypescript,
-  SiGithub,
-  SiLinkedin
+  SiTypescript
 } from 'react-icons/si';
-import { FaReact, FaMobile, FaServer, FaPhone } from 'react-icons/fa';
+import { FaMobile } from 'react-icons/fa';
 import { Avatar, AvatarImage, AvatarFallback } from '@/components/ui/avatar';
 import { Badge } from '@/components/ui/badge';
 import RizwanImage from '@/assets/Rizwan.jpeg';
@@ -124,9 +117,9 @@ export default function Hero() {
               transition={{ delay: 0.5, duration: 0.6 }}
             >
               {[
-                { label: 'React Native Expert', icon: SiReact, color: 'from-cyan-500 to-blue-600' },
-                { label: 'ViciDial Specialist', icon: FaPhone, color: 'from-emerald-500 to-teal-600' },
-                { label: 'Full Stack', icon: Code, color: 'from-purple-500 to-indigo-600' }
+                { label: 'Mobile Developer', icon: FaMobile, color: 'from-teal-500 to-emerald-600' },
+                { label: 'Web Developer', icon: Globe, color: 'from-emerald-500 to-cyan-600' },
+                { label: 'Full Stack', icon: Code, color: 'from-cyan-500 to-teal-600' }
               ].map((tag, index) => (
                 <motion.div
                   key={tag.label}
@@ -149,7 +142,7 @@ export default function Hero() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.7, duration: 0.6 }}
             >
-              I architect and develop enterprise-grade mobile applications and telephony solutions. 
+              I architect and develop enterprise-grade mobile and web applications. 
               <span className="text-teal-600 dark:text-teal-400 font-medium"> Transforming complex requirements into elegant, scalable solutions.</span>
             </motion.p>
 
@@ -283,7 +276,7 @@ export default function Hero() {
                   { icon: SiReact, delay: 0, color: 'text-cyan-500' },
                   { icon: SiNodedotjs, delay: 1, color: 'text-green-500' },
                   { icon: SiTypescript, delay: 2, color: 'text-blue-500' },
-                  { icon: FaPhone, delay: 3, color: 'text-emerald-500' }
+                  { icon: FaMobile, delay: 3, color: 'text-teal-500' }
                 ].map((tech, index) => (
                   <motion.div
                     key={index}
@@ -356,15 +349,15 @@ export default function Hero() {
                 >
                   <div className="flex items-center justify-between mb-4">
                     <div className="flex items-center gap-3">
-                      <div className="w-10 h-10 bg-gradient-to-br from-emerald-500 to-teal-600 rounded-lg flex items-center justify-center">
-                        <FaPhone className="w-5 h-5 text-white" />
+                      <div className="w-10 h-10 bg-gradient-to-br from-emerald-500 to-cyan-600 rounded-lg flex items-center justify-center">
+                        <Globe className="w-5 h-5 text-white" />
                       </div>
                       <div>
                         <h3 className="font-bold text-gray-900 dark:text-gray-100 text-sm">
-                          VICIDIAL EXPERT
+                          FULL STACK DEVELOPER
                         </h3>
                         <p className="text-xs text-gray-600 dark:text-gray-400">
-                          Call Center Solutions
+                          Mobile & Web Solutions
                         </p>
                       </div>
                     </div>
@@ -373,7 +366,7 @@ export default function Hero() {
                     </div>
                   </div>
                   <div className="flex justify-between text-xs text-gray-500 dark:text-gray-500">
-                    <span>Certified Specialist</span>
+                    <span>Certified Professional</span>
                     <span>Advanced</span>
                   </div>
                 </motion.div>

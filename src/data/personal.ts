@@ -8,6 +8,6 @@ export const personalInfo: PersonalInfo = {
   location: 'Islamabad, Pakistan',
   github: 'https://github.com/rizwanabdullah11',
   linkedin: 'https://www.linkedin.com/in/rizwan-abdullah-804208232/',
-  tagline: 'I architect and develop enterprise-grade mobile applications and telephony solutions.',
+  tagline: 'I architect and develop enterprise-grade mobile and web applications.',
   description: 'Transforming complex requirements into elegant, scalable solutions.'
 };

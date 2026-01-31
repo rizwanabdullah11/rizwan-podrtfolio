@@ -53,7 +53,7 @@ export default function Summary() {
           >
             <div className="space-y-6">
               <p className="text-xl text-gray-700 dark:text-gray-300 leading-relaxed font-light">
-                Full Stack Software Engineer with <span className="font-semibold text-teal-600 dark:text-teal-400">3+ years of enterprise experience</span> specializing in React Native mobile development and ViciDial telephony solutions.
+                Full Stack Software Engineer with <span className="font-semibold text-teal-600 dark:text-teal-400">3+ years of enterprise experience</span> specializing in React Native mobile development and modern web applications.
               </p>
               <p className="text-lg text-gray-600 dark:text-gray-400 leading-relaxed">
                 Expert in architecting scalable applications, leading development teams, and delivering high-performance solutions for Fortune 500 companies and innovative startups.
