@@ -85,13 +85,6 @@ export default function Hero() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.3, duration: 0.6 }}
             >
-              <Badge 
-                variant="outline" 
-                className="inline-flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-teal-500/10 to-emerald-500/10 border-teal-200 dark:border-teal-800 text-teal-700 dark:text-teal-300"
-              >
-                <div className="w-2 h-2 bg-teal-500 rounded-full animate-pulse"></div>
-                <span className="text-sm font-medium">Available for Opportunities</span>
-              </Badge>
             </motion.div>
 
             {/* Greeting */}
@@ -154,8 +147,8 @@ export default function Hero() {
               transition={{ delay: 0.8, duration: 0.6 }}
             >
               {[
-                { number: '3+', label: 'Years Experience', sublabel: 'Professional' },
-                { number: '50+', label: 'Projects Delivered', sublabel: 'Enterprise & Startups' },
+                { number: '1+', label: 'Years Experience', sublabel: 'Professional' },
+                { number: '10+', label: 'Projects Delivered', sublabel: 'Enterprise & Startups' },
                 { number: '100%', label: 'Client Satisfaction', sublabel: 'Quality Focused' }
               ].map((stat, index) => (
                 <motion.div
@@ -336,7 +329,7 @@ export default function Hero() {
                   </div>
                   <div className="flex justify-between text-xs text-gray-500 dark:text-gray-500">
                     <span>Enterprise Ready</span>
-                    <span>3+ Years</span>
+                    <span>1+ Years</span>
                   </div>
                 </motion.div>
 

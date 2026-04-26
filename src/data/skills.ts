@@ -38,27 +38,6 @@ export const skills: Skill[] = [
     color: 'from-blue-500 to-blue-600',
     category: 'languages'
   },
-  {
-    name: 'Python',
-    icon: <SiPython className="w-6 h-6" />,
-    level: 85,
-    color: 'from-green-500 to-blue-500',
-    category: 'languages'
-  },
-  {
-    name: 'C++',
-    icon: <SiCplusplus className="w-6 h-6" />,
-    level: 80,
-    color: 'from-blue-600 to-purple-600',
-    category: 'languages'
-  },
-  {
-    name: 'Dart',
-    icon: <SiDart className="w-6 h-6" />,
-    level: 75,
-    color: 'from-blue-400 to-cyan-500',
-    category: 'languages'
-  },
 
   // Frontend & Mobile
   {
