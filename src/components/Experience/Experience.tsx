@@ -56,7 +56,7 @@ export default function Experience() {
           <div className="space-y-8">
             {[
               {
-                title: "Senior Software Developer",
+                title: "Junior Software Developer",
                 company: "MUST Pvt Ltd",
                 location: "MGC Complex G8 Markaz, Islamabad, Pakistan",
                 period: "May 2025 -- Present",
@@ -65,9 +65,8 @@ export default function Experience() {
                 borderColor: "border-blue-200 dark:border-blue-800",
                 achievements: [
                   "Leading development of enterprise-grade React Native applications",
-                  "Architecting scalable backend solutions with Node.js and PostgreSQL",
-                  "Mentoring junior developers and establishing coding standards",
-                  "Implementing CI/CD pipelines and automated testing frameworks"
+                  "Architecting scalable Frontend solutions with Next.js",
+                  "Mentoring junior developers and establishing coding standards"
                 ]
               },
               {

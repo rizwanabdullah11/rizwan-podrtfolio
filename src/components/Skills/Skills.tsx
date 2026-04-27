@@ -88,9 +88,9 @@ export default function Skills() {
                 {[
                   { name: 'JavaScript', icon: SiJavascript, level: 95, color: 'from-yellow-500 to-orange-500' },
                   { name: 'TypeScript', icon: SiTypescript, level: 90, color: 'from-blue-500 to-blue-600' },
-                  { name: 'Python', icon: SiPython, level: 85, color: 'from-green-500 to-blue-500' },
-                  { name: 'C++', icon: SiCplusplus, level: 80, color: 'from-blue-600 to-purple-600' },
-                  { name: 'Dart', icon: SiDart, level: 75, color: 'from-blue-400 to-cyan-500' }
+                  // { name: 'Python', icon: SiPython, level: 85, color: 'from-green-500 to-blue-500' },
+                  // { name: 'C++', icon: SiCplusplus, level: 80, color: 'from-blue-600 to-purple-600' },
+                  // { name: 'Dart', icon: SiDart, level: 75, color: 'from-blue-400 to-cyan-500' }
                 ].map((skill, index) => (
                   <motion.div
                     key={skill.name}

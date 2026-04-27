@@ -53,7 +53,7 @@ export default function Summary() {
           >
             <div className="space-y-6">
               <p className="text-xl text-gray-700 dark:text-gray-300 leading-relaxed font-light">
-                Full Stack Software Engineer with <span className="font-semibold text-teal-600 dark:text-teal-400">3+ years of enterprise experience</span> specializing in React Native mobile development and modern web applications.
+                Full Stack Software Engineer with <span className="font-semibold text-teal-600 dark:text-teal-400">1+ years of enterprise experience</span> specializing in React Native mobile development and modern web applications.
               </p>
               <p className="text-lg text-gray-600 dark:text-gray-400 leading-relaxed">
                 Expert in architecting scalable applications, leading development teams, and delivering high-performance solutions for Fortune 500 companies and innovative startups.
@@ -62,8 +62,6 @@ export default function Summary() {
               {/* Key Highlights */}
               <div className="grid grid-cols-2 gap-4 mt-8">
                 {[
-                  { label: 'Enterprise Projects', value: '15+', icon: Briefcase },
-                  { label: 'Team Leadership', value: '5+ devs', icon: Users },
                   { label: 'Code Quality', value: '99.9%', icon: Award },
                   { label: 'Client Retention', value: '100%', icon: Globe }
                 ].map((stat, index) => (
@@ -87,9 +85,9 @@ export default function Summary() {
             <div className="space-y-4">
               {[
                 { title: 'Technical Leadership', desc: 'Leading cross-functional teams and mentoring junior developers', icon: '🚀' },
-                { title: 'Architecture Design', desc: 'Designing scalable, maintainable system architectures', icon: '🏗️' },
+                // { title: 'Architecture Design', desc: 'Designing scalable, maintainable system architectures', icon: '🏗️' },
                 { title: 'Performance Optimization', desc: 'Optimizing applications for maximum speed and scalability', icon: '⚡' },
-                { title: 'Code Quality', desc: 'Implementing best practices, testing, and CI/CD pipelines', icon: '✨' }
+                { title: 'Code Quality', desc: 'Implementing best practices, testing', icon: '✨' }
               ].map((attr, index) => (
                 <motion.div
                   key={attr.title}
