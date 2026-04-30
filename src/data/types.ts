@@ -61,6 +61,7 @@ export interface Project {
   gradient: string;
   isPrivate?: boolean;
   featured?: boolean;
+  type: 'mobile' | 'web';
 }
 
 export interface Stat {
