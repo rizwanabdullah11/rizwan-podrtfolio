@@ -50,6 +50,18 @@ export const projects: Project[] = [
 
   // ── Web Apps (Next.js & React.js) ───────────────────────────────────────────
   {
+    title: "WOW Gutters Service Platform",
+    url: "https://wowgutters.co.uk",
+    tech: "Next.js, TypeScript",
+    description: [
+      "Built a professional service platform for exterior cleaning and gutter maintenance with fast quote generation and booking capabilities",
+      "Developed a fully responsive, SEO-optimized frontend using Next.js and TypeScript to ensure high performance and a seamless user experience"
+    ],
+    gradient: "from-blue-500 to-indigo-500",
+    featured: true,
+    type: "web"
+  },
+  {
     title: "M-eState Housing Society Management",
     url: "https://mestate.must.services/login",
     tech: "Next.js, Nest.js, PostgreSQL",
