@@ -2,7 +2,7 @@ import { Experience } from './types';
 
 export const experiences: Experience[] = [
   {
-    title: "JUnior Software Developer",
+    title: "Junior Software Developer",
     company: "MUST Pvt Ltd",
     location: "MGC Complex G8 Markaz, Islamabad, Pakistan",
     period: "May 2025 -- Present",
@@ -11,10 +11,9 @@ export const experiences: Experience[] = [
     borderColor: "border-blue-200 dark:border-blue-800",
     current: true,
     achievements: [
-      "Leading development of enterprise-grade React Native applications",
-      "Architecting scalable backend solutions with Node.js and PostgreSQL",
-      "Mentoring junior developers and establishing coding standards",
-      "Implementing CI/CD pipelines and automated testing frameworks"
+      "Building web products with Next.js, React, and shadcn/ui",
+      "Developing cross-platform mobile apps with React Native",
+      "Shipping polished UI with the same stack across web and mobile projects"
     ]
   },
   {
@@ -26,14 +25,13 @@ export const experiences: Experience[] = [
     bgGradient: "from-indigo-50 to-purple-50 dark:from-indigo-900/20 dark:to-purple-900/20",
     borderColor: "border-indigo-200 dark:border-indigo-800",
     achievements: [
-      "Developed cross-platform mobile applications using React Native",
-      "Integrated real-time features with WebSocket and Firebase",
-      "Optimized application performance resulting in 40% faster load times",
-      "Collaborated with international teams across different time zones"
+      "Built and maintained frontends with Next.js",
+      "Styled interfaces with Tailwind CSS for responsive, consistent design",
+      "Worked on backend and server-side features with Node.js"
     ]
   },
   {
-    title: "Full Stack Web Developer",
+    title: "Software Development Intern",
     company: "iOPTIME Pvt Ltd",
     location: "G8 Markaz, Islamabad, Pakistan",
     period: "November 2024 -- January 2025",
@@ -41,10 +39,9 @@ export const experiences: Experience[] = [
     bgGradient: "from-emerald-50 to-teal-50 dark:from-emerald-900/20 dark:to-teal-900/20",
     borderColor: "border-emerald-200 dark:border-emerald-800",
     achievements: [
-      "Built responsive web applications with Next.js and TypeScript",
-      "Implemented ViciDial call center solutions for enterprise clients",
-      "Developed RESTful APIs and integrated third-party services",
-      "Delivered projects 20% ahead of schedule with zero critical bugs"
+      "Developed UI with React and styled with Tailwind CSS",
+      "Worked on Laravel backends and full-stack features alongside the team",
+      "Contributed to real product code during the internship program"
     ]
   }
 ];

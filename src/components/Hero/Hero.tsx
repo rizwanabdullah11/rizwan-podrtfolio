@@ -1,20 +1,21 @@
 'use client';
 
 import { motion } from 'framer-motion';
-import Image from 'next/image';
 import { 
   Mail, 
   Code,
   Globe,
   Award,
-  FolderOpen
+  FolderOpen,
+  Smartphone
 } from 'lucide-react';
 import { 
   SiReact, 
   SiNodedotjs,
-  SiTypescript
+  SiTypescript,
+  SiNextdotjs
 } from 'react-icons/si';
-import { FaMobile } from 'react-icons/fa';
+import { FaReact } from 'react-icons/fa';
 import { Avatar, AvatarImage, AvatarFallback } from '@/components/ui/avatar';
 import { Badge } from '@/components/ui/badge';
 import RizwanImage from '@/assets/Rizwan.jpeg';
@@ -79,12 +80,22 @@ export default function Hero() {
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
           >
-            {/* Professional Badge */}
+            {/* Focus strip: web-first + mobile */}
             <motion.div
+              className="flex flex-wrap items-center gap-2"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.3, duration: 0.6 }}
             >
+              <Badge
+                className="px-3 py-1 text-xs font-medium border-0 bg-gradient-to-r from-emerald-600 to-teal-600 text-white shadow-md"
+              >
+                Main focus: Next.js & web
+              </Badge>
+              <Badge variant="outline" className="px-3 py-1 text-xs font-medium border-teal-500/40 text-teal-700 dark:text-teal-300 gap-1.5">
+                <Smartphone className="w-3.5 h-3.5" />
+                React Native app shipped
+              </Badge>
             </motion.div>
 
             {/* Greeting */}
@@ -102,7 +113,7 @@ export default function Hero() {
               </h1>
             </motion.div>
 
-            {/* Expertise Tags */}
+            {/* Expertise Tags — web primary; mobile called out secondarily */}
             <motion.div
               className="flex flex-wrap gap-3"
               initial={{ opacity: 0, y: 20 }}
@@ -110,20 +121,29 @@ export default function Hero() {
               transition={{ delay: 0.5, duration: 0.6 }}
             >
               {[
-                { label: 'Mobile Developer', icon: FaMobile, color: 'from-teal-500 to-emerald-600' },
-                { label: 'Web Developer', icon: Globe, color: 'from-emerald-500 to-cyan-600' },
-                { label: 'Full Stack', icon: Code, color: 'from-cyan-500 to-teal-600' }
+                { kind: 'solid' as const, label: 'Next.js & Web', icon: SiNextdotjs, color: 'from-emerald-500 to-teal-600' },
+                { kind: 'solid' as const, label: 'Full Stack', icon: Code, color: 'from-teal-500 to-emerald-600' },
+                { kind: 'solid' as const, label: 'Web & APIs', icon: Globe, color: 'from-cyan-500 to-cyan-700' },
+                {
+                  kind: 'outline' as const,
+                  label: 'React Native · app shipped',
+                  icon: Smartphone,
+                },
               ].map((tag, index) => (
                 <motion.div
-                  key={tag.label}
-                  className={`flex items-center gap-2 px-4 py-2 bg-gradient-to-r ${tag.color} text-white rounded-lg shadow-lg hover:shadow-xl transition-all duration-300`}
+                  key={tag.label + (tag.kind === 'outline' ? '-outline' : '')}
+                  className={
+                    tag.kind === 'solid'
+                      ? `flex items-center gap-2 px-4 py-2 bg-gradient-to-r ${tag.color} text-white rounded-lg shadow-lg hover:shadow-xl transition-all duration-300`
+                      : 'flex items-center gap-2 px-4 py-2 rounded-lg border-2 border-teal-500/35 bg-white/70 dark:bg-gray-800/70 text-gray-800 dark:text-gray-200 shadow-sm hover:border-teal-500/60 hover:shadow-md transition-all duration-300'
+                  }
                   whileHover={{ scale: 1.05, y: -2 }}
                   initial={{ opacity: 0, x: -20 }}
                   animate={{ opacity: 1, x: 0 }}
                   transition={{ delay: 0.6 + index * 0.1, duration: 0.5 }}
                 >
-                  <tag.icon className="w-4 h-4" />
-                  <span className="text-sm font-medium">{tag.label}</span>
+                  <tag.icon className="w-4 h-4 shrink-0" />
+                  <span className="text-sm font-medium leading-tight">{tag.label}</span>
                 </motion.div>
               ))}
             </motion.div>
@@ -135,8 +155,8 @@ export default function Hero() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.7, duration: 0.6 }}
             >
-              I architect and develop enterprise-grade mobile and web applications. 
-              <span className="text-teal-600 dark:text-teal-400 font-medium"> Transforming complex requirements into elegant, scalable solutions.</span>
+              I focus on production-ready web apps with Next.js — fast UIs, solid architecture, and clean full-stack delivery.
+              <span className="text-teal-600 dark:text-teal-400 font-medium"> I&apos;ve also built a React Native mobile app end to end — check the Mobile Apps tab under Projects for details.</span>
             </motion.p>
 
             {/* Stats Row */}
@@ -264,15 +284,19 @@ export default function Hero() {
                   <div className="absolute inset-0 bg-gradient-to-br from-teal-500/10 to-transparent rounded-full pointer-events-none"></div>
                 </motion.div>
 
-                {/* Orbiting Tech Icons */}
+                {/* Orbiting tech — Next.js + web stack + React Native */}
                 {[
-                  { icon: SiReact, delay: 0, color: 'text-cyan-500' },
-                  { icon: SiNodedotjs, delay: 1, color: 'text-green-500' },
-                  { icon: SiTypescript, delay: 2, color: 'text-blue-500' },
-                  { icon: FaMobile, delay: 3, color: 'text-teal-500' }
-                ].map((tech, index) => (
+                  { icon: SiNextdotjs, slot: 0, color: 'text-gray-800 dark:text-gray-200' },
+                  { icon: SiReact, slot: 1, color: 'text-cyan-500' },
+                  { icon: SiNodedotjs, slot: 2, color: 'text-green-500' },
+                  { icon: FaReact, slot: 3, color: 'text-teal-500', title: 'React Native' },
+                  { icon: SiTypescript, slot: 4, color: 'text-blue-500' },
+                ].map((tech) => {
+                  const angle = (tech.slot * 2 * Math.PI) / 5;
+                  return (
                   <motion.div
-                    key={index}
+                    key={tech.slot}
+                    title={'title' in tech ? tech.title : undefined}
                     className="absolute w-12 h-12 bg-white dark:bg-gray-800 rounded-full shadow-lg flex items-center justify-center"
                     style={{
                       top: '50%',
@@ -281,19 +305,20 @@ export default function Hero() {
                     }}
                     animate={{
                       rotate: [0, 360],
-                      x: [0, Math.cos(tech.delay * Math.PI / 2) * 150],
-                      y: [0, Math.sin(tech.delay * Math.PI / 2) * 150],
+                      x: [0, Math.cos(angle) * 150],
+                      y: [0, Math.sin(angle) * 150],
                     }}
                     transition={{
                       duration: 10,
                       repeat: Infinity,
                       ease: "linear",
-                      delay: tech.delay * 0.5
+                      delay: tech.slot * 0.5
                     }}
                   >
                     <tech.icon className={`w-6 h-6 ${tech.color}`} />
                   </motion.div>
-                ))}
+                  );
+                })}
               </motion.div>
 
               {/* Enhanced Certification Cards */}
@@ -315,7 +340,7 @@ export default function Hero() {
                           SOFTWARE ENGINEER
                         </h3>
                         <p className="text-xs text-gray-600 dark:text-gray-400">
-                          React Native & Full Stack
+                          Next.js & web · RN app shipped
                         </p>
                       </div>
                     </div>
@@ -350,7 +375,7 @@ export default function Hero() {
                           FULL STACK DEVELOPER
                         </h3>
                         <p className="text-xs text-gray-600 dark:text-gray-400">
-                          Mobile & Web Solutions
+                          Web-first · React Native in portfolio
                         </p>
                       </div>
                     </div>

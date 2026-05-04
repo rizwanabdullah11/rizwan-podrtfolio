@@ -2,6 +2,7 @@
 
 import { motion } from 'framer-motion';
 import { Briefcase, MapPin } from 'lucide-react';
+import { experiences } from '@/data/experience';
 
 export default function Experience() {
   const fadeInUp = {
@@ -54,52 +55,7 @@ export default function Experience() {
           </div>
           
           <div className="space-y-8">
-            {[
-              {
-                title: "Junior Software Developer",
-                company: "MUST Pvt Ltd",
-                location: "MGC Complex G8 Markaz, Islamabad, Pakistan",
-                period: "May 2025 -- Present",
-                gradient: "from-blue-500 to-cyan-500",
-                bgGradient: "from-blue-50 to-cyan-50 dark:from-blue-900/20 dark:to-cyan-900/20",
-                borderColor: "border-blue-200 dark:border-blue-800",
-                achievements: [
-                  "Leading development of enterprise-grade React Native applications",
-                  "Architecting scalable Frontend solutions with Next.js",
-                  "Mentoring junior developers and establishing coding standards"
-                ]
-              },
-              {
-                title: "Software Engineer (Remote)",
-                company: "DragSense",
-                location: "Islamabad, Pakistan",
-                period: "February 2025 -- April 2025",
-                gradient: "from-indigo-500 to-purple-500",
-                bgGradient: "from-indigo-50 to-purple-50 dark:from-indigo-900/20 dark:to-purple-900/20",
-                borderColor: "border-indigo-200 dark:border-indigo-800",
-                achievements: [
-                  "Developed cross-platform mobile applications using React Native",
-                  "Integrated real-time features with WebSocket and Firebase",
-                  "Optimized application performance resulting in 40% faster load times",
-                  "Collaborated with international teams across different time zones"
-                ]
-              },
-              {
-                title: "Full Stack Web Developer",
-                company: "iOPTIME Pvt Ltd",
-                location: "G8 Markaz, Islamabad, Pakistan",
-                period: "November 2024 -- January 2025",
-                gradient: "from-emerald-500 to-teal-500",
-                bgGradient: "from-emerald-50 to-teal-50 dark:from-emerald-900/20 dark:to-teal-900/20",
-                borderColor: "border-emerald-200 dark:border-emerald-800",
-                achievements: [
-                  "Built responsive web applications with Next.js and TypeScript",
-                  "Implemented ViciDial call center solutions for enterprise clients",
-                  "Developed RESTful APIs and integrated third-party services",
-                  "Delivered projects 20% ahead of schedule with zero critical bugs"
-                ]
-              }
-            ].map((job, index) => (
+            {experiences.map((job, index) => (
               <motion.div 
                 key={index}
                 variants={fadeInUp} 
@@ -108,7 +64,7 @@ export default function Experience() {
               >
                 {/* Timeline Connector */}
                 <div className="absolute -left-6 top-8 w-4 h-4 bg-gradient-to-br from-gray-400 to-gray-600 rounded-full shadow-lg border-4 border-white dark:border-gray-800"></div>
-                {index < 2 && (
+                {index < experiences.length - 1 && (
                   <div className="absolute -left-4 top-12 w-1 h-24 bg-gradient-to-b from-gray-300 to-gray-400 dark:from-gray-600 dark:to-gray-700"></div>
                 )}
                 

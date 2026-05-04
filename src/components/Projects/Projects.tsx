@@ -23,7 +23,7 @@ const tabs = [
 type TabId = typeof tabs[number]['id'];
 
 export default function Projects() {
-  const [activeTab, setActiveTab] = useState<TabId>('mobile');
+  const [activeTab, setActiveTab] = useState<TabId>('web');
 
   const mobileProjects = getMobileProjects();
   const webProjects    = getWebProjects();
