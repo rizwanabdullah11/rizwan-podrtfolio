@@ -1,8 +1,8 @@
-import { 
-  SiReact, 
-  SiNextdotjs, 
-  SiTypescript, 
-  SiJavascript, 
+import {
+  SiReact,
+  SiNextdotjs,
+  SiTypescript,
+  SiJavascript,
   SiNodedotjs,
   SiMongodb,
   SiPostgresql,
@@ -10,16 +10,9 @@ import {
   SiRedux,
   SiFirebase,
   SiGithub,
-  SiHtml5,
-  SiCss3,
   SiPhp,
-  SiLaravel,
-  SiMysql,
-  SiPython,
-  SiCplusplus,
-  SiDart
 } from 'react-icons/si';
-import { FaReact, FaMobile, FaServer, FaPhone } from 'react-icons/fa';
+import { FaReact, FaPhone } from 'react-icons/fa';
 import { Skill } from './types';
 
 export const skills: Skill[] = [
