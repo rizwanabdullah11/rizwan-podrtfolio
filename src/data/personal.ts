@@ -8,6 +8,6 @@ export const personalInfo: PersonalInfo = {
   location: 'Islamabad, Pakistan',
   github: 'https://github.com/rizwanabdullah11',
   linkedin: 'https://www.linkedin.com/in/rizwan-abdullah-804208232/',
-  tagline: 'I architect and develop enterprise-grade mobile and web applications.',
+  tagline: 'I build fast, scalable web applications with Next.js — and full-stack products end to end.',
   description: 'Transforming complex requirements into elegant, scalable solutions.'
 };

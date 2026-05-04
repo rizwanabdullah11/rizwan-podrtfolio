@@ -17,9 +17,9 @@ import {
 import { FaReact } from 'react-icons/fa';
 
 const techStack = [
-  { name: 'React Native', icon: FaReact,        color: 'text-cyan-500',   bg: 'bg-cyan-500/10'   },
   { name: 'Next.js',      icon: SiNextdotjs,    color: 'text-gray-800 dark:text-gray-200', bg: 'bg-gray-500/10' },
   { name: 'React.js',     icon: SiReact,        color: 'text-cyan-400',   bg: 'bg-cyan-400/10'   },
+  { name: 'React Native', icon: FaReact,        color: 'text-cyan-500',   bg: 'bg-cyan-500/10'   },
   { name: 'TypeScript',   icon: SiTypescript,   color: 'text-blue-500',   bg: 'bg-blue-500/10'   },
   { name: 'JavaScript',   icon: SiJavascript,   color: 'text-yellow-500', bg: 'bg-yellow-500/10' },
   { name: 'Node.js',      icon: SiNodedotjs,    color: 'text-green-500',  bg: 'bg-green-500/10'  },
@@ -31,8 +31,8 @@ const techStack = [
 ];
 
 const highlights = [
-  { icon: Smartphone, label: 'Mobile Dev',       value: 'React Native',    color: 'from-cyan-500 to-blue-500'     },
-  { icon: Globe,      label: 'Web Dev',           value: 'Next.js & React', color: 'from-emerald-500 to-teal-500'  },
+  { icon: Globe,      label: 'Web (main focus)', value: 'Next.js & React', color: 'from-emerald-500 to-teal-500'  },
+  { icon: Smartphone, label: 'Mobile',          value: 'React Native',    color: 'from-cyan-500 to-blue-500'     },
   { icon: Zap,        label: 'Experience',        value: '1+ Years',        color: 'from-yellow-500 to-orange-500' },
   { icon: Code2,      label: 'Apps Delivered',    value: '10+',             color: 'from-purple-500 to-indigo-500' },
   { icon: Shield,     label: 'Code Quality',      value: 'Best Practices',  color: 'from-teal-500 to-emerald-500'  },
@@ -88,15 +88,15 @@ export default function Summary() {
               transition={{ duration: 0.6, delay: 0.1 }}
             >
               <p className="text-lg leading-relaxed">
-                Hi, I&apos;m <span className="font-semibold text-teal-600 dark:text-teal-400">Rizwan Abdullah</span> — a Software Engineer based in Islamabad, Pakistan, with <span className="font-semibold text-teal-600 dark:text-teal-400">1+ years of professional experience</span> building mobile and web applications that are fast, scalable, and user-friendly.
+                Hi, I&apos;m <span className="font-semibold text-teal-600 dark:text-teal-400">Rizwan Abdullah</span> — a Software Engineer based in Islamabad, Pakistan, with <span className="font-semibold text-teal-600 dark:text-teal-400">1+ years of professional experience</span> building web applications that are fast, scalable, and user-friendly — with mobile work when the product calls for it.
               </p>
 
               <p className="text-base leading-relaxed">
-                My primary focus is <span className="font-medium text-gray-900 dark:text-gray-100">React Native</span> for cross-platform mobile development. I enjoy crafting smooth, native-feeling experiences for both iOS and Android — from authentication flows and real-time features to offline support and push notifications. I care deeply about performance and making sure every interaction feels polished.
+                My main focus is <span className="font-medium text-gray-900 dark:text-gray-100">Next.js</span> and the modern React ecosystem: App Router, server and client components, and polished UI with Tailwind and <span className="font-medium text-gray-900 dark:text-gray-100">shadcn/ui</span>. I care about performance, clear structure, and shipping interfaces that feel great in the browser.
               </p>
 
               <p className="text-base leading-relaxed">
-                On the web side, I work with <span className="font-medium text-gray-900 dark:text-gray-100">Next.js</span> and <span className="font-medium text-gray-900 dark:text-gray-100">React.js</span> to build modern, responsive applications. Whether it&apos;s a complex admin dashboard, a management system with role-based access, or a real-time collaborative tool, I focus on clean architecture and maintainable code that scales.
+                I also build with <span className="font-medium text-gray-900 dark:text-gray-100">React.js</span> more broadly, and <span className="font-medium text-gray-900 dark:text-gray-100">React Native</span> for cross-platform mobile — smooth flows, solid state management, and features that work reliably on iOS and Android.
               </p>
 
               <p className="text-base leading-relaxed">
@@ -104,7 +104,7 @@ export default function Summary() {
               </p>
 
               <p className="text-base leading-relaxed">
-                Over the past year I&apos;ve worked across different environments — from a remote role at <span className="font-medium text-gray-900 dark:text-gray-100">DragSense</span> where I built cross-platform mobile apps and integrated real-time WebSocket features, to <span className="font-medium text-gray-900 dark:text-gray-100">iOPTIME</span> where I delivered full-stack web solutions, and currently at <span className="font-medium text-gray-900 dark:text-gray-100">MUST Pvt Ltd</span> where I&apos;m leading React Native development and contributing to enterprise-grade products.
+                Over the past year I&apos;ve worked across different stacks — <span className="font-medium text-gray-900 dark:text-gray-100">DragSense</span> (Next.js, Tailwind, Node.js), <span className="font-medium text-gray-900 dark:text-gray-100">iOPTIME</span> as an intern (React, Laravel, Tailwind), and currently <span className="font-medium text-gray-900 dark:text-gray-100">MUST Pvt Ltd</span> where I ship Next.js and shadcn-powered web work alongside React Native when needed.
               </p>
 
               <p className="text-base leading-relaxed">
@@ -112,7 +112,7 @@ export default function Summary() {
               </p>
 
               <p className="text-base leading-relaxed">
-                When I&apos;m not coding, I&apos;m exploring new tools, keeping up with the React and React Native ecosystem, and looking for ways to improve the products I work on. I&apos;m always open to interesting projects and collaborations — feel free to reach out.
+                When I&apos;m not coding, I&apos;m exploring new tools, keeping up with Next.js and the wider React ecosystem, and looking for ways to improve the products I work on. I&apos;m always open to interesting projects and collaborations — feel free to reach out.
               </p>
             </motion.div>
 
@@ -182,8 +182,8 @@ export default function Summary() {
                 </h3>
                 <div className="space-y-3">
                   {[
+                    { icon: '🌐', title: 'Web Apps',     desc: 'Next.js, React, Tailwind & shadcn/ui — my main focus' },
                     { icon: '📱', title: 'Mobile Apps',  desc: 'Cross-platform iOS & Android with React Native' },
-                    { icon: '🌐', title: 'Web Apps',     desc: 'Full-stack apps with Next.js & React.js'       },
                     { icon: '⚙️', title: 'Backend APIs', desc: 'REST APIs with Node.js, PostgreSQL & MongoDB'  },
                   ].map((item, i) => (
                     <motion.div
