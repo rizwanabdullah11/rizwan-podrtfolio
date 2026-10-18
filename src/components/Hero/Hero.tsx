@@ -1,22 +1,15 @@
 'use client';
 
 import { motion } from 'framer-motion';
+import Image from 'next/image';
 import { 
   Mail, 
   Code,
   Globe,
-  Award,
   FolderOpen,
   Smartphone
 } from 'lucide-react';
-import { 
-  SiReact, 
-  SiNodedotjs,
-  SiTypescript,
-  SiNextdotjs
-} from 'react-icons/si';
-import { FaReact } from 'react-icons/fa';
-import { Avatar, AvatarImage, AvatarFallback } from '@/components/ui/avatar';
+import { SiNextdotjs } from 'react-icons/si';
 import { Badge } from '@/components/ui/badge';
 import RizwanImage from '@/assets/Rizwan.jpeg';
 
@@ -218,161 +211,70 @@ export default function Hero() {
             </motion.div>
           </motion.div>
 
-          {/* Right Content - Enhanced Profile Area */}
+          {/* Right Content - 3D Animated Profile Presentation */}
           <motion.div
-            className="relative flex items-center justify-center order-1 lg:order-2 mb-8 lg:mb-0"
-            initial={{ opacity: 0, x: 50 }}
-            animate={{ opacity: 1, x: 0 }}
+            className="relative flex items-center justify-center order-1 lg:order-2 mb-12 lg:mb-0"
+            initial={{ opacity: 0, scale: 0.9 }}
+            animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.8, delay: 0.4 }}
           >
-            {/* Background Soft Glow */}
+            {/* Background 3D Ambient Glows */}
             <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
               <motion.div
-                className="w-96 h-96 bg-orange-500/10 rounded-full blur-3xl"
+                className="w-[420px] h-[480px] bg-gradient-to-tr from-orange-500/20 via-amber-400/15 to-orange-600/20 rounded-[48px] blur-3xl"
                 animate={{
-                  scale: [1, 1.1, 1],
-                  rotate: [0, 360],
+                  scale: [1, 1.15, 1],
+                  rotate: [0, 180, 360],
                 }}
                 transition={{
-                  duration: 20,
+                  duration: 16,
                   repeat: Infinity,
-                  ease: "linear"
+                  ease: "linear",
                 }}
               />
             </div>
 
-            {/* Profile Content */}
-            <div className="relative z-10 text-center space-y-6 sm:space-y-8">
-              {/* Enhanced Avatar with Tech Stack Orbit */}
-              <motion.div
-                className="relative"
-                initial={{ scale: 0 }}
-                animate={{ scale: 1 }}
-                transition={{ duration: 0.8, delay: 0.8, type: "spring", bounce: 0.4 }}
-              >
-                {/* Main Avatar with Orange Ring */}
-                <motion.div
-                  className="w-48 h-48 sm:w-56 sm:h-56 lg:w-64 lg:h-64 mx-auto rounded-full shadow-2xl relative overflow-hidden ring-4 ring-orange-500 shadow-orange-500/20"
-                  whileHover={{ scale: 1.05 }}
-                >
-                  <Avatar className="w-full h-full">
-                    <AvatarImage 
-                      src={RizwanImage.src} 
-                      alt="Rizwan Abdullah"
-                      className="object-cover"
-                    />
-                    <AvatarFallback className="text-6xl lg:text-7xl font-bold bg-orange-500 text-white">
-                      RA
-                    </AvatarFallback>
-                  </Avatar>
-                </motion.div>
+            {/* 3D Floating Interactive Card */}
+            <motion.div
+              className="relative group cursor-pointer my-4"
+              animate={{
+                y: [-10, 10, -10],
+              }}
+              transition={{
+                duration: 6,
+                repeat: Infinity,
+                ease: "easeInOut",
+              }}
+              whileHover={{
+                rotateY: -8,
+                rotateX: 6,
+                scale: 1.03,
+                transition: { duration: 0.3 }
+              }}
+              style={{
+                perspective: 1200,
+                transformStyle: "preserve-3d",
+              }}
+            >
+              {/* Outer Neon Gradient Glow Frame */}
+              <div className="absolute -inset-1.5 bg-gradient-to-tr from-orange-500 via-amber-400 to-orange-600 rounded-[34px] opacity-75 blur-sm group-hover:opacity-100 group-hover:blur-md transition-all duration-500" />
 
-                {/* Orbiting tech — clean white & dark circles with orange hover */}
-                {[
-                  { icon: SiNextdotjs, slot: 0 },
-                  { icon: SiReact, slot: 1 },
-                  { icon: SiNodedotjs, slot: 2 },
-                  { icon: FaReact, slot: 3, title: 'React Native' },
-                  { icon: SiTypescript, slot: 4 },
-                ].map((tech) => {
-                  const angle = (tech.slot * 2 * Math.PI) / 5;
-                  return (
-                  <motion.div
-                    key={tech.slot}
-                    title={'title' in tech ? tech.title : undefined}
-                    className="absolute w-12 h-12 bg-white text-black hover:text-orange-500 rounded-full shadow-md flex items-center justify-center transition-colors"
-                    style={{
-                      top: '50%',
-                      left: '50%',
-                      transformOrigin: '0 0',
-                    }}
-                    animate={{
-                      rotate: [0, 360],
-                      x: [0, Math.cos(angle) * 150],
-                      y: [0, Math.sin(angle) * 150],
-                    }}
-                    transition={{
-                      duration: 10,
-                      repeat: Infinity,
-                      ease: "linear",
-                      delay: tech.slot * 0.5
-                    }}
-                  >
-                    <tech.icon className="w-6 h-6" />
-                  </motion.div>
-                  );
-                })}
-              </motion.div>
-
-              {/* Enhanced Certification Cards */}
-              <div className="grid grid-cols-1 gap-3 sm:gap-4 max-w-sm mx-auto px-4 sm:px-0">
-                <motion.div
-                  className="bg-gray-50 rounded-2xl p-6 shadow-sm hover:shadow-md transition-all duration-300"
-                  initial={{ opacity: 0, y: 30 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ delay: 1.2, duration: 0.6 }}
-                  whileHover={{ y: -5, scale: 1.02 }}
-                >
-                  <div className="flex items-center justify-between mb-4">
-                    <div className="flex items-center gap-3">
-                      <div className="w-10 h-10 bg-orange-500 rounded-lg flex items-center justify-center shadow-md shadow-orange-500/25">
-                        <SiReact className="w-5 h-5 text-white" />
-                      </div>
-                      <div>
-                        <h3 className="font-bold text-black text-sm text-left">
-                          SOFTWARE ENGINEER
-                        </h3>
-                        <p className="text-xs text-orange-500 font-medium text-left">
-                          Next.js & RBAC Portals
-                        </p>
-                      </div>
-                    </div>
-                    <div className="w-6 h-6 bg-orange-500 rounded-full flex items-center justify-center">
-                      <motion.div
-                        className="w-2 h-2 bg-white rounded-full"
-                        animate={{ scale: [1, 1.2, 1] }}
-                        transition={{ duration: 2, repeat: Infinity }}
-                      />
-                    </div>
-                  </div>
-                  <div className="flex justify-between text-xs text-gray-500">
-                    <span>Enterprise Ready</span>
-                    <span>2+ Years</span>
-                  </div>
-                </motion.div>
-
-                <motion.div
-                  className="bg-gray-50 rounded-2xl p-6 shadow-sm hover:shadow-md transition-all duration-300"
-                  initial={{ opacity: 0, y: 30 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ delay: 1.4, duration: 0.6 }}
-                  whileHover={{ y: -5, scale: 1.02 }}
-                >
-                  <div className="flex items-center justify-between mb-4">
-                    <div className="flex items-center gap-3">
-                      <div className="w-10 h-10 bg-orange-500 rounded-lg flex items-center justify-center shadow-md shadow-orange-500/25">
-                        <Globe className="w-5 h-5 text-white" />
-                      </div>
-                      <div>
-                        <h3 className="font-bold text-black text-sm text-left">
-                          SEO & FULL STACK
-                        </h3>
-                        <p className="text-xs text-orange-500 font-medium text-left">
-                          Technical & Local SEO · Next.js
-                        </p>
-                      </div>
-                    </div>
-                    <div className="w-6 h-6 bg-orange-500 rounded-full flex items-center justify-center">
-                      <Award className="w-3 h-3 text-white" />
-                    </div>
-                  </div>
-                  <div className="flex justify-between text-xs text-gray-500">
-                    <span>Proven Performance</span>
-                    <span>High Organic Reach</span>
-                  </div>
-                </motion.div>
+              {/* Main Image Container */}
+              <div className="relative w-72 sm:w-80 lg:w-[360px] h-[390px] sm:h-[440px] lg:h-[470px] rounded-[30px] p-2.5 bg-white shadow-2xl shadow-orange-500/20 overflow-hidden">
+                <div className="relative w-full h-full rounded-[22px] overflow-hidden bg-gray-100">
+                  <Image
+                    src={RizwanImage}
+                    alt="Rizwan Abdullah"
+                    fill
+                    sizes="(max-width: 768px) 100vw, 400px"
+                    priority
+                    className="object-cover object-top scale-102 group-hover:scale-108 transition-transform duration-700 ease-out"
+                  />
+                  {/* Subtle 3D Glass Sheen without text or dark overlays */}
+                  <div className="absolute inset-0 bg-gradient-to-tr from-transparent via-white/5 to-transparent pointer-events-none" />
+                </div>
               </div>
-            </div>
+            </motion.div>
           </motion.div>
         </div>
 
