@@ -1,78 +1,46 @@
 'use client';
 
 import { motion } from 'framer-motion';
-import { User, Smartphone, Globe, Code2, Zap, Shield, GitBranch } from 'lucide-react';
-import {
-  SiReact,
-  SiNextdotjs,
-  SiTypescript,
-  SiJavascript,
-  SiNodedotjs,
-  SiPostgresql,
-  SiMongodb,
-  SiFirebase,
-  SiRedux,
-  SiTailwindcss,
-} from 'react-icons/si';
-import { FaReact } from 'react-icons/fa';
-
-const techStack = [
-  { name: 'Next.js',      icon: SiNextdotjs,    color: 'text-gray-800 dark:text-gray-200', bg: 'bg-gray-500/10' },
-  { name: 'React.js',     icon: SiReact,        color: 'text-cyan-400',   bg: 'bg-cyan-400/10'   },
-  { name: 'React Native', icon: FaReact,        color: 'text-cyan-500',   bg: 'bg-cyan-500/10'   },
-  { name: 'TypeScript',   icon: SiTypescript,   color: 'text-blue-500',   bg: 'bg-blue-500/10'   },
-  { name: 'JavaScript',   icon: SiJavascript,   color: 'text-yellow-500', bg: 'bg-yellow-500/10' },
-  { name: 'Node.js',      icon: SiNodedotjs,    color: 'text-green-500',  bg: 'bg-green-500/10'  },
-  { name: 'PostgreSQL',   icon: SiPostgresql,   color: 'text-blue-600',   bg: 'bg-blue-600/10'   },
-  { name: 'MongoDB',      icon: SiMongodb,      color: 'text-green-600',  bg: 'bg-green-600/10'  },
-  { name: 'Firebase',     icon: SiFirebase,     color: 'text-orange-500', bg: 'bg-orange-500/10' },
-  { name: 'Redux',        icon: SiRedux,        color: 'text-purple-500', bg: 'bg-purple-500/10' },
-  { name: 'Tailwind CSS', icon: SiTailwindcss,  color: 'text-teal-400',   bg: 'bg-teal-400/10'   },
-];
+import { User, Smartphone, Globe, Zap } from 'lucide-react';
 
 const highlights = [
-  { icon: Globe,      label: 'Web (main focus)', value: 'Next.js & React', color: 'from-emerald-500 to-teal-500'  },
-  { icon: Smartphone, label: 'Mobile',          value: 'React Native',    color: 'from-cyan-500 to-blue-500'     },
-  { icon: Zap,        label: 'Experience',        value: '1+ Years',        color: 'from-yellow-500 to-orange-500' },
-  { icon: Code2,      label: 'Apps Delivered',    value: '10+',             color: 'from-purple-500 to-indigo-500' },
-  { icon: Shield,     label: 'Code Quality',      value: 'Best Practices',  color: 'from-teal-500 to-emerald-500'  },
-  { icon: GitBranch,  label: 'Version Control',   value: 'Git & GitHub',    color: 'from-gray-600 to-gray-800'     },
+  { icon: Zap,        label: 'Experience',       value: '2+ Years' },
+  { icon: Globe,      label: 'Web & Enterprise', value: 'Next.js & RBAC Portals' },
+  { icon: Zap,        label: 'Search Optimization', value: 'Technical & Local SEO' },
+  { icon: Smartphone, label: 'Mobile Apps',      value: 'React Native' },
 ];
 
 export default function Summary() {
   return (
     <motion.section
       id="summary"
-      className="mb-24"
+      className="mb-24 scroll-mt-28"
       initial={{ opacity: 0, y: 50 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
       transition={{ duration: 0.6 }}
     >
-      <motion.div
-        className="relative bg-gradient-to-br from-white via-teal-50 to-emerald-50 dark:from-gray-800 dark:via-gray-800 dark:to-gray-700 rounded-2xl sm:rounded-3xl shadow-2xl p-6 sm:p-8 lg:p-12 border border-teal-100 dark:border-gray-600 overflow-hidden"
-        whileHover={{ y: -5 }}
-        transition={{ duration: 0.3 }}
+      <div
+        className="relative bg-white py-4 overflow-hidden"
       >
-        {/* Background blobs */}
-        <div className="absolute top-0 right-0 w-72 h-72 bg-gradient-to-br from-teal-500/5 to-emerald-500/5 rounded-full blur-3xl pointer-events-none" />
-        <div className="absolute bottom-0 left-0 w-56 h-56 bg-gradient-to-br from-emerald-500/5 to-cyan-500/5 rounded-full blur-2xl pointer-events-none" />
+        {/* Soft Orange Glow */}
+        <div className="absolute top-0 right-0 w-72 h-72 bg-orange-500/5 rounded-full blur-3xl pointer-events-none" />
 
         <div className="relative z-10">
           {/* Header */}
           <div className="flex items-start gap-5 mb-10">
             <motion.div
-              className="p-4 bg-gradient-to-br from-teal-500 to-emerald-600 rounded-2xl shadow-lg flex-shrink-0"
+              className="p-4 bg-orange-500 rounded-2xl shadow-lg shadow-orange-500/25 flex-shrink-0"
               whileHover={{ rotate: 360, scale: 1.1 }}
               transition={{ duration: 0.6 }}
             >
               <User className="w-8 h-8 text-white" />
             </motion.div>
             <div>
-              <h2 className="text-3xl sm:text-4xl font-bold bg-gradient-to-r from-gray-900 via-gray-800 to-gray-700 dark:from-gray-100 dark:via-gray-200 dark:to-gray-300 bg-clip-text text-transparent mb-2">
+              <h2 className="text-3xl sm:text-4xl font-bold text-orange-500 mb-2">
                 About Me
               </h2>
-              <div className="w-24 h-1 bg-gradient-to-r from-teal-500 to-emerald-500 rounded-full" />
+              <div className="w-24 h-1 bg-orange-500 rounded-full" />
             </div>
           </div>
 
@@ -81,38 +49,22 @@ export default function Summary() {
 
             {/* ── LEFT: Bio (~500 words) ── */}
             <motion.div
-              className="space-y-5 text-gray-700 dark:text-gray-300"
+              className="space-y-5 text-black"
               initial={{ opacity: 0, x: -30 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: 0.1 }}
             >
               <p className="text-lg leading-relaxed">
-                Hi, I&apos;m <span className="font-semibold text-teal-600 dark:text-teal-400">Rizwan Abdullah</span> — a Software Engineer based in Islamabad, Pakistan, with <span className="font-semibold text-teal-600 dark:text-teal-400">1+ years of professional experience</span> building web applications that are fast, scalable, and user-friendly — with mobile work when the product calls for it.
+                Hi, I&apos;m <span className="font-semibold text-orange-500">Rizwan Abdullah</span> — a Software Engineer and SEO Expert based in Islamabad with <span className="font-semibold text-orange-500">2+ years of professional experience</span> building high-performance web applications and scalable enterprise systems.
               </p>
 
               <p className="text-base leading-relaxed">
-                My main focus is <span className="font-medium text-gray-900 dark:text-gray-100">Next.js</span> and the modern React ecosystem: App Router, server and client components, and polished UI with Tailwind and <span className="font-medium text-gray-900 dark:text-gray-100">shadcn/ui</span>. I care about performance, clear structure, and shipping interfaces that feel great in the browser.
+                My primary expertise centers around <span className="font-medium text-black">Next.js (App Router)</span>, TypeScript, and modern UI architectures with Tailwind CSS and <span className="font-medium text-black">shadcn/ui</span>. Beyond engineering clean frontends, I specialize in <span className="font-semibold text-orange-500">Technical & Local SEO</span> — optimizing live commercial websites for top search visibility, Core Web Vitals, and conversions.
               </p>
 
               <p className="text-base leading-relaxed">
-                I also build with <span className="font-medium text-gray-900 dark:text-gray-100">React.js</span> more broadly, and <span className="font-medium text-gray-900 dark:text-gray-100">React Native</span> for cross-platform mobile — smooth flows, solid state management, and features that work reliably on iOS and Android.
-              </p>
-
-              <p className="text-base leading-relaxed">
-                I&apos;m comfortable across the full stack — using <span className="font-medium text-gray-900 dark:text-gray-100">Node.js</span>, <span className="font-medium text-gray-900 dark:text-gray-100">PostgreSQL</span>, <span className="font-medium text-gray-900 dark:text-gray-100">MongoDB</span>, and <span className="font-medium text-gray-900 dark:text-gray-100">Firebase</span> on the backend. I write TypeScript by default, use Redux for state management, and keep my UIs consistent with Tailwind CSS and component libraries like ShadCN UI.
-              </p>
-
-              <p className="text-base leading-relaxed">
-                Over the past year I&apos;ve worked across different stacks — <span className="font-medium text-gray-900 dark:text-gray-100">DragSense</span> (Next.js, Tailwind, Node.js), <span className="font-medium text-gray-900 dark:text-gray-100">iOPTIME</span> as an intern (React, Laravel, Tailwind), and currently <span className="font-medium text-gray-900 dark:text-gray-100">MUST Pvt Ltd</span> where I ship Next.js and shadcn-powered web work alongside React Native when needed.
-              </p>
-
-              <p className="text-base leading-relaxed">
-                I believe good software is more than working code — it&apos;s readable, testable, and built with the next developer in mind. I follow clean code principles, use Git workflows properly, and always think about edge cases and error handling before shipping.
-              </p>
-
-              <p className="text-base leading-relaxed">
-                When I&apos;m not coding, I&apos;m exploring new tools, keeping up with Next.js and the wider React ecosystem, and looking for ways to improve the products I work on. I&apos;m always open to interesting projects and collaborations — feel free to reach out.
+                I also architect complex enterprise solutions with multi-tier <span className="font-semibold text-orange-500">Role-Based Access Control (RBAC)</span> for Admin, Organization, Staff, and Auditor workflows, alongside cross-platform mobile apps with <span className="font-medium text-black">React Native</span> and robust backend APIs with <span className="font-medium text-black">Node.js, PostgreSQL, and MongoDB</span>.
               </p>
             </motion.div>
 
@@ -126,69 +78,47 @@ export default function Summary() {
             >
               {/* Quick stats */}
               <div>
-                <h3 className="text-sm font-semibold uppercase tracking-widest text-gray-500 dark:text-gray-400 mb-4">
+                <h3 className="text-sm font-bold uppercase tracking-widest text-orange-500 mb-4">
                   At a Glance
                 </h3>
                 <div className="grid grid-cols-2 gap-3">
                   {highlights.map((item, i) => (
                     <motion.div
                       key={item.label}
-                      className="flex items-center gap-3 p-3 bg-white/60 dark:bg-gray-700/50 rounded-xl border border-gray-200/60 dark:border-gray-600/50 backdrop-blur-sm"
+                      className="flex items-center gap-3 p-3 bg-gray-50 rounded-xl shadow-sm hover:shadow-md transition-all duration-300 group"
                       initial={{ opacity: 0, y: 15 }}
                       whileInView={{ opacity: 1, y: 0 }}
                       viewport={{ once: true }}
                       transition={{ delay: 0.3 + i * 0.07, duration: 0.4 }}
                       whileHover={{ scale: 1.03, y: -2 }}
                     >
-                      <div className={`p-2 rounded-lg bg-gradient-to-br ${item.color} flex-shrink-0`}>
-                        <item.icon className="w-4 h-4 text-white" />
+                      <div className="p-2 rounded-lg bg-orange-500/10 text-orange-500 group-hover:bg-orange-500 group-hover:text-white transition-colors flex-shrink-0">
+                        <item.icon className="w-4 h-4" />
                       </div>
                       <div className="min-w-0">
-                        <p className="text-xs text-gray-500 dark:text-gray-400 truncate">{item.label}</p>
-                        <p className="text-sm font-semibold text-gray-900 dark:text-gray-100 truncate">{item.value}</p>
+                        <p className="text-xs text-gray-500 truncate">{item.label}</p>
+                        <p className="text-sm font-semibold text-orange-500 group-hover:text-orange-600 transition-colors truncate">{item.value}</p>
                       </div>
                     </motion.div>
                   ))}
                 </div>
               </div>
 
-              {/* Tech stack */}
-              <div>
-                <h3 className="text-sm font-semibold uppercase tracking-widest text-gray-500 dark:text-gray-400 mb-4">
-                  Tech Stack
-                </h3>
-                <div className="flex flex-wrap gap-2">
-                  {techStack.map((tech, i) => (
-                    <motion.div
-                      key={tech.name}
-                      className={`flex items-center gap-2 px-3 py-1.5 rounded-lg ${tech.bg} border border-gray-200/50 dark:border-gray-600/50`}
-                      initial={{ opacity: 0, scale: 0.8 }}
-                      whileInView={{ opacity: 1, scale: 1 }}
-                      viewport={{ once: true }}
-                      transition={{ delay: 0.4 + i * 0.05, duration: 0.3 }}
-                      whileHover={{ scale: 1.08, y: -2 }}
-                    >
-                      <tech.icon className={`w-4 h-4 ${tech.color}`} />
-                      <span className="text-sm font-medium text-gray-800 dark:text-gray-200">{tech.name}</span>
-                    </motion.div>
-                  ))}
-                </div>
-              </div>
 
               {/* What I build */}
               <div>
-                <h3 className="text-sm font-semibold uppercase tracking-widest text-gray-500 dark:text-gray-400 mb-4">
+                <h3 className="text-sm font-bold uppercase tracking-widest text-orange-500 mb-4">
                   What I Build
                 </h3>
                 <div className="space-y-3">
                   {[
-                    { icon: '🌐', title: 'Web Apps',     desc: 'Next.js, React, Tailwind & shadcn/ui — my main focus' },
-                    { icon: '📱', title: 'Mobile Apps',  desc: 'Cross-platform iOS & Android with React Native' },
-                    { icon: '⚙️', title: 'Backend APIs', desc: 'REST APIs with Node.js, PostgreSQL & MongoDB'  },
+                    { icon: '🌐', title: 'Web Apps & RBAC Portals',  desc: 'Next.js (App Router), Tailwind & shadcn/ui with granular role-based permissions' },
+                    { icon: '🚀', title: 'Technical & Local SEO',    desc: 'Keyword strategy, schema markup, Core Web Vitals & organic ranking' },
+                    { icon: '📱', title: 'Mobile & APIs',            desc: 'Cross-platform iOS & Android with React Native and Node.js/PostgreSQL backends' },
                   ].map((item, i) => (
                     <motion.div
                       key={item.title}
-                      className="flex items-start gap-3 p-3 bg-white/40 dark:bg-gray-700/30 rounded-xl border border-gray-200/40 dark:border-gray-600/30"
+                      className="flex items-start gap-3 p-3 bg-gray-50 rounded-xl shadow-sm hover:shadow-md transition-all duration-300 group"
                       initial={{ opacity: 0, x: 20 }}
                       whileInView={{ opacity: 1, x: 0 }}
                       viewport={{ once: true }}
@@ -197,8 +127,8 @@ export default function Summary() {
                     >
                       <span className="text-xl leading-none mt-0.5">{item.icon}</span>
                       <div>
-                        <p className="font-semibold text-gray-900 dark:text-gray-100 text-sm">{item.title}</p>
-                        <p className="text-xs text-gray-500 dark:text-gray-400 mt-0.5">{item.desc}</p>
+                        <p className="font-semibold text-orange-500 group-hover:text-orange-600 transition-colors text-sm">{item.title}</p>
+                        <p className="text-xs text-gray-600 mt-0.5">{item.desc}</p>
                       </div>
                     </motion.div>
                   ))}
@@ -208,7 +138,7 @@ export default function Summary() {
 
           </div>
         </div>
-      </motion.div>
+      </div>
     </motion.section>
   );
 }

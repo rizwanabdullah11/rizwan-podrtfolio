@@ -15,60 +15,82 @@ interface ProjectCardProps {
 export default function ProjectCard({ project, index }: ProjectCardProps) {
   return (
     <motion.div
-      initial={{ opacity: 0, y: 50 }}
+      initial={{ opacity: 0, y: 30 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
-      transition={{ duration: 0.6, delay: index * 0.1 }}
-      whileHover={{ y: -8, scale: 1.02 }}
+      transition={{ duration: 0.5, delay: index * 0.05 }}
+      whileHover={{ y: -5 }}
+      className="h-full"
     >
-      <Card className="group relative overflow-hidden bg-white dark:bg-gray-800/90 border-gray-200 dark:border-gray-700 hover:shadow-2xl transition-all duration-500">
-        <div className={`absolute inset-0 bg-gradient-to-r ${project.gradient} opacity-0 group-hover:opacity-10 transition-opacity duration-500`}></div>
-        
-        <CardHeader className="relative z-10">
-          <div className="flex flex-col md:flex-row md:justify-between md:items-start gap-4">
-            <div className="flex-1">
-              <CardTitle className="text-xl mb-2 text-gray-900 dark:text-white group-hover:text-gray-700 dark:group-hover:text-gray-200 transition-colors">
-                {project.title}
-              </CardTitle>
-              {project.isPrivate && (
-                <Badge variant="secondary" className="bg-yellow-100 dark:bg-yellow-900 text-yellow-800 dark:text-yellow-200">
-                  Private Project
-                </Badge>
-              )}
-            </div>
-            
-            {!project.isPrivate && project.url ? (
-              <Button
-                href={project.url}
-                variant="primary"
-                size="sm"
-                icon={<ExternalLink className="w-4 h-4" />}
-                className={`bg-gradient-to-r ${project.gradient}`}
-              >
-                View Project
-              </Button>
+      <div className="group relative h-full flex flex-col justify-between bg-gray-50 rounded-2xl p-6 sm:p-7 shadow-sm hover:shadow-md transition-all duration-300">
+        <div>
+          {/* Top row: Category Badge & Status */}
+          <div className="flex items-center justify-between gap-3 mb-4">
+            {project.category ? (
+              <span className="inline-flex items-center px-3 py-1 rounded-full text-xs font-semibold bg-orange-500/10 text-orange-600">
+                {project.category}
+              </span>
             ) : (
-              <Badge className={`bg-gradient-to-r ${project.gradient} opacity-60 text-white`}>
-                <Code className="w-4 h-4 mr-2" />
-                Confidential
-              </Badge>
+              <span className="inline-flex items-center px-3 py-1 rounded-full text-xs font-semibold bg-gray-200 text-black">
+                {project.type === 'mobile' ? 'Mobile App' : 'Web App'}
+              </span>
             )}
+
+            {project.isPrivate ? (
+              <span className="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-xs font-medium bg-gray-200 text-gray-700">
+                <Code className="w-3 h-3 text-orange-500" />
+                Confidential
+              </span>
+            ) : project.url ? (
+              <span className="inline-flex items-center gap-1.5 text-xs font-semibold text-green-600">
+                <span className="w-2 h-2 rounded-full bg-green-500 animate-pulse" />
+                Live Project
+              </span>
+            ) : null}
           </div>
-          
-          <CardDescription className="font-medium mt-2">{project.tech}</CardDescription>
-        </CardHeader>
-        
-        <CardContent className="relative z-10">
-          <ul className="space-y-2">
+
+          {/* Project Title */}
+          <h3 className="text-xl font-bold text-black group-hover:text-orange-500 transition-colors mb-3 leading-snug">
+            {project.title}
+          </h3>
+
+          {/* Tech Stack Pills */}
+          <div className="flex flex-wrap gap-1.5 mb-4">
+            {project.tech.split(',').map((t, idx) => (
+              <span
+                key={idx}
+                className="px-2.5 py-0.5 text-xs font-medium rounded-md bg-white text-black shadow-2xs"
+              >
+                {t.trim()}
+              </span>
+            ))}
+          </div>
+
+          {/* Bullet points */}
+          <ul className="space-y-2.5 mb-6 text-sm text-black leading-relaxed">
             {project.description.map((desc, i) => (
-              <li key={i} className="flex items-start gap-2 text-gray-700 dark:text-gray-300">
-                <span className={`w-2 h-2 rounded-full bg-gradient-to-r ${project.gradient} mt-2 flex-shrink-0`}></span>
-                {desc}
+              <li key={i} className="flex items-start gap-2.5">
+                <span className="w-1.5 h-1.5 rounded-full bg-orange-500 mt-2 flex-shrink-0" />
+                <span>{desc}</span>
               </li>
             ))}
           </ul>
-        </CardContent>
-      </Card>
+        </div>
+
+        {/* Action Button at bottom */}
+        {!project.isPrivate && project.url ? (
+          <div className="pt-2">
+            <Button
+              href={project.url}
+              variant="primary"
+              size="sm"
+              icon={<ExternalLink className="w-4 h-4" />}
+            >
+              Visit Live Website
+            </Button>
+          </div>
+        ) : null}
+      </div>
     </motion.div>
   );
 }

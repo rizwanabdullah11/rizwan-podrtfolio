@@ -62,6 +62,7 @@ export interface Project {
   isPrivate?: boolean;
   featured?: boolean;
   type: 'mobile' | 'web';
+  category?: string;
 }
 
 export interface Stat {
