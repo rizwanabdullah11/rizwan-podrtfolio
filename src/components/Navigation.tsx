@@ -47,7 +47,7 @@ export default function Navigation() {
   };
 
   return (
-    <nav className="fixed top-0 left-0 right-0 bg-white/90 dark:bg-gray-900/90 backdrop-blur-xl shadow-sm z-50 border-b border-gray-100/50 dark:border-gray-800/50 transition-all duration-300">
+    <nav className="fixed top-0 left-0 right-0 bg-white/95 backdrop-blur-xl shadow-sm z-50 border-b border-gray-100 transition-all duration-300">
       <div className="max-w-7xl mx-auto px-6">
         <div className="flex justify-between items-center py-5">
           <motion.div
@@ -60,7 +60,7 @@ export default function Navigation() {
               <span className="text-white font-bold text-sm">RA</span>
             </div>
             <div>
-              <div className="text-xl font-bold text-gray-900 dark:text-white">Rizwan</div>
+              <div className="text-xl font-bold text-black">Rizwan</div>
               <div className="text-xs text-orange-500 font-semibold -mt-1">Software Engineer</div>
             </div>
           </motion.div>
@@ -75,8 +75,8 @@ export default function Navigation() {
                   onClick={() => scrollToSection(item.id)}
                   className={`relative px-4 py-2 text-sm font-medium tracking-wide transition-all duration-300 rounded-lg group ${
                     activeSection === item.id
-                      ? 'text-orange-600 dark:text-orange-400 bg-orange-50 dark:bg-orange-950/30 font-semibold'
-                      : 'text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-100 hover:bg-gray-50 dark:hover:bg-gray-800/50'
+                      ? 'text-orange-600 bg-orange-50 font-semibold'
+                      : 'text-black hover:text-orange-500 hover:bg-gray-50'
                   }`}
                   whileHover={{ y: -1 }}
                   whileTap={{ scale: 0.95 }}
@@ -93,42 +93,22 @@ export default function Navigation() {
               );
             })}
             
-            {/* Enhanced Theme Toggle */}
+            {/* Theme Toggle */}
             <motion.button
               onClick={toggleTheme}
-              className="ml-4 p-2.5 rounded-xl bg-gray-100 dark:bg-gray-800 text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-100 hover:bg-gray-200 dark:hover:bg-gray-700 transition-all duration-300 shadow-sm"
+              className="ml-4 p-2.5 rounded-xl bg-gray-100 text-black hover:bg-gray-200 transition-all duration-300 shadow-sm"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
             >
-              <motion.div
-                animate={{ rotate: theme === 'dark' ? 0 : 180 }}
-                transition={{ duration: 0.3 }}
-              >
-                {theme === 'dark' ? <Sun className="w-4 h-4" /> : <Moon className="w-4 h-4" />}
-              </motion.div>
+              <Sun className="w-4 h-4 text-orange-500" />
             </motion.button>
           </div>
 
           {/* Mobile Menu Button */}
           <div className="md:hidden flex items-center gap-3">
-            {/* Mobile Theme Toggle */}
-            <motion.button
-              onClick={toggleTheme}
-              className="p-2 rounded-lg bg-gray-100 dark:bg-gray-800 text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-100 transition-all duration-300"
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-            >
-              <motion.div
-                animate={{ rotate: theme === 'dark' ? 0 : 180 }}
-                transition={{ duration: 0.3 }}
-              >
-                {theme === 'dark' ? <Sun className="w-4 h-4" /> : <Moon className="w-4 h-4" />}
-              </motion.div>
-            </motion.button>
-            
             <motion.button
               onClick={() => setIsOpen(!isOpen)}
-              className="p-2 rounded-lg bg-gray-100 dark:bg-gray-800 text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-100 transition-all duration-300"
+              className="p-2 rounded-lg bg-gray-100 text-black transition-all duration-300"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
             >
@@ -150,7 +130,7 @@ export default function Navigation() {
             opacity: isOpen ? 1 : 0,
           }}
           transition={{ duration: 0.3, ease: 'easeInOut' }}
-          className="md:hidden overflow-hidden border-t border-gray-100 dark:border-gray-800"
+          className="md:hidden overflow-hidden border-t border-gray-100"
         >
           <div className="py-4 space-y-2">
             {navItems.map((item, index) => {
@@ -162,7 +142,7 @@ export default function Navigation() {
                   className={`flex items-center gap-3 w-full px-4 py-3 rounded-xl transition-all duration-300 font-medium ${
                     activeSection === item.id
                       ? 'text-white bg-orange-500 shadow-lg shadow-orange-500/25'
-                      : 'text-gray-700 dark:text-gray-300 hover:text-orange-500 hover:bg-orange-500/10'
+                      : 'text-black hover:text-orange-500 hover:bg-orange-500/10'
                   }`}
                   initial={{ opacity: 0, x: -20 }}
                   animate={{ opacity: isOpen ? 1 : 0, x: isOpen ? 0 : -20 }}

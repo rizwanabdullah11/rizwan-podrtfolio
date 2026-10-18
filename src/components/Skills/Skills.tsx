@@ -49,13 +49,11 @@ export default function Skills() {
       whileInView="animate"
       viewport={{ once: true }}
     >
-      <motion.div 
-        className="relative bg-white dark:bg-gray-800 rounded-2xl sm:rounded-3xl shadow-xl p-6 sm:p-8 lg:p-12 border border-gray-200 dark:border-gray-700 hover:border-orange-500/50 dark:hover:border-orange-500/50 transition-all duration-300 overflow-hidden"
-        whileHover={{ y: -5 }}
-        transition={{ duration: 0.3 }}
+      <div 
+        className="relative bg-white py-4 overflow-hidden"
       >
         {/* Background Soft Glow */}
-        <div className="absolute top-0 right-0 w-80 h-80 bg-orange-500/5 dark:bg-orange-500/10 rounded-full blur-3xl pointer-events-none"></div>
+        <div className="absolute top-0 right-0 w-80 h-80 bg-orange-500/5 rounded-full blur-3xl pointer-events-none"></div>
         
         <div className="relative z-10">
           <div className="flex items-start gap-6 mb-12">
@@ -67,7 +65,7 @@ export default function Skills() {
               <Code className="w-8 h-8 text-white" />
             </motion.div>
             <div>
-              <h2 className="text-4xl font-bold text-gray-900 dark:text-white mb-2">
+              <h2 className="text-4xl font-bold text-orange-500 mb-2">
                 Technical Expertise
               </h2>
               <div className="w-24 h-1 bg-orange-500 rounded-full"></div>
@@ -81,7 +79,7 @@ export default function Skills() {
                 <div className="p-3 bg-orange-500/10 rounded-xl text-orange-500">
                   <SiReact className="w-6 h-6" />
                 </div>
-                <h3 className="text-2xl font-bold text-gray-900 dark:text-white">Programming Languages</h3>
+                <h3 className="text-2xl font-bold text-orange-500">Programming Languages</h3>
               </div>
               <div className="grid grid-cols-1 gap-4">
                 {[
@@ -90,7 +88,7 @@ export default function Skills() {
                 ].map((skill, index) => (
                   <motion.div
                     key={skill.name}
-                    className="group bg-gray-50/60 dark:bg-gray-700/40 rounded-xl p-4 border border-gray-200 dark:border-gray-600 hover:border-orange-500 hover:shadow-md transition-all duration-300"
+                    className="group bg-gray-50 rounded-xl p-4 shadow-sm hover:shadow-md transition-all duration-300"
                     initial={{ opacity: 0, x: -20 }}
                     whileInView={{ opacity: 1, x: 0 }}
                     transition={{ delay: index * 0.1, duration: 0.5 }}
@@ -98,12 +96,12 @@ export default function Skills() {
                   >
                     <div className="flex items-center justify-between mb-3">
                       <div className="flex items-center gap-3">
-                        <skill.icon className="w-6 h-6 text-gray-700 dark:text-gray-300 group-hover:text-orange-500 transition-colors" />
-                        <span className="font-semibold text-gray-900 dark:text-gray-100 group-hover:text-orange-500 transition-colors">{skill.name}</span>
+                        <skill.icon className="w-6 h-6 text-black group-hover:text-orange-500 transition-colors" />
+                        <span className="font-semibold text-black group-hover:text-orange-500 transition-colors">{skill.name}</span>
                       </div>
                       <span className="text-sm font-semibold text-orange-500">{skill.level}%</span>
                     </div>
-                    <div className="w-full bg-gray-200 dark:bg-gray-600 rounded-full h-2">
+                    <div className="w-full bg-gray-200 rounded-full h-2">
                       <motion.div
                         className="h-2 bg-orange-500 rounded-full"
                         initial={{ width: 0 }}
@@ -122,7 +120,7 @@ export default function Skills() {
                 <div className="p-3 bg-orange-500/10 rounded-xl text-orange-500">
                   <FaMobile className="w-6 h-6" />
                 </div>
-                <h3 className="text-2xl font-bold text-gray-900 dark:text-white">Frontend & Mobile</h3>
+                <h3 className="text-2xl font-bold text-orange-500">Frontend & Mobile</h3>
               </div>
               <div className="grid grid-cols-2 gap-4">
                 {[
@@ -137,13 +135,13 @@ export default function Skills() {
                 ].map((skill, index) => (
                   <motion.div
                     key={skill.name}
-                    className="group bg-gray-50/60 dark:bg-gray-700/40 p-4 rounded-xl border border-gray-200 dark:border-gray-600 hover:border-orange-500 hover:shadow-md transition-all duration-300"
+                    className="group bg-gray-50 p-4 rounded-xl shadow-sm hover:shadow-md transition-all duration-300"
                     initial={{ opacity: 0, y: 20 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     transition={{ delay: index * 0.1, duration: 0.5 }}
                     whileHover={{ scale: 1.05, y: -2 }}
                   >
-                    <div className="flex items-center gap-3 text-gray-800 dark:text-gray-200 group-hover:text-orange-500 transition-colors">
+                    <div className="flex items-center gap-3 text-black group-hover:text-orange-500 transition-colors">
                       <skill.icon className="w-6 h-6 text-orange-500" />
                       <span className="font-semibold text-sm">{skill.name}</span>
                     </div>
@@ -158,7 +156,7 @@ export default function Skills() {
                 <div className="p-3 bg-orange-500/10 rounded-xl text-orange-500">
                   <FaServer className="w-6 h-6" />
                 </div>
-                <h3 className="text-2xl font-bold text-gray-900 dark:text-white">Backend & APIs</h3>
+                <h3 className="text-2xl font-bold text-orange-500">Backend & APIs</h3>
               </div>
               <div className="space-y-4">
                 {[
@@ -169,7 +167,7 @@ export default function Skills() {
                 ].map((skill, index) => (
                   <motion.div
                     key={skill.name}
-                    className="group bg-gray-50/60 dark:bg-gray-700/40 rounded-xl p-4 border border-gray-200 dark:border-gray-600 hover:border-orange-500 hover:shadow-md transition-all duration-300"
+                    className="group bg-gray-50 rounded-xl p-4 shadow-sm hover:shadow-md transition-all duration-300"
                     initial={{ opacity: 0, x: 20 }}
                     whileInView={{ opacity: 1, x: 0 }}
                     transition={{ delay: index * 0.1, duration: 0.5 }}
@@ -180,8 +178,8 @@ export default function Skills() {
                         <skill.icon className="w-5 h-5" />
                       </div>
                       <div>
-                        <h4 className="font-semibold text-gray-900 dark:text-white group-hover:text-orange-500 transition-colors">{skill.name}</h4>
-                        <p className="text-sm text-gray-600 dark:text-gray-400">{skill.desc}</p>
+                        <h4 className="font-semibold text-orange-500 group-hover:text-orange-600 transition-colors">{skill.name}</h4>
+                        <p className="text-sm text-gray-600">{skill.desc}</p>
                       </div>
                     </div>
                   </motion.div>
@@ -195,7 +193,7 @@ export default function Skills() {
                 <div className="p-3 bg-orange-500/10 rounded-xl text-orange-500">
                   <Database className="w-6 h-6" />
                 </div>
-                <h3 className="text-2xl font-bold text-gray-900 dark:text-white">Databases & DevOps</h3>
+                <h3 className="text-2xl font-bold text-orange-500">Databases & DevOps</h3>
               </div>
               <div className="grid grid-cols-1 gap-4">
                 {[
@@ -207,7 +205,7 @@ export default function Skills() {
                 ].map((skill, index) => (
                   <motion.div
                     key={skill.name}
-                    className="group flex items-center justify-between p-4 bg-gray-50/60 dark:bg-gray-700/40 rounded-xl border border-gray-200 dark:border-gray-600 hover:border-orange-500 hover:shadow-md transition-all duration-300"
+                    className="group flex items-center justify-between p-4 bg-gray-50 rounded-xl shadow-sm hover:shadow-md transition-all duration-300"
                     initial={{ opacity: 0, y: 20 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     transition={{ delay: index * 0.1, duration: 0.5 }}
@@ -218,8 +216,8 @@ export default function Skills() {
                         <skill.icon className="w-5 h-5" />
                       </div>
                       <div>
-                        <h4 className="font-semibold text-gray-900 dark:text-white group-hover:text-orange-500 transition-colors">{skill.name}</h4>
-                        <p className="text-xs text-gray-500 dark:text-gray-400">{skill.type}</p>
+                        <h4 className="font-semibold text-black group-hover:text-orange-500 transition-colors">{skill.name}</h4>
+                        <p className="text-xs text-gray-500">{skill.type}</p>
                       </div>
                     </div>
                     <div className="w-2 h-2 bg-orange-500 rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
@@ -229,7 +227,7 @@ export default function Skills() {
             </motion.div>
           </div>
         </div>
-      </motion.div>
+      </div>
     </motion.section>
   );
 }

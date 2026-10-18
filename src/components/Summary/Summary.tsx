@@ -17,7 +17,7 @@ import {
 import { FaReact } from 'react-icons/fa';
 
 const techStack = [
-  { name: 'Next.js',      icon: SiNextdotjs,    color: 'text-gray-800 dark:text-gray-200', bg: 'bg-gray-500/10' },
+  { name: 'Next.js',      icon: SiNextdotjs,    color: 'text-black',   bg: 'bg-gray-500/10' },
   { name: 'React.js',     icon: SiReact,        color: 'text-cyan-400',   bg: 'bg-cyan-400/10'   },
   { name: 'React Native', icon: FaReact,        color: 'text-cyan-500',   bg: 'bg-cyan-500/10'   },
   { name: 'TypeScript',   icon: SiTypescript,   color: 'text-blue-500',   bg: 'bg-blue-500/10'   },
@@ -34,7 +34,7 @@ const highlights = [
   { icon: Globe,      label: 'Web & Enterprise', value: 'Next.js & RBAC Portals', color: 'from-emerald-500 to-teal-500'  },
   { icon: Zap,        label: 'Search Optimization', value: 'Technical & Local SEO', color: 'from-cyan-500 to-emerald-500' },
   { icon: Smartphone, label: 'Mobile Apps',      value: 'React Native',       color: 'from-cyan-500 to-blue-500'     },
-  { icon: Zap,        label: 'Experience',       value: '1+ Years',           color: 'from-yellow-500 to-orange-500' },
+  { icon: Zap,        label: 'Experience',       value: '2+ Years',           color: 'from-yellow-500 to-orange-500' },
   { icon: Code2,      label: 'Apps Delivered',   value: '12+',                color: 'from-purple-500 to-indigo-500' },
   { icon: Shield,     label: 'Code Quality',     value: 'Best Practices & RBAC', color: 'from-teal-500 to-emerald-500'  },
   { icon: GitBranch,  label: 'Version Control',  value: 'Git & GitHub',       color: 'from-gray-600 to-gray-800'     },
@@ -50,13 +50,11 @@ export default function Summary() {
       viewport={{ once: true }}
       transition={{ duration: 0.6 }}
     >
-      <motion.div
-        className="relative bg-white dark:bg-gray-800 rounded-2xl sm:rounded-3xl shadow-xl p-6 sm:p-8 lg:p-12 border border-gray-200 dark:border-gray-700 hover:border-orange-500/50 dark:hover:border-orange-500/50 transition-all duration-300 overflow-hidden"
-        whileHover={{ y: -5 }}
-        transition={{ duration: 0.3 }}
+      <div
+        className="relative bg-white py-4 overflow-hidden"
       >
         {/* Soft Orange Glow */}
-        <div className="absolute top-0 right-0 w-72 h-72 bg-orange-500/5 dark:bg-orange-500/10 rounded-full blur-3xl pointer-events-none" />
+        <div className="absolute top-0 right-0 w-72 h-72 bg-orange-500/5 rounded-full blur-3xl pointer-events-none" />
 
         <div className="relative z-10">
           {/* Header */}
@@ -69,7 +67,7 @@ export default function Summary() {
               <User className="w-8 h-8 text-white" />
             </motion.div>
             <div>
-              <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 dark:text-white mb-2">
+              <h2 className="text-3xl sm:text-4xl font-bold text-orange-500 mb-2">
                 About Me
               </h2>
               <div className="w-24 h-1 bg-orange-500 rounded-full" />
@@ -81,18 +79,18 @@ export default function Summary() {
 
             {/* ── LEFT: Bio (~500 words) ── */}
             <motion.div
-              className="space-y-5 text-gray-700 dark:text-gray-300"
+              className="space-y-5 text-black"
               initial={{ opacity: 0, x: -30 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: 0.1 }}
             >
               <p className="text-lg leading-relaxed">
-                Hi, I&apos;m <span className="font-semibold text-orange-500">Rizwan Abdullah</span> — a Software Engineer based in Islamabad, Pakistan, with <span className="font-semibold text-orange-500">1+ years of professional experience</span> building web applications that are fast, scalable, and user-friendly — with mobile work when the product calls for it.
+                Hi, I&apos;m <span className="font-semibold text-orange-500">Rizwan Abdullah</span> — a Software Engineer based in Islamabad, Pakistan, with <span className="font-semibold text-orange-500">2+ years of professional experience</span> building web applications that are fast, scalable, and user-friendly — with mobile work when the product calls for it.
               </p>
 
               <p className="text-base leading-relaxed">
-                My main focus is <span className="font-medium text-gray-900 dark:text-gray-100">Next.js</span> and the modern React ecosystem: App Router, server and client components, and polished UI with Tailwind and <span className="font-medium text-gray-900 dark:text-gray-100">shadcn/ui</span>. Beyond interface design, I specialize in <span className="font-semibold text-orange-500">Search Engine Optimization (SEO)</span> — having implemented full technical and local SEO strategies across multiple live commercial websites to drive organic search visibility, Core Web Vitals performance, and high conversion rates.
+                My main focus is <span className="font-medium text-black">Next.js</span> and the modern React ecosystem: App Router, server and client components, and polished UI with Tailwind and <span className="font-medium text-black">shadcn/ui</span>. Beyond interface design, I specialize in <span className="font-semibold text-orange-500">Search Engine Optimization (SEO)</span> — having implemented full technical and local SEO strategies across multiple live commercial websites to drive organic search visibility, Core Web Vitals performance, and high conversion rates.
               </p>
 
               <p className="text-base leading-relaxed">
@@ -100,15 +98,15 @@ export default function Summary() {
               </p>
 
               <p className="text-base leading-relaxed">
-                I also build with <span className="font-medium text-gray-900 dark:text-gray-100">React.js</span> more broadly, and <span className="font-medium text-gray-900 dark:text-gray-100">React Native</span> for cross-platform mobile — smooth flows, solid state management, and features that work reliably on iOS and Android.
+                I also build with <span className="font-medium text-black">React.js</span> more broadly, and <span className="font-medium text-black">React Native</span> for cross-platform mobile — smooth flows, solid state management, and features that work reliably on iOS and Android.
               </p>
 
               <p className="text-base leading-relaxed">
-                I&apos;m comfortable across the full stack — using <span className="font-medium text-gray-900 dark:text-gray-100">Node.js</span>, <span className="font-medium text-gray-900 dark:text-gray-100">PostgreSQL</span>, <span className="font-medium text-gray-900 dark:text-gray-100">MongoDB</span>, and <span className="font-medium text-gray-900 dark:text-gray-100">Firebase</span> on the backend. I write TypeScript by default, use Redux for state management, and keep my UIs consistent with Tailwind CSS and component libraries like ShadCN UI.
+                I&apos;m comfortable across the full stack — using <span className="font-medium text-black">Node.js</span>, <span className="font-medium text-black">PostgreSQL</span>, <span className="font-medium text-black">MongoDB</span>, and <span className="font-medium text-black">Firebase</span> on the backend. I write TypeScript by default, use Redux for state management, and keep my UIs consistent with Tailwind CSS and component libraries like ShadCN UI.
               </p>
 
               <p className="text-base leading-relaxed">
-                Over the past year I&apos;ve worked across different stacks — <span className="font-medium text-gray-900 dark:text-gray-100">DragSense</span> (Next.js, Tailwind, Node.js), <span className="font-medium text-gray-900 dark:text-gray-100">iOPTIME</span> as an intern (React, Laravel, Tailwind), and currently <span className="font-medium text-gray-900 dark:text-gray-100">MUST Pvt Ltd</span> where I ship Next.js and shadcn-powered web work alongside React Native when needed.
+                Over the past two years I&apos;ve worked across different stacks — <span className="font-medium text-black">DragSense</span> (Next.js, Tailwind, Node.js), <span className="font-medium text-black">iOPTIME</span> as an intern (React, Laravel, Tailwind), and currently <span className="font-medium text-black">MUST Pvt Ltd</span> where I ship Next.js and shadcn-powered web work alongside React Native when needed.
               </p>
 
               <p className="text-base leading-relaxed">
@@ -130,14 +128,14 @@ export default function Summary() {
             >
               {/* Quick stats */}
               <div>
-                <h3 className="text-sm font-semibold uppercase tracking-widest text-gray-500 dark:text-gray-400 mb-4">
+                <h3 className="text-sm font-bold uppercase tracking-widest text-orange-500 mb-4">
                   At a Glance
                 </h3>
                 <div className="grid grid-cols-2 gap-3">
                   {highlights.map((item, i) => (
                     <motion.div
                       key={item.label}
-                      className="flex items-center gap-3 p-3 bg-white dark:bg-gray-700/60 rounded-xl border border-gray-200 dark:border-gray-600 hover:border-orange-500 hover:shadow-md transition-all duration-300 group"
+                      className="flex items-center gap-3 p-3 bg-gray-50 rounded-xl shadow-sm hover:shadow-md transition-all duration-300 group"
                       initial={{ opacity: 0, y: 15 }}
                       whileInView={{ opacity: 1, y: 0 }}
                       viewport={{ once: true }}
@@ -148,8 +146,8 @@ export default function Summary() {
                         <item.icon className="w-4 h-4" />
                       </div>
                       <div className="min-w-0">
-                        <p className="text-xs text-gray-500 dark:text-gray-400 truncate">{item.label}</p>
-                        <p className="text-sm font-semibold text-gray-900 dark:text-gray-100 group-hover:text-orange-500 transition-colors truncate">{item.value}</p>
+                        <p className="text-xs text-gray-500 truncate">{item.label}</p>
+                        <p className="text-sm font-semibold text-orange-500 group-hover:text-orange-600 transition-colors truncate">{item.value}</p>
                       </div>
                     </motion.div>
                   ))}
@@ -158,14 +156,14 @@ export default function Summary() {
 
               {/* Tech stack */}
               <div>
-                <h3 className="text-sm font-semibold uppercase tracking-widest text-gray-500 dark:text-gray-400 mb-4">
+                <h3 className="text-sm font-bold uppercase tracking-widest text-orange-500 mb-4">
                   Tech Stack
                 </h3>
                 <div className="flex flex-wrap gap-2">
                   {techStack.map((tech, i) => (
                     <motion.div
                       key={tech.name}
-                      className="flex items-center gap-2 px-3 py-1.5 rounded-lg bg-gray-50 dark:bg-gray-700/50 border border-gray-200 dark:border-gray-600 hover:border-orange-500 hover:text-orange-500 dark:hover:border-orange-500 dark:hover:text-orange-400 transition-colors cursor-default"
+                      className="flex items-center gap-2 px-3 py-1.5 rounded-lg bg-gray-100 hover:text-orange-500 transition-colors cursor-default"
                       initial={{ opacity: 0, scale: 0.8 }}
                       whileInView={{ opacity: 1, scale: 1 }}
                       viewport={{ once: true }}
@@ -173,7 +171,7 @@ export default function Summary() {
                       whileHover={{ scale: 1.05, y: -2 }}
                     >
                       <tech.icon className="w-4 h-4 text-orange-500" />
-                      <span className="text-sm font-medium text-gray-800 dark:text-gray-200">{tech.name}</span>
+                      <span className="text-sm font-medium text-black">{tech.name}</span>
                     </motion.div>
                   ))}
                 </div>
@@ -181,7 +179,7 @@ export default function Summary() {
 
               {/* What I build */}
               <div>
-                <h3 className="text-sm font-semibold uppercase tracking-widest text-gray-500 dark:text-gray-400 mb-4">
+                <h3 className="text-sm font-bold uppercase tracking-widest text-orange-500 mb-4">
                   What I Build
                 </h3>
                 <div className="space-y-3">
@@ -194,7 +192,7 @@ export default function Summary() {
                   ].map((item, i) => (
                     <motion.div
                       key={item.title}
-                      className="flex items-start gap-3 p-3 bg-gray-50 dark:bg-gray-700/40 rounded-xl border border-gray-200 dark:border-gray-600 hover:border-orange-500 hover:shadow-md transition-all duration-300 group"
+                      className="flex items-start gap-3 p-3 bg-gray-50 rounded-xl shadow-sm hover:shadow-md transition-all duration-300 group"
                       initial={{ opacity: 0, x: 20 }}
                       whileInView={{ opacity: 1, x: 0 }}
                       viewport={{ once: true }}
@@ -203,8 +201,8 @@ export default function Summary() {
                     >
                       <span className="text-xl leading-none mt-0.5">{item.icon}</span>
                       <div>
-                        <p className="font-semibold text-gray-900 dark:text-gray-100 group-hover:text-orange-500 transition-colors text-sm">{item.title}</p>
-                        <p className="text-xs text-gray-500 dark:text-gray-400 mt-0.5">{item.desc}</p>
+                        <p className="font-semibold text-orange-500 group-hover:text-orange-600 transition-colors text-sm">{item.title}</p>
+                        <p className="text-xs text-gray-600 mt-0.5">{item.desc}</p>
                       </div>
                     </motion.div>
                   ))}
@@ -214,7 +212,7 @@ export default function Summary() {
 
           </div>
         </div>
-      </motion.div>
+      </div>
     </motion.section>
   );
 }

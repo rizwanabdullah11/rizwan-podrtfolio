@@ -38,13 +38,8 @@ export default function Projects() {
       whileInView="animate"
       viewport={{ once: true }}
     >
-      <motion.div
-        className="relative bg-white dark:bg-gray-800 rounded-2xl sm:rounded-3xl shadow-xl p-6 sm:p-8 lg:p-12 border border-gray-200 dark:border-gray-700 hover:border-orange-500/50 transition-colors overflow-hidden"
-        initial={{ opacity: 0, y: 50 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true }}
-        transition={{ duration: 0.6 }}
-        whileHover={{ y: -5 }}
+      <div
+        className="relative bg-white py-4 overflow-hidden"
       >
         {/* Subtle Background Glow */}
         <div className="absolute top-0 right-0 w-80 h-80 bg-orange-500/5 rounded-full blur-3xl pointer-events-none" />
@@ -67,7 +62,7 @@ export default function Projects() {
                   className={`flex items-center gap-2 px-5 py-2.5 rounded-xl font-medium text-sm transition-all duration-300 ${
                     isActive
                       ? 'bg-orange-500 text-white shadow-lg shadow-orange-500/25 scale-105'
-                      : 'bg-white dark:bg-gray-700 text-gray-700 dark:text-gray-300 border border-gray-200 dark:border-gray-600 hover:border-orange-500 hover:text-orange-500'
+                      : 'bg-gray-100 text-black hover:text-orange-500'
                   }`}
                 >
                   <Icon className="w-4 h-4" />
@@ -75,7 +70,7 @@ export default function Projects() {
                   <span className={`text-xs px-1.5 py-0.5 rounded-full ${
                     isActive
                       ? 'bg-white/25 text-white'
-                      : 'bg-gray-100 dark:bg-gray-600 text-gray-600 dark:text-gray-300'
+                      : 'bg-gray-200 text-black'
                   }`}>
                     {tab.id === 'mobile' ? mobileProjects.length : webProjects.length}
                   </span>
@@ -85,7 +80,7 @@ export default function Projects() {
           </div>
 
           {/* Tech subtitle */}
-          <p className="text-sm text-gray-500 dark:text-gray-400 mb-6 -mt-4">
+          <p className="text-sm text-gray-500 mb-6 -mt-4">
             {tabs.find(t => t.id === activeTab)?.tech}
           </p>
 
@@ -105,7 +100,7 @@ export default function Projects() {
             </motion.div>
           </AnimatePresence>
         </div>
-      </motion.div>
+      </div>
     </motion.section>
   );
 }

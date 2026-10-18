@@ -38,7 +38,7 @@ export default function Hero() {
   return (
     <motion.section 
       id="home"
-      className="min-h-screen bg-white dark:bg-gray-900 pt-20 relative overflow-hidden"
+      className="min-h-screen bg-white pt-20 relative overflow-hidden"
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       transition={{ duration: 0.8 }}
@@ -46,7 +46,7 @@ export default function Hero() {
       {/* Background Soft Glow */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
         <motion.div
-          className="absolute top-1/4 right-1/4 w-96 h-96 bg-orange-500/10 dark:bg-orange-500/15 rounded-full blur-3xl"
+          className="absolute top-1/4 right-1/4 w-96 h-96 bg-orange-500/10 rounded-full blur-3xl"
           animate={{
             scale: [1, 1.2, 1],
             rotate: [0, 180, 360],
@@ -58,7 +58,7 @@ export default function Hero() {
           }}
         />
         <motion.div
-          className="absolute bottom-1/4 left-1/4 w-80 h-80 bg-orange-400/10 dark:bg-orange-600/15 rounded-full blur-3xl"
+          className="absolute bottom-1/4 left-1/4 w-80 h-80 bg-orange-400/10 rounded-full blur-3xl"
           animate={{
             scale: [1.2, 1, 1.2],
             rotate: [360, 180, 0],
@@ -94,11 +94,11 @@ export default function Hero() {
               </Badge>
               <Badge
                 variant="outline"
-                className="px-3.5 py-1.5 text-xs font-semibold border-orange-500/40 text-orange-600 dark:text-orange-400 bg-orange-500/5 hover:bg-orange-500 hover:text-white transition-colors"
+                className="px-3.5 py-1.5 text-xs font-semibold border-orange-500/40 text-orange-600 bg-orange-500/5 hover:bg-orange-500 hover:text-white transition-colors"
               >
                 Technical & Local SEO Expert
               </Badge>
-              <Badge variant="outline" className="px-3.5 py-1.5 text-xs font-semibold border-gray-300 dark:border-gray-700 text-gray-700 dark:text-gray-300 gap-1.5 hover:border-orange-500 hover:text-orange-500 transition-colors">
+              <Badge variant="outline" className="px-3.5 py-1.5 text-xs font-semibold border-gray-300 text-gray-700 gap-1.5 hover:border-orange-500 hover:text-orange-500 transition-colors">
                 <Smartphone className="w-3.5 h-3.5" />
                 React Native
               </Badge>
@@ -110,7 +110,7 @@ export default function Hero() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.4, duration: 0.6 }}
             >
-              <h1 className="text-4xl sm:text-5xl lg:text-7xl font-bold text-gray-900 dark:text-white leading-tight lg:leading-[0.9] tracking-tight">
+              <h1 className="text-4xl sm:text-5xl lg:text-7xl font-bold text-orange-500 leading-tight lg:leading-[0.9] tracking-tight">
                 Software Engineer
                 <br />
                 <span className="text-orange-500">
@@ -134,7 +134,7 @@ export default function Hero() {
               ].map((tag, index) => (
                 <motion.div
                   key={tag.label}
-                  className="flex items-center gap-2 px-4 py-2 bg-white dark:bg-gray-800 text-gray-800 dark:text-gray-200 border border-gray-200 dark:border-gray-700 rounded-xl shadow-sm hover:border-orange-500 hover:text-orange-500 dark:hover:border-orange-500 dark:hover:text-orange-400 hover:shadow-md transition-all duration-300 cursor-default"
+                  className="flex items-center gap-2 px-4 py-2 bg-gray-50 text-black rounded-xl shadow-sm hover:text-orange-500 hover:shadow-md transition-all duration-300 cursor-default"
                   whileHover={{ scale: 1.05, y: -2 }}
                   initial={{ opacity: 0, x: -20 }}
                   animate={{ opacity: 1, x: 0 }}
@@ -148,7 +148,7 @@ export default function Hero() {
 
             {/* Tagline */}
             <motion.p
-              className="text-lg sm:text-xl lg:text-2xl text-gray-600 dark:text-gray-300 max-w-2xl leading-relaxed font-light"
+              className="text-lg sm:text-xl lg:text-2xl text-black max-w-2xl leading-relaxed font-light"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.7, duration: 0.6 }}
@@ -165,7 +165,7 @@ export default function Hero() {
               transition={{ delay: 0.8, duration: 0.6 }}
             >
               {[
-                { number: '1+', label: 'Years Experience', sublabel: 'Professional' },
+                { number: '2+', label: 'Years Experience', sublabel: 'Professional' },
                 { number: '12+', label: 'Projects Delivered', sublabel: 'Enterprise & Startups' },
                 { number: '100%', label: 'Client Satisfaction', sublabel: 'Quality Focused' }
               ].map((stat, index) => (
@@ -177,13 +177,13 @@ export default function Hero() {
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ delay: 0.9 + index * 0.1, duration: 0.5 }}
                 >
-                  <div className="text-2xl sm:text-3xl lg:text-4xl font-bold text-gray-900 dark:text-white group-hover:text-orange-500 transition-colors">
+                  <div className="text-2xl sm:text-3xl lg:text-4xl font-bold text-orange-500 group-hover:text-orange-600 transition-colors">
                     {stat.number}
                   </div>
-                  <div className="text-xs sm:text-sm font-semibold text-gray-700 dark:text-gray-300 uppercase tracking-wider">
+                  <div className="text-xs sm:text-sm font-semibold text-black uppercase tracking-wider">
                     {stat.label}
                   </div>
-                  <div className="text-xs text-gray-500 dark:text-gray-400">
+                  <div className="text-xs text-gray-600">
                     {stat.sublabel}
                   </div>
                 </motion.div>
@@ -199,7 +199,7 @@ export default function Hero() {
             >
               <motion.a
                 href="mailto:rizwan.abdullah193@gmail.com"
-                className="inline-flex items-center gap-3 px-6 py-3 bg-orange-500 text-white font-semibold rounded-xl shadow-lg shadow-orange-500/25 hover:bg-orange-600 transition-all duration-300"
+                className="inline-flex items-center gap-3 px-6 py-3 bg-black text-white font-semibold rounded-xl shadow-lg shadow-black/20 hover:bg-gray-900 transition-all duration-300"
                 whileHover={{ scale: 1.05, y: -2 }}
                 whileTap={{ scale: 0.95 }}
               >
@@ -208,7 +208,7 @@ export default function Hero() {
               </motion.a>
               <motion.a
                 href="#projects"
-                className="inline-flex items-center gap-3 px-6 py-3 border-2 border-gray-300 dark:border-gray-700 text-gray-800 dark:text-gray-200 font-semibold rounded-xl hover:border-orange-500 hover:text-orange-500 hover:bg-orange-500/5 transition-all duration-300"
+                className="inline-flex items-center gap-3 px-6 py-3 border-2 border-black text-black font-semibold rounded-xl hover:bg-black hover:text-white transition-all duration-300"
                 whileHover={{ scale: 1.05, y: -2 }}
                 whileTap={{ scale: 0.95 }}
               >
@@ -280,7 +280,7 @@ export default function Hero() {
                   <motion.div
                     key={tech.slot}
                     title={'title' in tech ? tech.title : undefined}
-                    className="absolute w-12 h-12 bg-white dark:bg-gray-800 text-gray-800 dark:text-gray-200 hover:text-orange-500 dark:hover:text-orange-400 rounded-full shadow-md flex items-center justify-center border border-gray-200 dark:border-gray-700 hover:border-orange-500 transition-colors"
+                    className="absolute w-12 h-12 bg-white text-black hover:text-orange-500 rounded-full shadow-md flex items-center justify-center transition-colors"
                     style={{
                       top: '50%',
                       left: '50%',
@@ -307,7 +307,7 @@ export default function Hero() {
               {/* Enhanced Certification Cards */}
               <div className="grid grid-cols-1 gap-3 sm:gap-4 max-w-sm mx-auto px-4 sm:px-0">
                 <motion.div
-                  className="bg-white dark:bg-gray-800 rounded-2xl p-6 shadow-md border border-gray-200 dark:border-gray-700 hover:border-orange-500 transition-all duration-300"
+                  className="bg-gray-50 rounded-2xl p-6 shadow-sm hover:shadow-md transition-all duration-300"
                   initial={{ opacity: 0, y: 30 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ delay: 1.2, duration: 0.6 }}
@@ -319,7 +319,7 @@ export default function Hero() {
                         <SiReact className="w-5 h-5 text-white" />
                       </div>
                       <div>
-                        <h3 className="font-bold text-gray-900 dark:text-white text-sm text-left">
+                        <h3 className="font-bold text-black text-sm text-left">
                           SOFTWARE ENGINEER
                         </h3>
                         <p className="text-xs text-orange-500 font-medium text-left">
@@ -335,14 +335,14 @@ export default function Hero() {
                       />
                     </div>
                   </div>
-                  <div className="flex justify-between text-xs text-gray-500 dark:text-gray-400">
+                  <div className="flex justify-between text-xs text-gray-500">
                     <span>Enterprise Ready</span>
-                    <span>1+ Years</span>
+                    <span>2+ Years</span>
                   </div>
                 </motion.div>
 
                 <motion.div
-                  className="bg-white dark:bg-gray-800 rounded-2xl p-6 shadow-md border border-gray-200 dark:border-gray-700 hover:border-orange-500 transition-all duration-300"
+                  className="bg-gray-50 rounded-2xl p-6 shadow-sm hover:shadow-md transition-all duration-300"
                   initial={{ opacity: 0, y: 30 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ delay: 1.4, duration: 0.6 }}
@@ -354,7 +354,7 @@ export default function Hero() {
                         <Globe className="w-5 h-5 text-white" />
                       </div>
                       <div>
-                        <h3 className="font-bold text-gray-900 dark:text-white text-sm text-left">
+                        <h3 className="font-bold text-black text-sm text-left">
                           SEO & FULL STACK
                         </h3>
                         <p className="text-xs text-orange-500 font-medium text-left">
@@ -366,7 +366,7 @@ export default function Hero() {
                       <Award className="w-3 h-3 text-white" />
                     </div>
                   </div>
-                  <div className="flex justify-between text-xs text-gray-500 dark:text-gray-400">
+                  <div className="flex justify-between text-xs text-gray-500">
                     <span>Proven Performance</span>
                     <span>High Organic Reach</span>
                   </div>
@@ -384,12 +384,12 @@ export default function Hero() {
           transition={{ delay: 1.4, duration: 0.6 }}
         >
           <motion.div
-            className="w-6 h-10 border-2 border-gray-400 dark:border-gray-600 rounded-full flex justify-center"
+            className="w-6 h-10 border-2 border-gray-400 rounded-full flex justify-center"
             animate={{ y: [0, 10, 0] }}
             transition={{ duration: 2, repeat: Infinity }}
           >
             <motion.div
-              className="w-1 h-3 bg-gray-400 dark:bg-gray-600 rounded-full mt-2"
+              className="w-1 h-3 bg-gray-400 rounded-full mt-2"
               animate={{ y: [0, 6, 0] }}
               transition={{ duration: 2, repeat: Infinity }}
             />

@@ -26,7 +26,7 @@ export default function SectionHeader({
         {icon}
       </motion.div>
       <div>
-        <h2 className={`text-4xl font-bold bg-gradient-to-r ${gradient} bg-clip-text text-transparent mb-2`}>
+        <h2 className="text-4xl font-bold text-orange-500 mb-2">
           {title}
         </h2>
         <div className="w-24 h-1 bg-orange-500 rounded-full"></div>

@@ -7,8 +7,8 @@ export const experiences: Experience[] = [
     location: "Birmingham, UK (Remote)",
     period: "Dec 2025 – Present",
     gradient: "from-orange-500 to-amber-500",
-    bgGradient: "bg-white dark:bg-gray-800",
-    borderColor: "border-gray-200 dark:border-gray-700",
+    bgGradient: "bg-white",
+    borderColor: "border-0",
     current: true,
     achievements: [
       "Planned and implemented technical SEO, on-page SEO, and local SEO across four live service-business websites, completing optimization for all four.",
@@ -22,8 +22,8 @@ export const experiences: Experience[] = [
     location: "MGC Complex G8 Markaz, Islamabad",
     period: "May 2025 – Mar 2026",
     gradient: "from-orange-500 to-amber-500",
-    bgGradient: "bg-white dark:bg-gray-800",
-    borderColor: "border-gray-200 dark:border-gray-700",
+    bgGradient: "bg-white",
+    borderColor: "border-0",
     achievements: [
       "Working on full-stack web and mobile solutions for housing and real estate management systems.",
       "Contributing to backend API development, front-end feature implementation, and cross-team code reviews."
@@ -35,8 +35,8 @@ export const experiences: Experience[] = [
     location: "Islamabad, Pakistan",
     period: "Feb 2025 – Apr 2025",
     gradient: "from-orange-500 to-amber-500",
-    bgGradient: "bg-white dark:bg-gray-800",
-    borderColor: "border-gray-200 dark:border-gray-700",
+    bgGradient: "bg-white",
+    borderColor: "border-0",
     achievements: [
       "Developed responsive UI components and integrated third-party APIs in a remote Agile environment.",
       "Collaborated closely with design and backend teams to ship product features on schedule."
@@ -48,8 +48,8 @@ export const experiences: Experience[] = [
     location: "G8 Markaz, Islamabad",
     period: "Nov 2024 – Jan 2025",
     gradient: "from-orange-500 to-amber-500",
-    bgGradient: "bg-white dark:bg-gray-800",
-    borderColor: "border-gray-200 dark:border-gray-700",
+    bgGradient: "bg-white",
+    borderColor: "border-0",
     achievements: [
       "Built and maintained web applications using React.js and Node.js for client-facing products.",
       "Optimized application performance and improved page load times through code refactoring and lazy loading."

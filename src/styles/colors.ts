@@ -14,37 +14,37 @@ export const colorPalette = {
   sections: {
     hero: {
       accent: 'from-orange-500/10 to-orange-500/5',
-      bg: 'bg-white dark:bg-gray-900',
+      bg: 'bg-white',
     },
     summary: {
       accent: 'from-orange-500/10 to-orange-500/5',
-      bg: 'bg-white dark:bg-gray-800',
+      bg: 'bg-white',
     },
     experience: {
       accent: 'from-orange-500/10 to-orange-500/5',
-      bg: 'bg-white dark:bg-gray-800',
+      bg: 'bg-white',
     },
     skills: {
       accent: 'from-orange-500/10 to-orange-500/5',
-      bg: 'bg-white dark:bg-gray-800',
+      bg: 'bg-white',
     },
     education: {
       accent: 'from-orange-500/10 to-orange-500/5',
-      bg: 'bg-white dark:bg-gray-800',
+      bg: 'bg-white',
     },
     projects: {
       accent: 'from-orange-500/10 to-orange-500/5',
-      bg: 'bg-white dark:bg-gray-800',
+      bg: 'bg-white',
     },
     contact: {
       accent: 'from-orange-500/10 to-orange-500/5',
-      bg: 'bg-white dark:bg-gray-800',
+      bg: 'bg-white',
     },
   },
 
   badges: {
     primary: 'bg-orange-500 text-white',
-    secondary: 'bg-orange-50 dark:bg-orange-950/40 text-orange-700 dark:text-orange-300 border border-orange-200 dark:border-orange-800',
+    secondary: 'bg-orange-50 text-orange-700',
   },
 
   icons: {

@@ -14,13 +14,11 @@ export default function Education() {
       viewport={{ once: true }}
       transition={{ duration: 0.6 }}
     >
-      <motion.div 
-        className="relative bg-white dark:bg-gray-800 rounded-2xl sm:rounded-3xl shadow-xl p-6 sm:p-8 lg:p-12 border border-gray-200 dark:border-gray-700 hover:border-orange-500/50 dark:hover:border-orange-500/50 transition-all duration-300 overflow-hidden"
-        whileHover={{ y: -5 }}
-        transition={{ duration: 0.3 }}
+      <div 
+        className="relative bg-white py-4 overflow-hidden"
       >
         {/* Soft Orange Background Glow */}
-        <div className="absolute top-0 right-0 w-64 h-64 bg-orange-500/5 dark:bg-orange-500/10 rounded-full blur-3xl pointer-events-none"></div>
+        <div className="absolute top-0 right-0 w-64 h-64 bg-orange-500/5 rounded-full blur-3xl pointer-events-none"></div>
         
         <div className="relative z-10">
           <div className="flex items-start gap-6 mb-12">
@@ -32,7 +30,7 @@ export default function Education() {
               <GraduationCap className="w-8 h-8 text-white" />
             </motion.div>
             <div>
-              <h2 className="text-4xl font-bold text-gray-900 dark:text-white mb-2">
+              <h2 className="text-4xl font-bold text-orange-500 mb-2">
                 Education & Certifications
               </h2>
               <div className="w-24 h-1 bg-orange-500 rounded-full"></div>
@@ -42,7 +40,7 @@ export default function Education() {
           <div className="grid lg:grid-cols-2 gap-8">
             {/* Degree */}
             <motion.div 
-              className="relative group bg-gray-50/60 dark:bg-gray-700/40 rounded-2xl p-8 border border-gray-200 dark:border-gray-700 hover:border-orange-500 hover:shadow-xl transition-all duration-300"
+              className="relative group bg-gray-50 rounded-2xl p-6 sm:p-8 shadow-sm hover:shadow-md transition-all duration-300"
               whileHover={{ x: 6, scale: 1.01 }}
               initial={{ opacity: 0, x: -20 }}
               whileInView={{ opacity: 1, x: 0 }}
@@ -53,20 +51,20 @@ export default function Education() {
                   <GraduationCap className="w-7 h-7 text-white" />
                 </div>
                 <div className="flex-1">
-                  <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-2 group-hover:text-orange-500 transition-colors">
+                  <h3 className="text-2xl font-bold text-orange-500 mb-2 group-hover:text-orange-600 transition-colors">
                     Bachelor of Computer Science
                   </h3>
                   <div className="flex items-center gap-2 mb-2">
                     <Globe className="w-4 h-4 text-orange-500" />
-                    <span className="text-lg font-medium text-gray-700 dark:text-gray-300">Air University</span>
+                    <span className="text-lg font-medium text-black">Air University</span>
                   </div>
-                  <div className="flex items-center gap-2 text-gray-500 dark:text-gray-400 text-sm">
+                  <div className="flex items-center gap-2 text-gray-500 text-sm">
                     <MapPin className="w-4 h-4" />
                     <span>Islamabad, Pakistan</span>
                   </div>
                 </div>
                 <motion.div
-                  className="px-4 py-1.5 bg-orange-500 text-white rounded-full text-sm font-semibold shadow-md shadow-orange-500/20"
+                  className="px-4 py-1.5 bg-black text-white rounded-full text-sm font-semibold shadow-md shadow-black/20"
                   whileHover={{ scale: 1.05 }}
                 >
                   2020 - 2024
@@ -74,7 +72,7 @@ export default function Education() {
               </div>
               
               <div className="space-y-3">
-                <h4 className="font-semibold text-gray-900 dark:text-gray-100 text-sm uppercase tracking-wider">Key Achievements:</h4>
+                <h4 className="font-bold text-orange-500 text-sm uppercase tracking-wider">Key Achievements:</h4>
                 {[
                   'Graduated with distinction in Software Engineering',
                   'Led multiple capstone projects using modern tech stack',
@@ -89,7 +87,7 @@ export default function Education() {
                     transition={{ delay: 0.1 * i, duration: 0.5 }}
                   >
                     <div className="w-2 h-2 rounded-full bg-orange-500 mt-2 flex-shrink-0"></div>
-                    <span className="text-gray-700 dark:text-gray-300 text-sm sm:text-base">{achievement}</span>
+                    <span className="text-black text-sm sm:text-base">{achievement}</span>
                   </motion.div>
                 ))}
               </div>
@@ -98,7 +96,7 @@ export default function Education() {
             {/* Certifications */}
             <div className="space-y-6">
               <motion.div
-                className="bg-gray-50/60 dark:bg-gray-700/40 rounded-2xl p-6 border border-gray-200 dark:border-gray-700 hover:border-orange-500 hover:shadow-lg transition-all duration-300 group"
+                className="bg-gray-50 rounded-2xl p-6 shadow-sm hover:shadow-md transition-all duration-300 group"
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.3, duration: 0.6 }}
@@ -110,13 +108,13 @@ export default function Education() {
                       <SiReact className="w-6 h-6" />
                     </div>
                     <div>
-                      <h3 className="text-lg font-bold text-gray-900 dark:text-white group-hover:text-orange-500 transition-colors">
+                      <h3 className="text-lg font-bold text-orange-500 group-hover:text-orange-600 transition-colors">
                         Developing Front-End Apps with React
                       </h3>
-                      <p className="text-gray-600 dark:text-gray-400 font-medium">IBM</p>
+                      <p className="text-black font-medium">IBM</p>
                     </div>
                   </div>
-                  <span className="px-3 py-1 bg-orange-500 text-white rounded-full text-xs font-semibold">
+                  <span className="px-3 py-1 bg-black text-white rounded-full text-xs font-semibold">
                     April 2023
                   </span>
                 </div>
@@ -124,7 +122,7 @@ export default function Education() {
                   href="https://coursera.org/verify/PGS8NVNDM6UN"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 px-4 py-2 bg-orange-500 hover:bg-orange-600 text-white rounded-lg text-sm font-semibold shadow-md shadow-orange-500/20 transition-all duration-300"
+                  className="inline-flex items-center gap-2 px-4 py-2 bg-black hover:bg-gray-900 text-white rounded-lg text-sm font-semibold shadow-md shadow-black/20 transition-all duration-300"
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
                 >
@@ -134,7 +132,7 @@ export default function Education() {
               </motion.div>
 
               <motion.div
-                className="bg-gray-50/60 dark:bg-gray-700/40 rounded-2xl p-6 border border-gray-200 dark:border-gray-700 hover:border-orange-500 hover:shadow-lg transition-all duration-300 group"
+                className="bg-gray-50 rounded-2xl p-6 shadow-sm hover:shadow-md transition-all duration-300 group"
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.4, duration: 0.6 }}
@@ -146,13 +144,13 @@ export default function Education() {
                       <SiGithub className="w-6 h-6" />
                     </div>
                     <div>
-                      <h3 className="text-lg font-bold text-gray-900 dark:text-white group-hover:text-orange-500 transition-colors">
+                      <h3 className="text-lg font-bold text-orange-500 group-hover:text-orange-600 transition-colors">
                         Getting Started with Git and GitHub
                       </h3>
-                      <p className="text-gray-600 dark:text-gray-400 font-medium">IBM</p>
+                      <p className="text-black font-medium">IBM</p>
                     </div>
                   </div>
-                  <span className="px-3 py-1 bg-orange-500 text-white rounded-full text-xs font-semibold">
+                  <span className="px-3 py-1 bg-black text-white rounded-full text-xs font-semibold">
                     June 2023
                   </span>
                 </div>
@@ -160,7 +158,7 @@ export default function Education() {
                   href="https://coursera.org/verify/L7HMA72GX8DU"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 px-4 py-2 bg-orange-500 hover:bg-orange-600 text-white rounded-lg text-sm font-semibold shadow-md shadow-orange-500/20 transition-all duration-300"
+                  className="inline-flex items-center gap-2 px-4 py-2 bg-black hover:bg-gray-900 text-white rounded-lg text-sm font-semibold shadow-md shadow-black/20 transition-all duration-300"
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
                 >
@@ -171,12 +169,12 @@ export default function Education() {
 
               {/* Continuous Learning */}
               <motion.div
-                className="bg-gray-50/60 dark:bg-gray-700/40 rounded-2xl p-6 border border-gray-200 dark:border-gray-700 hover:border-orange-500 transition-colors"
+                className="bg-gray-50 rounded-2xl p-6 shadow-sm transition-colors"
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.5, duration: 0.6 }}
               >
-                <h4 className="font-bold text-gray-900 dark:text-white mb-4 flex items-center gap-2">
+                <h4 className="font-bold text-orange-500 mb-4 flex items-center gap-2">
                   <Award className="w-5 h-5 text-orange-500" />
                   Continuous Learning
                 </h4>
@@ -189,7 +187,7 @@ export default function Education() {
                   ].map((skill, i) => (
                     <div key={i} className="flex items-center gap-2">
                       <div className="w-2 h-2 bg-orange-500 rounded-full"></div>
-                      <span className="text-gray-700 dark:text-gray-300">{skill}</span>
+                      <span className="text-black">{skill}</span>
                     </div>
                   ))}
                 </div>
@@ -197,7 +195,7 @@ export default function Education() {
             </div>
           </div>
         </div>
-      </motion.div>
+      </div>
     </motion.section>
   );
 }
