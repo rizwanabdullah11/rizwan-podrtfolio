@@ -14,7 +14,7 @@ export default function Navigation() {
     { id: 'home', label: 'HOME', icon: Home },
     { id: 'summary', label: 'ABOUT', icon: User },
     { id: 'experience', label: 'EXPERIENCE', icon: Briefcase },
-    { id: 'skills', label: 'SKILLS', icon: Code },
+    { id: 'skills', label: 'EXPERTISE', icon: Code },
     { id: 'education', label: 'EDUCATION', icon: Award },
     { id: 'projects', label: 'PROJECTS', icon: FolderOpen },
     { id: 'contact', label: 'CONTACT', icon: Mail },

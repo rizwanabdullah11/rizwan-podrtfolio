@@ -1,43 +1,13 @@
 'use client';
 
 import { motion } from 'framer-motion';
-import { User, Smartphone, Globe, Code2, Zap, Shield, GitBranch } from 'lucide-react';
-import {
-  SiReact,
-  SiNextdotjs,
-  SiTypescript,
-  SiJavascript,
-  SiNodedotjs,
-  SiPostgresql,
-  SiMongodb,
-  SiFirebase,
-  SiRedux,
-  SiTailwindcss,
-} from 'react-icons/si';
-import { FaReact } from 'react-icons/fa';
-
-const techStack = [
-  { name: 'Next.js',      icon: SiNextdotjs,    color: 'text-black',   bg: 'bg-gray-500/10' },
-  { name: 'React.js',     icon: SiReact,        color: 'text-cyan-400',   bg: 'bg-cyan-400/10'   },
-  { name: 'React Native', icon: FaReact,        color: 'text-cyan-500',   bg: 'bg-cyan-500/10'   },
-  { name: 'TypeScript',   icon: SiTypescript,   color: 'text-blue-500',   bg: 'bg-blue-500/10'   },
-  { name: 'JavaScript',   icon: SiJavascript,   color: 'text-yellow-500', bg: 'bg-yellow-500/10' },
-  { name: 'Node.js',      icon: SiNodedotjs,    color: 'text-green-500',  bg: 'bg-green-500/10'  },
-  { name: 'PostgreSQL',   icon: SiPostgresql,   color: 'text-blue-600',   bg: 'bg-blue-600/10'   },
-  { name: 'MongoDB',      icon: SiMongodb,      color: 'text-green-600',  bg: 'bg-green-600/10'  },
-  { name: 'Firebase',     icon: SiFirebase,     color: 'text-orange-500', bg: 'bg-orange-500/10' },
-  { name: 'Tailwind CSS', icon: SiTailwindcss,  color: 'text-teal-400',   bg: 'bg-teal-400/10'   },
-  { name: 'SEO & Performance', icon: Globe,      color: 'text-emerald-500',bg: 'bg-emerald-500/10' },
-];
+import { User, Smartphone, Globe, Zap } from 'lucide-react';
 
 const highlights = [
-  { icon: Globe,      label: 'Web & Enterprise', value: 'Next.js & RBAC Portals', color: 'from-emerald-500 to-teal-500'  },
-  { icon: Zap,        label: 'Search Optimization', value: 'Technical & Local SEO', color: 'from-cyan-500 to-emerald-500' },
-  { icon: Smartphone, label: 'Mobile Apps',      value: 'React Native',       color: 'from-cyan-500 to-blue-500'     },
-  { icon: Zap,        label: 'Experience',       value: '2+ Years',           color: 'from-yellow-500 to-orange-500' },
-  { icon: Code2,      label: 'Apps Delivered',   value: '12+',                color: 'from-purple-500 to-indigo-500' },
-  { icon: Shield,     label: 'Code Quality',     value: 'Best Practices & RBAC', color: 'from-teal-500 to-emerald-500'  },
-  { icon: GitBranch,  label: 'Version Control',  value: 'Git & GitHub',       color: 'from-gray-600 to-gray-800'     },
+  { icon: Zap,        label: 'Experience',       value: '2+ Years' },
+  { icon: Globe,      label: 'Web & Enterprise', value: 'Next.js & RBAC Portals' },
+  { icon: Zap,        label: 'Search Optimization', value: 'Technical & Local SEO' },
+  { icon: Smartphone, label: 'Mobile Apps',      value: 'React Native' },
 ];
 
 export default function Summary() {
@@ -86,35 +56,15 @@ export default function Summary() {
               transition={{ duration: 0.6, delay: 0.1 }}
             >
               <p className="text-lg leading-relaxed">
-                Hi, I&apos;m <span className="font-semibold text-orange-500">Rizwan Abdullah</span> — a Software Engineer based in Islamabad, Pakistan, with <span className="font-semibold text-orange-500">2+ years of professional experience</span> building web applications that are fast, scalable, and user-friendly — with mobile work when the product calls for it.
+                Hi, I&apos;m <span className="font-semibold text-orange-500">Rizwan Abdullah</span> — a Software Engineer and SEO Expert based in Islamabad with <span className="font-semibold text-orange-500">2+ years of professional experience</span> building high-performance web applications and scalable enterprise systems.
               </p>
 
               <p className="text-base leading-relaxed">
-                My main focus is <span className="font-medium text-black">Next.js</span> and the modern React ecosystem: App Router, server and client components, and polished UI with Tailwind and <span className="font-medium text-black">shadcn/ui</span>. Beyond interface design, I specialize in <span className="font-semibold text-orange-500">Search Engine Optimization (SEO)</span> — having implemented full technical and local SEO strategies across multiple live commercial websites to drive organic search visibility, Core Web Vitals performance, and high conversion rates.
+                My primary expertise centers around <span className="font-medium text-black">Next.js (App Router)</span>, TypeScript, and modern UI architectures with Tailwind CSS and <span className="font-medium text-black">shadcn/ui</span>. Beyond engineering clean frontends, I specialize in <span className="font-semibold text-orange-500">Technical & Local SEO</span> — optimizing live commercial websites for top search visibility, Core Web Vitals, and conversions.
               </p>
 
               <p className="text-base leading-relaxed">
-                I also architect complex enterprise web applications — including multi-tier management portals with granular <span className="font-semibold text-orange-500">Role-Based Access Control (RBAC)</span> supporting Organization, Employee, Auditor, and Admin workflows (such as ISSO compliance platforms and business suites).
-              </p>
-
-              <p className="text-base leading-relaxed">
-                I also build with <span className="font-medium text-black">React.js</span> more broadly, and <span className="font-medium text-black">React Native</span> for cross-platform mobile — smooth flows, solid state management, and features that work reliably on iOS and Android.
-              </p>
-
-              <p className="text-base leading-relaxed">
-                I&apos;m comfortable across the full stack — using <span className="font-medium text-black">Node.js</span>, <span className="font-medium text-black">PostgreSQL</span>, <span className="font-medium text-black">MongoDB</span>, and <span className="font-medium text-black">Firebase</span> on the backend. I write TypeScript by default, use Redux for state management, and keep my UIs consistent with Tailwind CSS and component libraries like ShadCN UI.
-              </p>
-
-              <p className="text-base leading-relaxed">
-                Over the past two years I&apos;ve worked across different stacks — <span className="font-medium text-black">DragSense</span> (Next.js, Tailwind, Node.js), <span className="font-medium text-black">iOPTIME</span> as an intern (React, Laravel, Tailwind), and currently <span className="font-medium text-black">MUST Pvt Ltd</span> where I ship Next.js and shadcn-powered web work alongside React Native when needed.
-              </p>
-
-              <p className="text-base leading-relaxed">
-                I believe good software is more than working code — it&apos;s readable, testable, and built with the next developer in mind. I follow clean code principles, use Git workflows properly, and always think about edge cases and error handling before shipping.
-              </p>
-
-              <p className="text-base leading-relaxed">
-                When I&apos;m not coding, I&apos;m exploring new tools, keeping up with Next.js and the wider React ecosystem, and looking for ways to improve the products I work on. I&apos;m always open to interesting projects and collaborations — feel free to reach out.
+                I also architect complex enterprise solutions with multi-tier <span className="font-semibold text-orange-500">Role-Based Access Control (RBAC)</span> for Admin, Organization, Staff, and Auditor workflows, alongside cross-platform mobile apps with <span className="font-medium text-black">React Native</span> and robust backend APIs with <span className="font-medium text-black">Node.js, PostgreSQL, and MongoDB</span>.
               </p>
             </motion.div>
 
@@ -154,28 +104,6 @@ export default function Summary() {
                 </div>
               </div>
 
-              {/* Tech stack */}
-              <div>
-                <h3 className="text-sm font-bold uppercase tracking-widest text-orange-500 mb-4">
-                  Tech Stack
-                </h3>
-                <div className="flex flex-wrap gap-2">
-                  {techStack.map((tech, i) => (
-                    <motion.div
-                      key={tech.name}
-                      className="flex items-center gap-2 px-3 py-1.5 rounded-lg bg-gray-100 hover:text-orange-500 transition-colors cursor-default"
-                      initial={{ opacity: 0, scale: 0.8 }}
-                      whileInView={{ opacity: 1, scale: 1 }}
-                      viewport={{ once: true }}
-                      transition={{ delay: 0.4 + i * 0.05, duration: 0.3 }}
-                      whileHover={{ scale: 1.05, y: -2 }}
-                    >
-                      <tech.icon className="w-4 h-4 text-orange-500" />
-                      <span className="text-sm font-medium text-black">{tech.name}</span>
-                    </motion.div>
-                  ))}
-                </div>
-              </div>
 
               {/* What I build */}
               <div>
@@ -184,11 +112,9 @@ export default function Summary() {
                 </h3>
                 <div className="space-y-3">
                   {[
-                    { icon: '🌐', title: 'Web Apps & Portals',  desc: 'Next.js, React, Tailwind & shadcn/ui — my main focus' },
-                    { icon: '🚀', title: 'SEO Optimization',    desc: 'Technical SEO, schema markup, Core Web Vitals & organic rankings' },
-                    { icon: '🏢', title: 'Role-Based Panels',   desc: 'ISSO-style RBAC architectures for Admin, Organization, Staff & Auditors' },
-                    { icon: '📱', title: 'Mobile Apps',         desc: 'Cross-platform iOS & Android with React Native' },
-                    { icon: '⚙️', title: 'Backend APIs',        desc: 'REST APIs with Node.js, PostgreSQL & MongoDB'  },
+                    { icon: '🌐', title: 'Web Apps & RBAC Portals',  desc: 'Next.js (App Router), Tailwind & shadcn/ui with granular role-based permissions' },
+                    { icon: '🚀', title: 'Technical & Local SEO',    desc: 'Keyword strategy, schema markup, Core Web Vitals & organic ranking' },
+                    { icon: '📱', title: 'Mobile & APIs',            desc: 'Cross-platform iOS & Android with React Native and Node.js/PostgreSQL backends' },
                   ].map((item, i) => (
                     <motion.div
                       key={item.title}
