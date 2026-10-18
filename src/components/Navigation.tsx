@@ -15,8 +15,8 @@ export default function Navigation() {
     { id: 'summary', label: 'ABOUT', icon: User },
     { id: 'experience', label: 'EXPERIENCE', icon: Briefcase },
     { id: 'skills', label: 'SKILLS', icon: Code },
-    { id: 'expertise', label: 'EXPERTISE', icon: Award },
-    { id: 'projects', label: 'WORKS', icon: FolderOpen },
+    { id: 'education', label: 'EDUCATION', icon: Award },
+    { id: 'projects', label: 'PROJECTS', icon: FolderOpen },
     { id: 'contact', label: 'CONTACT', icon: Mail },
   ];
 
@@ -53,14 +53,15 @@ export default function Navigation() {
           <motion.div
             initial={{ opacity: 0, x: -20 }}
             animate={{ opacity: 1, x: 0 }}
-            className="flex items-center gap-3"
+            className="flex items-center gap-3 cursor-pointer"
+            onClick={() => scrollToSection('home')}
           >
-            <div className="w-10 h-10 bg-gradient-to-br from-teal-600 to-emerald-600 rounded-xl flex items-center justify-center shadow-lg">
+            <div className="w-10 h-10 bg-orange-500 rounded-xl flex items-center justify-center shadow-md shadow-orange-500/30">
               <span className="text-white font-bold text-sm">RA</span>
             </div>
             <div>
-              <div className="text-xl font-bold text-gray-900 dark:text-gray-100">Rizwan</div>
-              <div className="text-xs text-gray-500 dark:text-gray-500 -mt-1">Software Engineer</div>
+              <div className="text-xl font-bold text-gray-900 dark:text-white">Rizwan</div>
+              <div className="text-xs text-orange-500 font-semibold -mt-1">Software Engineer</div>
             </div>
           </motion.div>
 
@@ -74,7 +75,7 @@ export default function Navigation() {
                   onClick={() => scrollToSection(item.id)}
                   className={`relative px-4 py-2 text-sm font-medium tracking-wide transition-all duration-300 rounded-lg group ${
                     activeSection === item.id
-                      ? 'text-teal-600 dark:text-teal-400 bg-teal-50 dark:bg-teal-900/20'
+                      ? 'text-orange-600 dark:text-orange-400 bg-orange-50 dark:bg-orange-950/30 font-semibold'
                       : 'text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-100 hover:bg-gray-50 dark:hover:bg-gray-800/50'
                   }`}
                   whileHover={{ y: -1 }}
@@ -83,7 +84,7 @@ export default function Navigation() {
                   {item.label}
                   {activeSection === item.id && (
                     <motion.div
-                      className="absolute bottom-0 left-1/2 w-1 h-1 bg-teal-500 rounded-full"
+                      className="absolute bottom-0 left-1/2 w-1 h-1 bg-orange-500 rounded-full"
                       layoutId="activeIndicator"
                       style={{ x: '-50%' }}
                     />
@@ -158,10 +159,10 @@ export default function Navigation() {
                 <motion.button
                   key={item.id}
                   onClick={() => scrollToSection(item.id)}
-                  className={`flex items-center gap-3 w-full px-4 py-3 rounded-xl transition-all duration-300 ${
+                  className={`flex items-center gap-3 w-full px-4 py-3 rounded-xl transition-all duration-300 font-medium ${
                     activeSection === item.id
-                      ? 'text-white bg-gradient-to-r from-blue-500 to-purple-500 shadow-lg'
-                      : 'text-gray-700 dark:text-gray-300 hover:text-white hover:bg-gradient-to-r hover:from-blue-400 hover:to-purple-400'
+                      ? 'text-white bg-orange-500 shadow-lg shadow-orange-500/25'
+                      : 'text-gray-700 dark:text-gray-300 hover:text-orange-500 hover:bg-orange-500/10'
                   }`}
                   initial={{ opacity: 0, x: -20 }}
                   animate={{ opacity: isOpen ? 1 : 0, x: isOpen ? 0 : -20 }}

@@ -21,7 +21,7 @@ export default function Footer() {
               href={personalInfo.github} 
               target="_blank" 
               rel="noopener noreferrer"
-              className="text-gray-400 hover:text-white transition-colors duration-300 hover:scale-110 transform"
+              className="text-gray-400 hover:text-orange-500 transition-colors duration-300 hover:scale-110 transform"
               aria-label="GitHub"
             >
               <Github className="w-5 h-5" />
@@ -30,14 +30,14 @@ export default function Footer() {
               href={personalInfo.linkedin} 
               target="_blank" 
               rel="noopener noreferrer"
-              className="text-gray-400 hover:text-white transition-colors duration-300 hover:scale-110 transform"
+              className="text-gray-400 hover:text-orange-500 transition-colors duration-300 hover:scale-110 transform"
               aria-label="LinkedIn"
             >
               <Linkedin className="w-5 h-5" />
             </a>
             <a 
               href={`mailto:${personalInfo.email}`}
-              className="text-gray-400 hover:text-white transition-colors duration-300 hover:scale-110 transform"
+              className="text-gray-400 hover:text-orange-500 transition-colors duration-300 hover:scale-110 transform"
               aria-label="Email"
             >
               <Mail className="w-5 h-5" />

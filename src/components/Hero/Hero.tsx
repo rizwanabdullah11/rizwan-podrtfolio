@@ -38,15 +38,15 @@ export default function Hero() {
   return (
     <motion.section 
       id="home"
-      className="min-h-screen bg-gradient-to-br from-gray-50 via-white to-teal-50 dark:from-gray-900 dark:via-gray-800 dark:to-gray-900 pt-20 relative overflow-hidden"
+      className="min-h-screen bg-white dark:bg-gray-900 pt-20 relative overflow-hidden"
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       transition={{ duration: 0.8 }}
     >
-      {/* Background Elements */}
-      <div className="absolute inset-0 overflow-hidden">
+      {/* Background Soft Glow */}
+      <div className="absolute inset-0 overflow-hidden pointer-events-none">
         <motion.div
-          className="absolute top-1/4 right-1/4 w-96 h-96 bg-gradient-to-br from-teal-400/20 to-emerald-500/20 rounded-full blur-3xl"
+          className="absolute top-1/4 right-1/4 w-96 h-96 bg-orange-500/10 dark:bg-orange-500/15 rounded-full blur-3xl"
           animate={{
             scale: [1, 1.2, 1],
             rotate: [0, 180, 360],
@@ -58,7 +58,7 @@ export default function Hero() {
           }}
         />
         <motion.div
-          className="absolute bottom-1/4 left-1/4 w-80 h-80 bg-gradient-to-br from-emerald-400/20 to-cyan-500/20 rounded-full blur-3xl"
+          className="absolute bottom-1/4 left-1/4 w-80 h-80 bg-orange-400/10 dark:bg-orange-600/15 rounded-full blur-3xl"
           animate={{
             scale: [1.2, 1, 1.2],
             rotate: [360, 180, 0],
@@ -80,7 +80,7 @@ export default function Hero() {
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
           >
-            {/* Focus strip: web-first + mobile */}
+            {/* Focus badges */}
             <motion.div
               className="flex flex-wrap items-center gap-2"
               initial={{ opacity: 0, y: 20 }}
@@ -88,13 +88,19 @@ export default function Hero() {
               transition={{ delay: 0.3, duration: 0.6 }}
             >
               <Badge
-                className="px-3 py-1 text-xs font-medium border-0 bg-gradient-to-r from-emerald-600 to-teal-600 text-white shadow-md"
+                className="px-3.5 py-1.5 text-xs font-semibold border-0 bg-orange-500 text-white shadow-sm shadow-orange-500/30"
               >
-                Main focus: Next.js & web
+                Next.js & Enterprise Portals
               </Badge>
-              <Badge variant="outline" className="px-3 py-1 text-xs font-medium border-teal-500/40 text-teal-700 dark:text-teal-300 gap-1.5">
+              <Badge
+                variant="outline"
+                className="px-3.5 py-1.5 text-xs font-semibold border-orange-500/40 text-orange-600 dark:text-orange-400 bg-orange-500/5 hover:bg-orange-500 hover:text-white transition-colors"
+              >
+                Technical & Local SEO Expert
+              </Badge>
+              <Badge variant="outline" className="px-3.5 py-1.5 text-xs font-semibold border-gray-300 dark:border-gray-700 text-gray-700 dark:text-gray-300 gap-1.5 hover:border-orange-500 hover:text-orange-500 transition-colors">
                 <Smartphone className="w-3.5 h-3.5" />
-                React Native app shipped
+                React Native
               </Badge>
             </motion.div>
 
@@ -104,16 +110,16 @@ export default function Hero() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.4, duration: 0.6 }}
             >
-              <h1 className="text-4xl sm:text-5xl lg:text-7xl font-bold text-gray-900 dark:text-gray-100 leading-tight lg:leading-[0.9] tracking-tight">
+              <h1 className="text-4xl sm:text-5xl lg:text-7xl font-bold text-gray-900 dark:text-white leading-tight lg:leading-[0.9] tracking-tight">
                 Software Engineer
                 <br />
-                <span className="bg-gradient-to-r from-teal-600 via-emerald-600 to-cyan-600 bg-clip-text text-transparent">
+                <span className="text-orange-500">
                   Rizwan Abdullah
                 </span>
               </h1>
             </motion.div>
 
-            {/* Expertise Tags — web primary; mobile called out secondarily */}
+            {/* Expertise Tags */}
             <motion.div
               className="flex flex-wrap gap-3"
               initial={{ opacity: 0, y: 20 }}
@@ -121,42 +127,34 @@ export default function Hero() {
               transition={{ delay: 0.5, duration: 0.6 }}
             >
               {[
-                { kind: 'solid' as const, label: 'Next.js & Web', icon: SiNextdotjs, color: 'from-emerald-500 to-teal-600' },
-                { kind: 'solid' as const, label: 'Full Stack', icon: Code, color: 'from-teal-500 to-emerald-600' },
-                { kind: 'solid' as const, label: 'Web & APIs', icon: Globe, color: 'from-cyan-500 to-cyan-700' },
-                {
-                  kind: 'outline' as const,
-                  label: 'React Native · app shipped',
-                  icon: Smartphone,
-                },
+                { label: 'Next.js & Portals', icon: SiNextdotjs },
+                { label: 'SEO Implementation', icon: Globe },
+                { label: 'ISSO-style RBAC Panels', icon: Code },
+                { label: 'React Native', icon: Smartphone },
               ].map((tag, index) => (
                 <motion.div
-                  key={tag.label + (tag.kind === 'outline' ? '-outline' : '')}
-                  className={
-                    tag.kind === 'solid'
-                      ? `flex items-center gap-2 px-4 py-2 bg-gradient-to-r ${tag.color} text-white rounded-lg shadow-lg hover:shadow-xl transition-all duration-300`
-                      : 'flex items-center gap-2 px-4 py-2 rounded-lg border-2 border-teal-500/35 bg-white/70 dark:bg-gray-800/70 text-gray-800 dark:text-gray-200 shadow-sm hover:border-teal-500/60 hover:shadow-md transition-all duration-300'
-                  }
+                  key={tag.label}
+                  className="flex items-center gap-2 px-4 py-2 bg-white dark:bg-gray-800 text-gray-800 dark:text-gray-200 border border-gray-200 dark:border-gray-700 rounded-xl shadow-sm hover:border-orange-500 hover:text-orange-500 dark:hover:border-orange-500 dark:hover:text-orange-400 hover:shadow-md transition-all duration-300 cursor-default"
                   whileHover={{ scale: 1.05, y: -2 }}
                   initial={{ opacity: 0, x: -20 }}
                   animate={{ opacity: 1, x: 0 }}
                   transition={{ delay: 0.6 + index * 0.1, duration: 0.5 }}
                 >
-                  <tag.icon className="w-4 h-4 shrink-0" />
-                  <span className="text-sm font-medium leading-tight">{tag.label}</span>
+                  <tag.icon className="w-4 h-4 shrink-0 text-orange-500" />
+                  <span className="text-sm font-semibold leading-tight">{tag.label}</span>
                 </motion.div>
               ))}
             </motion.div>
 
             {/* Tagline */}
             <motion.p
-              className="text-lg sm:text-xl lg:text-2xl text-gray-600 dark:text-gray-400 max-w-2xl leading-relaxed font-light"
+              className="text-lg sm:text-xl lg:text-2xl text-gray-600 dark:text-gray-300 max-w-2xl leading-relaxed font-light"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.7, duration: 0.6 }}
             >
-              I focus on production-ready web apps with Next.js — fast UIs, solid architecture, and clean full-stack delivery.
-              <span className="text-teal-600 dark:text-teal-400 font-medium"> I&apos;ve also built a React Native mobile app end to end — check the Mobile Apps tab under Projects for details.</span>
+              I architect high-performance web applications with Next.js & TypeScript, deliver comprehensive on-page & technical SEO for commercial websites, and build enterprise-grade RBAC management portals.
+              <span className="text-orange-500 font-medium"> I also develop cross-platform mobile apps with React Native.</span>
             </motion.p>
 
             {/* Stats Row */}
@@ -168,24 +166,24 @@ export default function Hero() {
             >
               {[
                 { number: '1+', label: 'Years Experience', sublabel: 'Professional' },
-                { number: '10+', label: 'Projects Delivered', sublabel: 'Enterprise & Startups' },
+                { number: '12+', label: 'Projects Delivered', sublabel: 'Enterprise & Startups' },
                 { number: '100%', label: 'Client Satisfaction', sublabel: 'Quality Focused' }
               ].map((stat, index) => (
                 <motion.div
                   key={stat.label}
-                  className="text-center group"
+                  className="text-center group p-3 rounded-xl transition-colors hover:bg-orange-500/5"
                   whileHover={{ scale: 1.05 }}
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ delay: 0.9 + index * 0.1, duration: 0.5 }}
                 >
-                  <div className="text-2xl sm:text-3xl lg:text-4xl font-bold text-gray-900 dark:text-gray-100 group-hover:text-teal-600 dark:group-hover:text-teal-400 transition-colors">
+                  <div className="text-2xl sm:text-3xl lg:text-4xl font-bold text-gray-900 dark:text-white group-hover:text-orange-500 transition-colors">
                     {stat.number}
                   </div>
-                  <div className="text-xs sm:text-sm font-medium text-gray-700 dark:text-gray-300 uppercase tracking-wider">
+                  <div className="text-xs sm:text-sm font-semibold text-gray-700 dark:text-gray-300 uppercase tracking-wider">
                     {stat.label}
                   </div>
-                  <div className="text-xs text-gray-500 dark:text-gray-500">
+                  <div className="text-xs text-gray-500 dark:text-gray-400">
                     {stat.sublabel}
                   </div>
                 </motion.div>
@@ -201,7 +199,7 @@ export default function Hero() {
             >
               <motion.a
                 href="mailto:rizwan.abdullah193@gmail.com"
-                className="inline-flex items-center gap-3 px-6 py-3 bg-gradient-to-r from-teal-600 to-emerald-600 text-white font-medium rounded-xl shadow-lg hover:shadow-xl transition-all duration-300"
+                className="inline-flex items-center gap-3 px-6 py-3 bg-orange-500 text-white font-semibold rounded-xl shadow-lg shadow-orange-500/25 hover:bg-orange-600 transition-all duration-300"
                 whileHover={{ scale: 1.05, y: -2 }}
                 whileTap={{ scale: 0.95 }}
               >
@@ -210,7 +208,7 @@ export default function Hero() {
               </motion.a>
               <motion.a
                 href="#projects"
-                className="inline-flex items-center gap-3 px-6 py-3 border-2 border-gray-300 dark:border-gray-600 text-gray-700 dark:text-gray-300 font-medium rounded-xl hover:border-teal-500 hover:text-teal-600 dark:hover:text-teal-400 transition-all duration-300"
+                className="inline-flex items-center gap-3 px-6 py-3 border-2 border-gray-300 dark:border-gray-700 text-gray-800 dark:text-gray-200 font-semibold rounded-xl hover:border-orange-500 hover:text-orange-500 hover:bg-orange-500/5 transition-all duration-300"
                 whileHover={{ scale: 1.05, y: -2 }}
                 whileTap={{ scale: 0.95 }}
               >
@@ -227,28 +225,16 @@ export default function Hero() {
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8, delay: 0.4 }}
           >
-            {/* Advanced Background Elements */}
-            <div className="absolute inset-0 flex items-center justify-center">
+            {/* Background Soft Glow */}
+            <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
               <motion.div
-                className="w-96 h-96 bg-gradient-to-br from-teal-500/20 via-emerald-500/20 to-cyan-500/20 rounded-full blur-3xl"
+                className="w-96 h-96 bg-orange-500/10 rounded-full blur-3xl"
                 animate={{
                   scale: [1, 1.1, 1],
                   rotate: [0, 360],
                 }}
                 transition={{
                   duration: 20,
-                  repeat: Infinity,
-                  ease: "linear"
-                }}
-              />
-              <motion.div
-                className="absolute w-80 h-80 bg-gradient-to-br from-blue-500/10 to-purple-500/10 rounded-full blur-2xl"
-                animate={{
-                  scale: [1.1, 1, 1.1],
-                  rotate: [360, 0],
-                }}
-                transition={{
-                  duration: 15,
                   repeat: Infinity,
                   ease: "linear"
                 }}
@@ -264,9 +250,9 @@ export default function Hero() {
                 animate={{ scale: 1 }}
                 transition={{ duration: 0.8, delay: 0.8, type: "spring", bounce: 0.4 }}
               >
-                {/* Main Avatar with Real Image */}
+                {/* Main Avatar with Orange Ring */}
                 <motion.div
-                  className="w-48 h-48 sm:w-56 sm:h-56 lg:w-64 lg:h-64 mx-auto rounded-full shadow-2xl relative overflow-hidden ring-4 ring-teal-500/50"
+                  className="w-48 h-48 sm:w-56 sm:h-56 lg:w-64 lg:h-64 mx-auto rounded-full shadow-2xl relative overflow-hidden ring-4 ring-orange-500 shadow-orange-500/20"
                   whileHover={{ scale: 1.05 }}
                 >
                   <Avatar className="w-full h-full">
@@ -275,29 +261,26 @@ export default function Hero() {
                       alt="Rizwan Abdullah"
                       className="object-cover"
                     />
-                    <AvatarFallback className="text-6xl lg:text-7xl font-bold bg-gradient-to-br from-teal-500 via-emerald-600 to-cyan-600 text-white">
+                    <AvatarFallback className="text-6xl lg:text-7xl font-bold bg-orange-500 text-white">
                       RA
                     </AvatarFallback>
                   </Avatar>
-                  
-                  {/* Subtle Pattern Overlay */}
-                  <div className="absolute inset-0 bg-gradient-to-br from-teal-500/10 to-transparent rounded-full pointer-events-none"></div>
                 </motion.div>
 
-                {/* Orbiting tech — Next.js + web stack + React Native */}
+                {/* Orbiting tech — clean white & dark circles with orange hover */}
                 {[
-                  { icon: SiNextdotjs, slot: 0, color: 'text-gray-800 dark:text-gray-200' },
-                  { icon: SiReact, slot: 1, color: 'text-cyan-500' },
-                  { icon: SiNodedotjs, slot: 2, color: 'text-green-500' },
-                  { icon: FaReact, slot: 3, color: 'text-teal-500', title: 'React Native' },
-                  { icon: SiTypescript, slot: 4, color: 'text-blue-500' },
+                  { icon: SiNextdotjs, slot: 0 },
+                  { icon: SiReact, slot: 1 },
+                  { icon: SiNodedotjs, slot: 2 },
+                  { icon: FaReact, slot: 3, title: 'React Native' },
+                  { icon: SiTypescript, slot: 4 },
                 ].map((tech) => {
                   const angle = (tech.slot * 2 * Math.PI) / 5;
                   return (
                   <motion.div
                     key={tech.slot}
                     title={'title' in tech ? tech.title : undefined}
-                    className="absolute w-12 h-12 bg-white dark:bg-gray-800 rounded-full shadow-lg flex items-center justify-center"
+                    className="absolute w-12 h-12 bg-white dark:bg-gray-800 text-gray-800 dark:text-gray-200 hover:text-orange-500 dark:hover:text-orange-400 rounded-full shadow-md flex items-center justify-center border border-gray-200 dark:border-gray-700 hover:border-orange-500 transition-colors"
                     style={{
                       top: '50%',
                       left: '50%',
@@ -315,7 +298,7 @@ export default function Hero() {
                       delay: tech.slot * 0.5
                     }}
                   >
-                    <tech.icon className={`w-6 h-6 ${tech.color}`} />
+                    <tech.icon className="w-6 h-6" />
                   </motion.div>
                   );
                 })}
@@ -324,7 +307,7 @@ export default function Hero() {
               {/* Enhanced Certification Cards */}
               <div className="grid grid-cols-1 gap-3 sm:gap-4 max-w-sm mx-auto px-4 sm:px-0">
                 <motion.div
-                  className="bg-white/80 dark:bg-gray-800/80 backdrop-blur-sm rounded-2xl p-6 shadow-xl border border-gray-100 dark:border-gray-700"
+                  className="bg-white dark:bg-gray-800 rounded-2xl p-6 shadow-md border border-gray-200 dark:border-gray-700 hover:border-orange-500 transition-all duration-300"
                   initial={{ opacity: 0, y: 30 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ delay: 1.2, duration: 0.6 }}
@@ -332,19 +315,19 @@ export default function Hero() {
                 >
                   <div className="flex items-center justify-between mb-4">
                     <div className="flex items-center gap-3">
-                      <div className="w-10 h-10 bg-gradient-to-br from-teal-500 to-emerald-600 rounded-lg flex items-center justify-center">
+                      <div className="w-10 h-10 bg-orange-500 rounded-lg flex items-center justify-center shadow-md shadow-orange-500/25">
                         <SiReact className="w-5 h-5 text-white" />
                       </div>
                       <div>
-                        <h3 className="font-bold text-gray-900 dark:text-gray-100 text-sm">
+                        <h3 className="font-bold text-gray-900 dark:text-white text-sm text-left">
                           SOFTWARE ENGINEER
                         </h3>
-                        <p className="text-xs text-gray-600 dark:text-gray-400">
-                          Next.js & web · RN app shipped
+                        <p className="text-xs text-orange-500 font-medium text-left">
+                          Next.js & RBAC Portals
                         </p>
                       </div>
                     </div>
-                    <div className="w-6 h-6 bg-green-500 rounded-full flex items-center justify-center">
+                    <div className="w-6 h-6 bg-orange-500 rounded-full flex items-center justify-center">
                       <motion.div
                         className="w-2 h-2 bg-white rounded-full"
                         animate={{ scale: [1, 1.2, 1] }}
@@ -352,14 +335,14 @@ export default function Hero() {
                       />
                     </div>
                   </div>
-                  <div className="flex justify-between text-xs text-gray-500 dark:text-gray-500">
+                  <div className="flex justify-between text-xs text-gray-500 dark:text-gray-400">
                     <span>Enterprise Ready</span>
                     <span>1+ Years</span>
                   </div>
                 </motion.div>
 
                 <motion.div
-                  className="bg-white/80 dark:bg-gray-800/80 backdrop-blur-sm rounded-2xl p-6 shadow-xl border border-gray-100 dark:border-gray-700"
+                  className="bg-white dark:bg-gray-800 rounded-2xl p-6 shadow-md border border-gray-200 dark:border-gray-700 hover:border-orange-500 transition-all duration-300"
                   initial={{ opacity: 0, y: 30 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ delay: 1.4, duration: 0.6 }}
@@ -367,25 +350,25 @@ export default function Hero() {
                 >
                   <div className="flex items-center justify-between mb-4">
                     <div className="flex items-center gap-3">
-                      <div className="w-10 h-10 bg-gradient-to-br from-emerald-500 to-cyan-600 rounded-lg flex items-center justify-center">
+                      <div className="w-10 h-10 bg-orange-500 rounded-lg flex items-center justify-center shadow-md shadow-orange-500/25">
                         <Globe className="w-5 h-5 text-white" />
                       </div>
                       <div>
-                        <h3 className="font-bold text-gray-900 dark:text-gray-100 text-sm">
-                          FULL STACK DEVELOPER
+                        <h3 className="font-bold text-gray-900 dark:text-white text-sm text-left">
+                          SEO & FULL STACK
                         </h3>
-                        <p className="text-xs text-gray-600 dark:text-gray-400">
-                          Web-first · React Native in portfolio
+                        <p className="text-xs text-orange-500 font-medium text-left">
+                          Technical & Local SEO · Next.js
                         </p>
                       </div>
                     </div>
-                    <div className="w-6 h-6 bg-blue-500 rounded-full flex items-center justify-center">
+                    <div className="w-6 h-6 bg-orange-500 rounded-full flex items-center justify-center">
                       <Award className="w-3 h-3 text-white" />
                     </div>
                   </div>
-                  <div className="flex justify-between text-xs text-gray-500 dark:text-gray-500">
-                    <span>Certified Professional</span>
-                    <span>Advanced</span>
+                  <div className="flex justify-between text-xs text-gray-500 dark:text-gray-400">
+                    <span>Proven Performance</span>
+                    <span>High Organic Reach</span>
                   </div>
                 </motion.div>
               </div>

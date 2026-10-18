@@ -2,46 +2,57 @@ import { Experience } from './types';
 
 export const experiences: Experience[] = [
   {
-    title: "Junior Software Developer",
-    company: "MUST Pvt Ltd",
-    location: "MGC Complex G8 Markaz, Islamabad, Pakistan",
-    period: "May 2025 -- Present",
-    gradient: "from-blue-500 to-cyan-500",
-    bgGradient: "from-blue-50 to-cyan-50 dark:from-blue-900/20 dark:to-cyan-900/20",
-    borderColor: "border-blue-200 dark:border-blue-800",
+    title: "Full Stack Developer & SEO Expert",
+    company: "WOW Gutters Ltd",
+    location: "Birmingham, UK (Remote)",
+    period: "Dec 2025 – Present",
+    gradient: "from-orange-500 to-amber-500",
+    bgGradient: "bg-white dark:bg-gray-800",
+    borderColor: "border-gray-200 dark:border-gray-700",
     current: true,
     achievements: [
-      "Building web products with Next.js, React, and shadcn/ui",
-      "Developing cross-platform mobile apps with React Native",
-      "Shipping polished UI with the same stack across web and mobile projects"
+      "Planned and implemented technical SEO, on-page SEO, and local SEO across four live service-business websites, completing optimization for all four.",
+      "Handled keyword research, meta titles and descriptions, heading structure, internal linking, schema markup, sitemap and robots configuration, and page-speed improvements.",
+      "Built and optimized location-targeted service pages and content to improve local search visibility across the West Midlands."
     ]
   },
   {
-    title: "Software Engineer (Remote)",
+    title: "Junior Software Developer",
+    company: "MUST Pvt Ltd",
+    location: "MGC Complex G8 Markaz, Islamabad",
+    period: "May 2025 – Mar 2026",
+    gradient: "from-orange-500 to-amber-500",
+    bgGradient: "bg-white dark:bg-gray-800",
+    borderColor: "border-gray-200 dark:border-gray-700",
+    achievements: [
+      "Working on full-stack web and mobile solutions for housing and real estate management systems.",
+      "Contributing to backend API development, front-end feature implementation, and cross-team code reviews."
+    ]
+  },
+  {
+    title: "Junior Software Engineer (Remote)",
     company: "DragSense",
     location: "Islamabad, Pakistan",
-    period: "February 2025 -- April 2025",
-    gradient: "from-indigo-500 to-purple-500",
-    bgGradient: "from-indigo-50 to-purple-50 dark:from-indigo-900/20 dark:to-purple-900/20",
-    borderColor: "border-indigo-200 dark:border-indigo-800",
+    period: "Feb 2025 – Apr 2025",
+    gradient: "from-orange-500 to-amber-500",
+    bgGradient: "bg-white dark:bg-gray-800",
+    borderColor: "border-gray-200 dark:border-gray-700",
     achievements: [
-      "Built and maintained frontends with Next.js",
-      "Styled interfaces with Tailwind CSS for responsive, consistent design",
-      "Worked on backend and server-side features with Node.js"
+      "Developed responsive UI components and integrated third-party APIs in a remote Agile environment.",
+      "Collaborated closely with design and backend teams to ship product features on schedule."
     ]
   },
   {
-    title: "Software Development Intern",
+    title: "Web Developer",
     company: "iOPTIME Pvt Ltd",
-    location: "G8 Markaz, Islamabad, Pakistan",
-    period: "November 2024 -- January 2025",
-    gradient: "from-emerald-500 to-teal-500",
-    bgGradient: "from-emerald-50 to-teal-50 dark:from-emerald-900/20 dark:to-teal-900/20",
-    borderColor: "border-emerald-200 dark:border-emerald-800",
+    location: "G8 Markaz, Islamabad",
+    period: "Nov 2024 – Jan 2025",
+    gradient: "from-orange-500 to-amber-500",
+    bgGradient: "bg-white dark:bg-gray-800",
+    borderColor: "border-gray-200 dark:border-gray-700",
     achievements: [
-      "Developed UI with React and styled with Tailwind CSS",
-      "Worked on Laravel backends and full-stack features alongside the team",
-      "Contributed to real product code during the internship program"
+      "Built and maintained web applications using React.js and Node.js for client-facing products.",
+      "Optimized application performance and improved page load times through code refactoring and lazy loading."
     ]
   }
 ];

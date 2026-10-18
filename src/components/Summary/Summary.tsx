@@ -26,17 +26,18 @@ const techStack = [
   { name: 'PostgreSQL',   icon: SiPostgresql,   color: 'text-blue-600',   bg: 'bg-blue-600/10'   },
   { name: 'MongoDB',      icon: SiMongodb,      color: 'text-green-600',  bg: 'bg-green-600/10'  },
   { name: 'Firebase',     icon: SiFirebase,     color: 'text-orange-500', bg: 'bg-orange-500/10' },
-  { name: 'Redux',        icon: SiRedux,        color: 'text-purple-500', bg: 'bg-purple-500/10' },
   { name: 'Tailwind CSS', icon: SiTailwindcss,  color: 'text-teal-400',   bg: 'bg-teal-400/10'   },
+  { name: 'SEO & Performance', icon: Globe,      color: 'text-emerald-500',bg: 'bg-emerald-500/10' },
 ];
 
 const highlights = [
-  { icon: Globe,      label: 'Web (main focus)', value: 'Next.js & React', color: 'from-emerald-500 to-teal-500'  },
-  { icon: Smartphone, label: 'Mobile',          value: 'React Native',    color: 'from-cyan-500 to-blue-500'     },
-  { icon: Zap,        label: 'Experience',        value: '1+ Years',        color: 'from-yellow-500 to-orange-500' },
-  { icon: Code2,      label: 'Apps Delivered',    value: '10+',             color: 'from-purple-500 to-indigo-500' },
-  { icon: Shield,     label: 'Code Quality',      value: 'Best Practices',  color: 'from-teal-500 to-emerald-500'  },
-  { icon: GitBranch,  label: 'Version Control',   value: 'Git & GitHub',    color: 'from-gray-600 to-gray-800'     },
+  { icon: Globe,      label: 'Web & Enterprise', value: 'Next.js & RBAC Portals', color: 'from-emerald-500 to-teal-500'  },
+  { icon: Zap,        label: 'Search Optimization', value: 'Technical & Local SEO', color: 'from-cyan-500 to-emerald-500' },
+  { icon: Smartphone, label: 'Mobile Apps',      value: 'React Native',       color: 'from-cyan-500 to-blue-500'     },
+  { icon: Zap,        label: 'Experience',       value: '1+ Years',           color: 'from-yellow-500 to-orange-500' },
+  { icon: Code2,      label: 'Apps Delivered',   value: '12+',                color: 'from-purple-500 to-indigo-500' },
+  { icon: Shield,     label: 'Code Quality',     value: 'Best Practices & RBAC', color: 'from-teal-500 to-emerald-500'  },
+  { icon: GitBranch,  label: 'Version Control',  value: 'Git & GitHub',       color: 'from-gray-600 to-gray-800'     },
 ];
 
 export default function Summary() {
@@ -50,29 +51,28 @@ export default function Summary() {
       transition={{ duration: 0.6 }}
     >
       <motion.div
-        className="relative bg-gradient-to-br from-white via-teal-50 to-emerald-50 dark:from-gray-800 dark:via-gray-800 dark:to-gray-700 rounded-2xl sm:rounded-3xl shadow-2xl p-6 sm:p-8 lg:p-12 border border-teal-100 dark:border-gray-600 overflow-hidden"
+        className="relative bg-white dark:bg-gray-800 rounded-2xl sm:rounded-3xl shadow-xl p-6 sm:p-8 lg:p-12 border border-gray-200 dark:border-gray-700 hover:border-orange-500/50 dark:hover:border-orange-500/50 transition-all duration-300 overflow-hidden"
         whileHover={{ y: -5 }}
         transition={{ duration: 0.3 }}
       >
-        {/* Background blobs */}
-        <div className="absolute top-0 right-0 w-72 h-72 bg-gradient-to-br from-teal-500/5 to-emerald-500/5 rounded-full blur-3xl pointer-events-none" />
-        <div className="absolute bottom-0 left-0 w-56 h-56 bg-gradient-to-br from-emerald-500/5 to-cyan-500/5 rounded-full blur-2xl pointer-events-none" />
+        {/* Soft Orange Glow */}
+        <div className="absolute top-0 right-0 w-72 h-72 bg-orange-500/5 dark:bg-orange-500/10 rounded-full blur-3xl pointer-events-none" />
 
         <div className="relative z-10">
           {/* Header */}
           <div className="flex items-start gap-5 mb-10">
             <motion.div
-              className="p-4 bg-gradient-to-br from-teal-500 to-emerald-600 rounded-2xl shadow-lg flex-shrink-0"
+              className="p-4 bg-orange-500 rounded-2xl shadow-lg shadow-orange-500/25 flex-shrink-0"
               whileHover={{ rotate: 360, scale: 1.1 }}
               transition={{ duration: 0.6 }}
             >
               <User className="w-8 h-8 text-white" />
             </motion.div>
             <div>
-              <h2 className="text-3xl sm:text-4xl font-bold bg-gradient-to-r from-gray-900 via-gray-800 to-gray-700 dark:from-gray-100 dark:via-gray-200 dark:to-gray-300 bg-clip-text text-transparent mb-2">
+              <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 dark:text-white mb-2">
                 About Me
               </h2>
-              <div className="w-24 h-1 bg-gradient-to-r from-teal-500 to-emerald-500 rounded-full" />
+              <div className="w-24 h-1 bg-orange-500 rounded-full" />
             </div>
           </div>
 
@@ -88,11 +88,15 @@ export default function Summary() {
               transition={{ duration: 0.6, delay: 0.1 }}
             >
               <p className="text-lg leading-relaxed">
-                Hi, I&apos;m <span className="font-semibold text-teal-600 dark:text-teal-400">Rizwan Abdullah</span> — a Software Engineer based in Islamabad, Pakistan, with <span className="font-semibold text-teal-600 dark:text-teal-400">1+ years of professional experience</span> building web applications that are fast, scalable, and user-friendly — with mobile work when the product calls for it.
+                Hi, I&apos;m <span className="font-semibold text-orange-500">Rizwan Abdullah</span> — a Software Engineer based in Islamabad, Pakistan, with <span className="font-semibold text-orange-500">1+ years of professional experience</span> building web applications that are fast, scalable, and user-friendly — with mobile work when the product calls for it.
               </p>
 
               <p className="text-base leading-relaxed">
-                My main focus is <span className="font-medium text-gray-900 dark:text-gray-100">Next.js</span> and the modern React ecosystem: App Router, server and client components, and polished UI with Tailwind and <span className="font-medium text-gray-900 dark:text-gray-100">shadcn/ui</span>. I care about performance, clear structure, and shipping interfaces that feel great in the browser.
+                My main focus is <span className="font-medium text-gray-900 dark:text-gray-100">Next.js</span> and the modern React ecosystem: App Router, server and client components, and polished UI with Tailwind and <span className="font-medium text-gray-900 dark:text-gray-100">shadcn/ui</span>. Beyond interface design, I specialize in <span className="font-semibold text-orange-500">Search Engine Optimization (SEO)</span> — having implemented full technical and local SEO strategies across multiple live commercial websites to drive organic search visibility, Core Web Vitals performance, and high conversion rates.
+              </p>
+
+              <p className="text-base leading-relaxed">
+                I also architect complex enterprise web applications — including multi-tier management portals with granular <span className="font-semibold text-orange-500">Role-Based Access Control (RBAC)</span> supporting Organization, Employee, Auditor, and Admin workflows (such as ISSO compliance platforms and business suites).
               </p>
 
               <p className="text-base leading-relaxed">
@@ -133,19 +137,19 @@ export default function Summary() {
                   {highlights.map((item, i) => (
                     <motion.div
                       key={item.label}
-                      className="flex items-center gap-3 p-3 bg-white/60 dark:bg-gray-700/50 rounded-xl border border-gray-200/60 dark:border-gray-600/50 backdrop-blur-sm"
+                      className="flex items-center gap-3 p-3 bg-white dark:bg-gray-700/60 rounded-xl border border-gray-200 dark:border-gray-600 hover:border-orange-500 hover:shadow-md transition-all duration-300 group"
                       initial={{ opacity: 0, y: 15 }}
                       whileInView={{ opacity: 1, y: 0 }}
                       viewport={{ once: true }}
                       transition={{ delay: 0.3 + i * 0.07, duration: 0.4 }}
                       whileHover={{ scale: 1.03, y: -2 }}
                     >
-                      <div className={`p-2 rounded-lg bg-gradient-to-br ${item.color} flex-shrink-0`}>
-                        <item.icon className="w-4 h-4 text-white" />
+                      <div className="p-2 rounded-lg bg-orange-500/10 text-orange-500 group-hover:bg-orange-500 group-hover:text-white transition-colors flex-shrink-0">
+                        <item.icon className="w-4 h-4" />
                       </div>
                       <div className="min-w-0">
                         <p className="text-xs text-gray-500 dark:text-gray-400 truncate">{item.label}</p>
-                        <p className="text-sm font-semibold text-gray-900 dark:text-gray-100 truncate">{item.value}</p>
+                        <p className="text-sm font-semibold text-gray-900 dark:text-gray-100 group-hover:text-orange-500 transition-colors truncate">{item.value}</p>
                       </div>
                     </motion.div>
                   ))}
@@ -161,14 +165,14 @@ export default function Summary() {
                   {techStack.map((tech, i) => (
                     <motion.div
                       key={tech.name}
-                      className={`flex items-center gap-2 px-3 py-1.5 rounded-lg ${tech.bg} border border-gray-200/50 dark:border-gray-600/50`}
+                      className="flex items-center gap-2 px-3 py-1.5 rounded-lg bg-gray-50 dark:bg-gray-700/50 border border-gray-200 dark:border-gray-600 hover:border-orange-500 hover:text-orange-500 dark:hover:border-orange-500 dark:hover:text-orange-400 transition-colors cursor-default"
                       initial={{ opacity: 0, scale: 0.8 }}
                       whileInView={{ opacity: 1, scale: 1 }}
                       viewport={{ once: true }}
                       transition={{ delay: 0.4 + i * 0.05, duration: 0.3 }}
-                      whileHover={{ scale: 1.08, y: -2 }}
+                      whileHover={{ scale: 1.05, y: -2 }}
                     >
-                      <tech.icon className={`w-4 h-4 ${tech.color}`} />
+                      <tech.icon className="w-4 h-4 text-orange-500" />
                       <span className="text-sm font-medium text-gray-800 dark:text-gray-200">{tech.name}</span>
                     </motion.div>
                   ))}
@@ -182,13 +186,15 @@ export default function Summary() {
                 </h3>
                 <div className="space-y-3">
                   {[
-                    { icon: '🌐', title: 'Web Apps',     desc: 'Next.js, React, Tailwind & shadcn/ui — my main focus' },
-                    { icon: '📱', title: 'Mobile Apps',  desc: 'Cross-platform iOS & Android with React Native' },
-                    { icon: '⚙️', title: 'Backend APIs', desc: 'REST APIs with Node.js, PostgreSQL & MongoDB'  },
+                    { icon: '🌐', title: 'Web Apps & Portals',  desc: 'Next.js, React, Tailwind & shadcn/ui — my main focus' },
+                    { icon: '🚀', title: 'SEO Optimization',    desc: 'Technical SEO, schema markup, Core Web Vitals & organic rankings' },
+                    { icon: '🏢', title: 'Role-Based Panels',   desc: 'ISSO-style RBAC architectures for Admin, Organization, Staff & Auditors' },
+                    { icon: '📱', title: 'Mobile Apps',         desc: 'Cross-platform iOS & Android with React Native' },
+                    { icon: '⚙️', title: 'Backend APIs',        desc: 'REST APIs with Node.js, PostgreSQL & MongoDB'  },
                   ].map((item, i) => (
                     <motion.div
                       key={item.title}
-                      className="flex items-start gap-3 p-3 bg-white/40 dark:bg-gray-700/30 rounded-xl border border-gray-200/40 dark:border-gray-600/30"
+                      className="flex items-start gap-3 p-3 bg-gray-50 dark:bg-gray-700/40 rounded-xl border border-gray-200 dark:border-gray-600 hover:border-orange-500 hover:shadow-md transition-all duration-300 group"
                       initial={{ opacity: 0, x: 20 }}
                       whileInView={{ opacity: 1, x: 0 }}
                       viewport={{ once: true }}
@@ -197,7 +203,7 @@ export default function Summary() {
                     >
                       <span className="text-xl leading-none mt-0.5">{item.icon}</span>
                       <div>
-                        <p className="font-semibold text-gray-900 dark:text-gray-100 text-sm">{item.title}</p>
+                        <p className="font-semibold text-gray-900 dark:text-gray-100 group-hover:text-orange-500 transition-colors text-sm">{item.title}</p>
                         <p className="text-xs text-gray-500 dark:text-gray-400 mt-0.5">{item.desc}</p>
                       </div>
                     </motion.div>

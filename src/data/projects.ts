@@ -50,12 +50,60 @@ export const projects: Project[] = [
 
   // ── Web Apps (Next.js & React.js) ───────────────────────────────────────────
   {
+    title: "Business Smart Suite (Enterprise Admin & Audit Portal)",
+    url: "https://business-smart-suite.vercel.app/",
+    tech: "Next.js, TypeScript, ShadCN UI, Tailwind CSS, Role-Based Access Control",
+    description: [
+      "Built an enterprise-grade multi-tenant management portal inspired by ISSO standards with end-to-end Role-Based Access Control (RBAC)",
+      "Implemented dedicated workflows and permission tiers for Super Admin, Organization, Employee, and Compliance Auditor roles with audit logging, data analytics, and operational tracking"
+    ],
+    gradient: "from-teal-600 to-emerald-600",
+    featured: true,
+    type: "web"
+  },
+  {
+    title: "Birmingham Gutter Cleaning Services",
+    url: "http://guttercleaningbirmingham.services/",
+    tech: "Next.js, TypeScript, Tailwind CSS, Technical SEO",
+    description: [
+      "Engineered a high-converting local service platform complete with automated quote calculation and instant customer booking",
+      "Executed comprehensive on-page & technical SEO architecture: local keyword targeting across 40+ West Midlands zones, schema markup, OpenGraph metadata, and Core Web Vitals optimization"
+    ],
+    gradient: "from-cyan-500 to-teal-500",
+    featured: true,
+    type: "web"
+  },
+  {
+    title: "Grey Gutters Commercial & Domestic Services",
+    url: "https://greygutters.com/",
+    tech: "Next.js, TypeScript, Tailwind CSS, Local SEO",
+    description: [
+      "Developed a modern web application for residential & commercial gutter cleaning and exterior maintenance",
+      "Implemented end-to-end SEO strategy: semantic HTML, dynamic sitemaps, structured service data, fast server-side rendering, and high SERP ranking performance"
+    ],
+    gradient: "from-blue-500 to-cyan-500",
+    featured: true,
+    type: "web"
+  },
+  {
+    title: "Prime Roof Works UK",
+    url: "https://primeroofworks.co.uk/",
+    tech: "Next.js, TypeScript, Tailwind CSS, Search Engine Optimization",
+    description: [
+      "Built a professional roofing and exterior renovation web platform featuring quotation inquiries and service galleries",
+      "Delivered complete SEO optimization: meta tags architecture, optimized image delivery, structured breadcrumbs, local citation integration, and lightning-fast load times"
+    ],
+    gradient: "from-emerald-500 to-cyan-600",
+    featured: true,
+    type: "web"
+  },
+  {
     title: "WOW Gutters Service Platform",
     url: "https://wowgutters.co.uk",
-    tech: "Next.js, TypeScript",
+    tech: "Next.js, TypeScript, Local SEO",
     description: [
       "Built a professional service platform for exterior cleaning and gutter maintenance with fast quote generation and booking capabilities",
-      "Developed a fully responsive, SEO-optimized frontend using Next.js and TypeScript to ensure high performance and a seamless user experience"
+      "Developed a fully responsive, SEO-optimized frontend using Next.js and TypeScript to ensure high performance and top search visibility"
     ],
     gradient: "from-blue-500 to-indigo-500",
     featured: true,
