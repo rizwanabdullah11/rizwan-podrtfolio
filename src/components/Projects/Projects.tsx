@@ -50,7 +50,7 @@ export default function Projects() {
   return (
     <motion.section
       id="projects"
-      className="mb-24"
+      className="mb-24 scroll-mt-28"
       variants={staggerContainer}
       initial="initial"
       whileInView="animate"

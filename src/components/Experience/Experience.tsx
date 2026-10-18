@@ -22,7 +22,7 @@ export default function Experience() {
   return (
     <motion.section 
       id="experience"
-      className="mb-24"
+      className="mb-24 scroll-mt-28"
       variants={staggerContainer}
       initial="initial"
       whileInView="animate"

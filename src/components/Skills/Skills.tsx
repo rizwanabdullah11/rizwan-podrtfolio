@@ -43,7 +43,7 @@ export default function Skills() {
   return (
     <motion.section 
       id="skills"
-      className="mb-24"
+      className="mb-24 scroll-mt-28"
       variants={staggerContainer}
       initial="initial"
       whileInView="animate"
