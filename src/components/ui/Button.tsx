@@ -24,7 +24,7 @@ export default function Button({
   icon,
   disabled = false
 }: ButtonProps) {
-  const baseClasses = 'inline-flex items-center gap-2 font-medium rounded-xl transition-all duration-300 shadow-lg hover:shadow-xl';
+  const baseClasses = 'inline-flex items-center gap-2 font-medium rounded-xl transition-all duration-300 hover:';
   
   const variants = {
     primary: 'bg-black hover:bg-gray-900 text-white shadow-black/20',

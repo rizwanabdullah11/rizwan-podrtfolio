@@ -58,7 +58,7 @@ export default function Skills() {
         <div className="relative z-10">
           <div className="flex items-start gap-6 mb-12">
             <motion.div
-              className="p-4 bg-orange-500 rounded-2xl shadow-lg shadow-orange-500/25"
+              className="p-4 bg-orange-500 rounded-2xl "
               whileHover={{ rotate: 360, scale: 1.1 }}
               transition={{ duration: 0.6 }}
             >
@@ -88,7 +88,7 @@ export default function Skills() {
                 ].map((skill, index) => (
                   <motion.div
                     key={skill.name}
-                    className="group bg-gray-50 rounded-xl p-4 shadow-sm hover:shadow-md transition-all duration-300"
+                    className="group bg-gray-50 rounded-xl p-4 transition-colors duration-200"
                     initial={{ opacity: 0, x: -20 }}
                     whileInView={{ opacity: 1, x: 0 }}
                     transition={{ delay: index * 0.1, duration: 0.5 }}
@@ -135,7 +135,7 @@ export default function Skills() {
                 ].map((skill, index) => (
                   <motion.div
                     key={skill.name}
-                    className="group bg-gray-50 p-4 rounded-xl shadow-sm hover:shadow-md transition-all duration-300"
+                    className="group bg-gray-50 p-4 rounded-xl transition-colors duration-200"
                     initial={{ opacity: 0, y: 20 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     transition={{ delay: index * 0.1, duration: 0.5 }}
@@ -167,7 +167,7 @@ export default function Skills() {
                 ].map((skill, index) => (
                   <motion.div
                     key={skill.name}
-                    className="group bg-gray-50 rounded-xl p-4 shadow-sm hover:shadow-md transition-all duration-300"
+                    className="group bg-gray-50 rounded-xl p-4 transition-colors duration-200"
                     initial={{ opacity: 0, x: 20 }}
                     whileInView={{ opacity: 1, x: 0 }}
                     transition={{ delay: index * 0.1, duration: 0.5 }}
@@ -205,7 +205,7 @@ export default function Skills() {
                 ].map((skill, index) => (
                   <motion.div
                     key={skill.name}
-                    className="group flex items-center justify-between p-4 bg-gray-50 rounded-xl shadow-sm hover:shadow-md transition-all duration-300"
+                    className="group flex items-center justify-between p-4 bg-gray-50 rounded-xl transition-colors duration-200"
                     initial={{ opacity: 0, y: 20 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     transition={{ delay: index * 0.1, duration: 0.5 }}

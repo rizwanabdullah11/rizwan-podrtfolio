@@ -31,7 +31,7 @@ export default function Hero() {
   return (
     <motion.section 
       id="home"
-      className="min-h-screen bg-white pt-20 relative overflow-hidden"
+      className="min-h-[100dvh] bg-white pt-20 relative overflow-hidden"
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       transition={{ duration: 0.8 }}
@@ -81,7 +81,7 @@ export default function Hero() {
               transition={{ delay: 0.3, duration: 0.6 }}
             >
               <Badge
-                className="px-3.5 py-1.5 text-xs font-semibold border-0 bg-orange-500 text-white shadow-sm shadow-orange-500/30"
+                className="px-3.5 py-1.5 text-xs font-semibold border-0 bg-orange-500 text-white shadow-orange-500/30"
               >
                 Next.js & Enterprise Portals
               </Badge>
@@ -127,7 +127,7 @@ export default function Hero() {
               ].map((tag, index) => (
                 <motion.div
                   key={tag.label}
-                  className="flex items-center gap-2 px-4 py-2 bg-gray-50 text-black rounded-xl shadow-sm hover:text-orange-500 hover:shadow-md transition-all duration-300 cursor-default"
+                  className="flex items-center gap-2 px-4 py-2 bg-gray-50 text-black rounded-xl hover:text-orange-500  transition-all duration-300 cursor-default"
                   whileHover={{ scale: 1.05, y: -2 }}
                   initial={{ opacity: 0, x: -20 }}
                   animate={{ opacity: 1, x: 0 }}
@@ -173,7 +173,7 @@ export default function Hero() {
                   <div className="text-2xl sm:text-3xl lg:text-4xl font-bold text-orange-500 group-hover:text-orange-600 transition-colors">
                     {stat.number}
                   </div>
-                  <div className="text-xs sm:text-sm font-semibold text-black uppercase tracking-wider">
+                  <div className="text-xs sm:text-sm font-semibold text-black">
                     {stat.label}
                   </div>
                   <div className="text-xs text-gray-600">
@@ -192,7 +192,7 @@ export default function Hero() {
             >
               <motion.a
                 href="mailto:rizwan.abdullah193@gmail.com"
-                className="inline-flex items-center gap-3 px-6 py-3 bg-black text-white font-semibold rounded-xl shadow-lg shadow-black/20 hover:bg-gray-900 transition-all duration-300"
+                className="inline-flex items-center gap-3 px-6 py-3 bg-black text-white font-semibold rounded-xl hover:bg-gray-900 transition-all duration-300"
                 whileHover={{ scale: 1.05, y: -2 }}
                 whileTap={{ scale: 0.95 }}
               >
@@ -218,20 +218,9 @@ export default function Hero() {
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.8, delay: 0.4 }}
           >
-            {/* Background 3D Ambient Glows */}
+            {/* Background Ambient Glow - decorative radial, taste-skill-ignore */}
             <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
-              <motion.div
-                className="w-[420px] h-[480px] bg-gradient-to-tr from-orange-500/20 via-amber-400/15 to-orange-600/20 rounded-[48px] blur-3xl"
-                animate={{
-                  scale: [1, 1.15, 1],
-                  rotate: [0, 180, 360],
-                }}
-                transition={{
-                  duration: 16,
-                  repeat: Infinity,
-                  ease: "linear",
-                }}
-              />
+              <div className="w-80 h-96 bg-orange-500 rounded-full opacity-10 blur-3xl" />
             </div>
 
             {/* 3D Floating Interactive Card */}
@@ -257,10 +246,10 @@ export default function Hero() {
               }}
             >
               {/* Outer Neon Gradient Glow Frame */}
-              <div className="absolute -inset-1.5 bg-gradient-to-tr from-orange-500 via-amber-400 to-orange-600 rounded-[34px] opacity-75 blur-sm group-hover:opacity-100 group-hover:blur-md transition-all duration-500" />
+              <div className="absolute -inset-1.5 bg-orange-500 rounded-[34px] opacity-80 transition-opacity duration-300 group-hover:opacity-100" />
 
               {/* Main Image Container */}
-              <div className="relative w-72 sm:w-80 lg:w-[360px] h-[390px] sm:h-[440px] lg:h-[470px] rounded-[30px] p-2.5 bg-white shadow-2xl shadow-orange-500/20 overflow-hidden">
+              <div className="relative w-72 sm:w-80 lg:w-[360px] h-[390px] sm:h-[440px] lg:h-[470px] rounded-[30px] p-2.5 bg-white overflow-hidden">
                 <div className="relative w-full h-full rounded-[22px] overflow-hidden bg-gray-100">
                   <Image
                     src={RizwanImage}
@@ -270,8 +259,6 @@ export default function Hero() {
                     priority
                     className="object-cover object-top scale-102 group-hover:scale-108 transition-transform duration-700 ease-out"
                   />
-                  {/* Subtle 3D Glass Sheen without text or dark overlays */}
-                  <div className="absolute inset-0 bg-gradient-to-tr from-transparent via-white/5 to-transparent pointer-events-none" />
                 </div>
               </div>
             </motion.div>

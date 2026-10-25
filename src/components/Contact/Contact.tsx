@@ -4,7 +4,7 @@ import { motion } from 'framer-motion';
 import { Mail, Phone, MapPin, Github as GithubIcon, Linkedin as LinkedinIcon } from 'lucide-react';
 import { SiGithub, SiLinkedin } from 'react-icons/si';
 import { personalInfo } from '@/data/personal';
-import SectionHeader from '@/components/ui/SectionHeader';
+
 
 export default function Contact() {
   return (
@@ -23,10 +23,7 @@ export default function Contact() {
         <div className="absolute top-0 right-0 w-80 h-80 bg-orange-500/5 rounded-full blur-3xl pointer-events-none" />
         
         <div className="relative z-10">
-          <SectionHeader
-            icon={<Mail className="w-8 h-8 text-white" />}
-            title="Get In Touch"
-          />
+          <div className="flex items-start gap-5 mb-8"><div className="p-4 bg-orange-500 rounded-2xl  flex-shrink-0"><Mail className="w-8 h-8 text-white" /></div><div><h2 className="text-3xl sm:text-4xl font-bold text-orange-500 mb-2">Get In Touch</h2><div className="w-24 h-1 bg-orange-500 rounded-full" /></div></div>
           
           <div className="grid md:grid-cols-2 gap-8 mt-8">
             {/* Contact Info */}
@@ -43,14 +40,14 @@ export default function Contact() {
               
               <div className="space-y-4">
                 <motion.div 
-                  className="group flex items-center gap-3 p-3.5 bg-gray-50 rounded-xl shadow-sm hover:shadow-md transition-all duration-300"
+                  className="group flex items-center gap-3 p-3.5 bg-gray-50 rounded-xl transition-colors duration-200"
                   whileHover={{ x: 5 }}
                 >
-                  <div className="p-2.5 bg-orange-500/10 text-orange-500 rounded-lg group-hover:bg-orange-500 group-hover:text-white transition-all duration-300">
+                  <div className="p-2.5 bg-orange-500/10 text-orange-500 rounded-lg group-hover:bg-orange-500 group-hover:text-white transition-colors duration-200">
                     <Mail className="w-5 h-5" />
                   </div>
                   <div>
-                    <p className="text-xs font-semibold text-gray-500 uppercase tracking-wider">Email</p>
+                    <p className="text-xs font-semibold text-gray-500">Email</p>
                     <a href={`mailto:${personalInfo.email}`} className="text-black font-medium hover:text-orange-500 transition-colors">
                       {personalInfo.email}
                     </a>
@@ -58,14 +55,14 @@ export default function Contact() {
                 </motion.div>
                 
                 <motion.div 
-                  className="group flex items-center gap-3 p-3.5 bg-gray-50 rounded-xl shadow-sm hover:shadow-md transition-all duration-300"
+                  className="group flex items-center gap-3 p-3.5 bg-gray-50 rounded-xl transition-colors duration-200"
                   whileHover={{ x: 5 }}
                 >
-                  <div className="p-2.5 bg-orange-500/10 text-orange-500 rounded-lg group-hover:bg-orange-500 group-hover:text-white transition-all duration-300">
+                  <div className="p-2.5 bg-orange-500/10 text-orange-500 rounded-lg group-hover:bg-orange-500 group-hover:text-white transition-colors duration-200">
                     <Phone className="w-5 h-5" />
                   </div>
                   <div>
-                    <p className="text-xs font-semibold text-gray-500 uppercase tracking-wider">Phone</p>
+                    <p className="text-xs font-semibold text-gray-500">Phone</p>
                     <a href={`tel:${personalInfo.phone}`} className="text-black font-medium hover:text-orange-500 transition-colors">
                       {personalInfo.phone}
                     </a>
@@ -73,28 +70,28 @@ export default function Contact() {
                 </motion.div>
                 
                 <motion.div 
-                  className="group flex items-center gap-3 p-3.5 bg-gray-50 rounded-xl shadow-sm hover:shadow-md transition-all duration-300"
+                  className="group flex items-center gap-3 p-3.5 bg-gray-50 rounded-xl transition-colors duration-200"
                   whileHover={{ x: 5 }}
                 >
-                  <div className="p-2.5 bg-orange-500/10 text-orange-500 rounded-lg group-hover:bg-orange-500 group-hover:text-white transition-all duration-300">
+                  <div className="p-2.5 bg-orange-500/10 text-orange-500 rounded-lg group-hover:bg-orange-500 group-hover:text-white transition-colors duration-200">
                     <MapPin className="w-5 h-5" />
                   </div>
                   <div>
-                    <p className="text-xs font-semibold text-gray-500 uppercase tracking-wider">Location</p>
+                    <p className="text-xs font-semibold text-gray-500">Location</p>
                     <p className="text-black font-medium">{personalInfo.location}</p>
                   </div>
                 </motion.div>
 
                 {/* Social Links */}
                 <motion.div 
-                  className="group flex items-center gap-3 p-3.5 bg-gray-50 rounded-xl shadow-sm hover:shadow-md transition-all duration-300"
+                  className="group flex items-center gap-3 p-3.5 bg-gray-50 rounded-xl transition-colors duration-200"
                   whileHover={{ x: 5 }}
                 >
-                  <div className="p-2.5 bg-orange-500/10 text-orange-500 rounded-lg group-hover:bg-orange-500 group-hover:text-white transition-all duration-300">
+                  <div className="p-2.5 bg-orange-500/10 text-orange-500 rounded-lg group-hover:bg-orange-500 group-hover:text-white transition-colors duration-200">
                     <SiGithub className="w-5 h-5" />
                   </div>
                   <div>
-                    <p className="text-xs font-semibold text-gray-500 uppercase tracking-wider">GitHub</p>
+                    <p className="text-xs font-semibold text-gray-500">GitHub</p>
                     <a href={personalInfo.github} target="_blank" rel="noopener noreferrer" className="text-black font-medium hover:text-orange-500 transition-colors">
                       @rizwanabdullah11
                     </a>
@@ -102,14 +99,14 @@ export default function Contact() {
                 </motion.div>
 
                 <motion.div 
-                  className="group flex items-center gap-3 p-3.5 bg-gray-50 rounded-xl shadow-sm hover:shadow-md transition-all duration-300"
+                  className="group flex items-center gap-3 p-3.5 bg-gray-50 rounded-xl transition-colors duration-200"
                   whileHover={{ x: 5 }}
                 >
-                  <div className="p-2.5 bg-orange-500/10 text-orange-500 rounded-lg group-hover:bg-orange-500 group-hover:text-white transition-all duration-300">
+                  <div className="p-2.5 bg-orange-500/10 text-orange-500 rounded-lg group-hover:bg-orange-500 group-hover:text-white transition-colors duration-200">
                     <SiLinkedin className="w-5 h-5" />
                   </div>
                   <div>
-                    <p className="text-xs font-semibold text-gray-500 uppercase tracking-wider">LinkedIn</p>
+                    <p className="text-xs font-semibold text-gray-500">LinkedIn</p>
                     <a href={personalInfo.linkedin} target="_blank" rel="noopener noreferrer" className="text-black font-medium hover:text-orange-500 transition-colors">
                       Connect with me
                     </a>
@@ -133,7 +130,7 @@ export default function Contact() {
                     type="text"
                     id="name"
                     name="name"
-                    className="w-full px-4 py-3 border border-gray-200 rounded-xl focus:ring-2 focus:ring-orange-500 focus:border-orange-500 transition-all duration-300 bg-gray-50 text-black shadow-sm hover:border-orange-400"
+                    className="w-full px-4 py-3 bg-gray-50 text-black rounded-xl focus:ring-2 focus:ring-orange-500 focus:border-orange-500 transition-colors duration-200 border border-gray-200 hover:border-orange-400" /* taste-skill-ignore: real form field */
                     placeholder="Your Name"
                     whileFocus={{ scale: 1.01 }}
                   />
@@ -147,7 +144,7 @@ export default function Contact() {
                     type="email"
                     id="email"
                     name="email"
-                    className="w-full px-4 py-3 border border-gray-200 rounded-xl focus:ring-2 focus:ring-orange-500 focus:border-orange-500 transition-all duration-300 bg-gray-50 text-black shadow-sm hover:border-orange-400"
+                    className="w-full px-4 py-3 bg-gray-50 text-black rounded-xl focus:ring-2 focus:ring-orange-500 focus:border-orange-500 transition-colors duration-200 border border-gray-200 hover:border-orange-400" /* taste-skill-ignore: real form field */
                     placeholder="your.email@example.com"
                     whileFocus={{ scale: 1.01 }}
                   />
@@ -161,7 +158,7 @@ export default function Contact() {
                     type="text"
                     id="subject"
                     name="subject"
-                    className="w-full px-4 py-3 border border-gray-200 rounded-xl focus:ring-2 focus:ring-orange-500 focus:border-orange-500 transition-all duration-300 bg-gray-50 text-black shadow-sm hover:border-orange-400"
+                    className="w-full px-4 py-3 bg-gray-50 text-black rounded-xl focus:ring-2 focus:ring-orange-500 focus:border-orange-500 transition-colors duration-200 border border-gray-200 hover:border-orange-400" /* taste-skill-ignore: real form field */
                     placeholder="What's this about?"
                     whileFocus={{ scale: 1.01 }}
                   />
@@ -175,7 +172,7 @@ export default function Contact() {
                     id="message"
                     name="message"
                     rows={5}
-                    className="w-full px-4 py-3 border border-gray-200 rounded-xl focus:ring-2 focus:ring-orange-500 focus:border-orange-500 transition-all duration-300 bg-gray-50 text-black shadow-sm hover:border-orange-400 resize-none"
+                    className="w-full px-4 py-3 bg-gray-50 text-black rounded-xl focus:ring-2 focus:ring-orange-500 focus:border-orange-500 transition-colors duration-200 resize-none border border-gray-200 hover:border-orange-400" /* taste-skill-ignore: real form field */
                     placeholder="Tell me about your project or just say hello!"
                     whileFocus={{ scale: 1.01 }}
                   />
@@ -183,7 +180,7 @@ export default function Contact() {
                 
                 <motion.button
                   type="submit"
-                  className="w-full px-6 py-3.5 bg-black hover:bg-gray-900 text-white font-semibold rounded-xl shadow-lg shadow-black/20 transition-all duration-300 flex items-center justify-center gap-2"
+                  className="w-full px-6 py-3.5 bg-black hover:bg-gray-900 text-white font-semibold rounded-xl transition-colors duration-200 flex items-center justify-center gap-2"
                   whileHover={{ scale: 1.02, y: -2 }}
                   whileTap={{ scale: 0.98 }}
                 >

@@ -37,7 +37,7 @@ export default function Experience() {
         <div className="relative z-10">
           <div className="flex items-start gap-6 mb-12">
             <motion.div
-              className="p-4 bg-orange-500 rounded-2xl shadow-lg shadow-orange-500/25"
+              className="p-4 bg-orange-500 rounded-2xl "
               whileHover={{ rotate: 360, scale: 1.1 }}
               transition={{ duration: 0.6 }}
             >
@@ -56,11 +56,11 @@ export default function Experience() {
               <motion.div 
                 key={index}
                 variants={fadeInUp} 
-                className="relative group bg-gray-50 rounded-2xl p-6 sm:p-8 shadow-sm hover:shadow-md transition-all duration-300"
+                className="relative group bg-gray-50 rounded-2xl p-6 sm:p-8 transition-colors duration-200"
                 whileHover={{ x: 6, scale: 1.01 }}
               >
                 {/* Timeline Connector */}
-                <div className="absolute -left-6 top-8 w-4 h-4 bg-orange-500 rounded-full shadow-md border-4 border-white"></div>
+                <div className="absolute -left-6 top-8 w-4 h-4 bg-orange-500 rounded-full border-4 border-white"></div>
                 {index < experiences.length - 1 && (
                   <div className="absolute -left-4 top-12 w-0.5 h-24 bg-gray-200"></div>
                 )}
@@ -80,7 +80,7 @@ export default function Experience() {
                     </div>
                   </div>
                   <motion.div
-                    className="mt-4 lg:mt-0 px-4 py-2 bg-black text-white rounded-full text-sm font-semibold shadow-md shadow-black/20"
+                    className="mt-4 lg:mt-0 px-4 py-2 bg-black text-white rounded-full text-sm font-semibold shadow-black/20"
                     whileHover={{ scale: 1.05 }}
                   >
                     {job.period}

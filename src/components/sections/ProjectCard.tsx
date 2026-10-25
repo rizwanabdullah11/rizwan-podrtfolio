@@ -4,8 +4,6 @@ import { motion } from 'framer-motion';
 import { ExternalLink, Code } from 'lucide-react';
 import { Project } from '@/data/types';
 import Button from '@/components/ui/Button';
-import { Card, CardHeader, CardTitle, CardDescription, CardContent } from '@/components/ui/Card';
-import { Badge } from '@/components/ui/badge';
 
 interface ProjectCardProps {
   project: Project;
@@ -18,11 +16,11 @@ export default function ProjectCard({ project, index }: ProjectCardProps) {
       initial={{ opacity: 0, y: 30 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
-      transition={{ duration: 0.5, delay: index * 0.05 }}
-      whileHover={{ y: -5 }}
+      transition={{ duration: 0.4, delay: index * 0.05 }}
+      whileHover={{ y: -4 }}
       className="h-full"
     >
-      <div className="group relative h-full flex flex-col justify-between bg-gray-50 rounded-2xl p-6 sm:p-7 shadow-sm hover:shadow-md transition-all duration-300">
+      <div className="group relative h-full flex flex-col justify-between bg-gray-50 rounded-2xl p-6 sm:p-7 transition-colors duration-200">
         <div>
           {/* Top row: Category Badge & Status */}
           <div className="flex items-center justify-between gap-3 mb-4">
@@ -42,15 +40,15 @@ export default function ProjectCard({ project, index }: ProjectCardProps) {
                 Confidential
               </span>
             ) : project.url ? (
-              <span className="inline-flex items-center gap-1.5 text-xs font-semibold text-green-600">
-                <span className="w-2 h-2 rounded-full bg-green-500 animate-pulse" />
+              <span className="inline-flex items-center gap-1.5 text-xs font-semibold text-emerald-700">
+                <span className="w-2 h-2 rounded-full bg-emerald-500" />
                 Live Project
               </span>
             ) : null}
           </div>
 
           {/* Project Title */}
-          <h3 className="text-xl font-bold text-black group-hover:text-orange-500 transition-colors mb-3 leading-snug">
+          <h3 className="text-xl font-bold text-black group-hover:text-orange-500 transition-colors duration-200 mb-3 leading-snug">
             {project.title}
           </h3>
 
@@ -59,7 +57,7 @@ export default function ProjectCard({ project, index }: ProjectCardProps) {
             {project.tech.split(',').map((t, idx) => (
               <span
                 key={idx}
-                className="px-2.5 py-0.5 text-xs font-medium rounded-md bg-white text-black shadow-2xs"
+                className="px-2.5 py-0.5 text-xs font-medium rounded-md bg-white text-black"
               >
                 {t.trim()}
               </span>
@@ -78,18 +76,24 @@ export default function ProjectCard({ project, index }: ProjectCardProps) {
         </div>
 
         {/* Action Button at bottom */}
-        {!project.isPrivate && project.url ? (
-          <div className="pt-2">
-            <Button
+        <div className="pt-4 mt-auto">
+          {project.url ? (
+            <a
               href={project.url}
-              variant="primary"
-              size="sm"
-              icon={<ExternalLink className="w-4 h-4" />}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center justify-center gap-2 w-full px-4 py-2.5 bg-black text-white hover:bg-gray-900 text-sm font-semibold rounded-xl transition-colors duration-200"
             >
-              Visit Live Website
-            </Button>
-          </div>
-        ) : null}
+              <ExternalLink className="w-4 h-4 text-orange-400" />
+              <span>Visit Live Website</span>
+            </a>
+          ) : (
+            <div className="flex items-center gap-2 text-xs text-gray-500 italic py-2">
+              <Code className="w-3.5 h-3.5 text-orange-500" />
+              <span>Enterprise RBAC / Confidential Platform</span>
+            </div>
+          )}
+        </div>
       </div>
     </motion.div>
   );
