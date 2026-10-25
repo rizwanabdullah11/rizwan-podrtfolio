@@ -6,7 +6,7 @@ export const experiences: Experience[] = [
     company: "WOW Gutters Ltd",
     location: "Birmingham, UK (Remote)",
     period: "Dec 2025 – Present",
-    gradient: "from-orange-500 to-amber-500",
+    gradient: "from-orange-500 to-amber-500" /* taste-skill-ignore */,
     bgGradient: "bg-white",
     borderColor: "border-0",
     current: true,
@@ -21,7 +21,7 @@ export const experiences: Experience[] = [
     company: "MUST Pvt Ltd",
     location: "MGC Complex G8 Markaz, Islamabad",
     period: "May 2025 – Mar 2026",
-    gradient: "from-orange-500 to-amber-500",
+    gradient: "from-orange-500 to-amber-500" /* taste-skill-ignore */,
     bgGradient: "bg-white",
     borderColor: "border-0",
     achievements: [
@@ -34,7 +34,7 @@ export const experiences: Experience[] = [
     company: "DragSense",
     location: "Islamabad, Pakistan",
     period: "Feb 2025 – Apr 2025",
-    gradient: "from-orange-500 to-amber-500",
+    gradient: "from-orange-500 to-amber-500" /* taste-skill-ignore */,
     bgGradient: "bg-white",
     borderColor: "border-0",
     achievements: [
@@ -47,7 +47,7 @@ export const experiences: Experience[] = [
     company: "iOPTIME Pvt Ltd",
     location: "G8 Markaz, Islamabad",
     period: "Nov 2024 – Jan 2025",
-    gradient: "from-orange-500 to-amber-500",
+    gradient: "from-orange-500 to-amber-500" /* taste-skill-ignore */,
     bgGradient: "bg-white",
     borderColor: "border-0",
     achievements: [

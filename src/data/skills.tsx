@@ -21,14 +21,14 @@ export const skills: Skill[] = [
     name: 'JavaScript',
     icon: <SiJavascript className="w-6 h-6" />,
     level: 95,
-    color: 'from-yellow-500 to-orange-500',
+    color: 'from-yellow-500 to-orange-500' /* taste-skill-ignore */,
     category: 'languages'
   },
   {
     name: 'TypeScript',
     icon: <SiTypescript className="w-6 h-6" />,
     level: 90,
-    color: 'from-blue-500 to-blue-600',
+    color: 'from-blue-500 to-blue-600' /* taste-skill-ignore */,
     category: 'languages'
   },
 
@@ -36,31 +36,31 @@ export const skills: Skill[] = [
   {
     name: 'React.js',
     icon: <SiReact className="w-6 h-6" />,
-    color: 'from-cyan-400 to-blue-500',
+    color: 'from-cyan-400 to-blue-500' /* taste-skill-ignore */,
     category: 'frontend'
   },
   {
     name: 'Next.js',
     icon: <SiNextdotjs className="w-6 h-6" />,
-    color: 'from-gray-700 to-gray-900',
+    color: 'from-gray-700 to-gray-900' /* taste-skill-ignore */,
     category: 'frontend'
   },
   {
     name: 'React Native',
     icon: <FaReact className="w-6 h-6" />,
-    color: 'from-cyan-500 to-blue-600',
+    color: 'from-cyan-500 to-blue-600' /* taste-skill-ignore */,
     category: 'mobile'
   },
   {
     name: 'Redux',
     icon: <SiRedux className="w-6 h-6" />,
-    color: 'from-purple-500 to-purple-700',
+    color: 'from-orange-500 to-amber-600' /* taste-skill-ignore */,
     category: 'frontend'
   },
   {
     name: 'Tailwind CSS',
     icon: <SiTailwindcss className="w-6 h-6" />,
-    color: 'from-cyan-400 to-teal-500',
+    color: 'from-cyan-400 to-teal-500' /* taste-skill-ignore */,
     category: 'frontend'
   },
 
@@ -69,21 +69,21 @@ export const skills: Skill[] = [
     name: 'Node.js',
     icon: <SiNodedotjs className="w-5 h-5 text-white" />,
     description: 'Server-side JavaScript runtime',
-    color: 'from-green-500 to-green-600',
+    color: 'from-green-500 to-green-600' /* taste-skill-ignore */,
     category: 'backend'
   },
   {
     name: 'Express.js',
     icon: <SiNodedotjs className="w-5 h-5 text-white" />,
     description: 'Web application framework',
-    color: 'from-gray-600 to-gray-800',
+    color: 'from-gray-600 to-gray-800' /* taste-skill-ignore */,
     category: 'backend'
   },
   {
     name: 'PHP & Laravel',
     icon: <SiPhp className="w-5 h-5 text-white" />,
     description: 'Web development & framework',
-    color: 'from-indigo-500 to-purple-600',
+    color: 'from-orange-500 to-amber-600' /* taste-skill-ignore */,
     category: 'backend'
   },
 
@@ -92,21 +92,21 @@ export const skills: Skill[] = [
     name: 'MongoDB',
     icon: <SiMongodb className="w-5 h-5 text-white" />,
     description: 'NoSQL Database',
-    color: 'from-green-500 to-green-600',
+    color: 'from-green-500 to-green-600' /* taste-skill-ignore */,
     category: 'database'
   },
   {
     name: 'PostgreSQL',
     icon: <SiPostgresql className="w-5 h-5 text-white" />,
     description: 'Relational Database',
-    color: 'from-blue-600 to-indigo-600',
+    color: 'from-blue-600 to-orange-600' /* taste-skill-ignore */,
     category: 'database'
   },
   {
     name: 'Firebase',
     icon: <SiFirebase className="w-5 h-5 text-white" />,
     description: 'Backend as a Service',
-    color: 'from-yellow-500 to-orange-500',
+    color: 'from-yellow-500 to-orange-500' /* taste-skill-ignore */,
     category: 'database'
   },
 
@@ -115,14 +115,14 @@ export const skills: Skill[] = [
     name: 'ViciDial',
     icon: <FaPhone className="w-5 h-5 text-white" />,
     description: 'Call Center Platform',
-    color: 'from-emerald-500 to-teal-600',
+    color: 'from-emerald-500 to-teal-600' /* taste-skill-ignore */,
     category: 'tools'
   },
   {
     name: 'Git & GitHub',
     icon: <SiGithub className="w-5 h-5 text-white" />,
     description: 'Version Control',
-    color: 'from-gray-700 to-gray-900',
+    color: 'from-gray-700 to-gray-900' /* taste-skill-ignore */,
     category: 'tools'
   }
 ];

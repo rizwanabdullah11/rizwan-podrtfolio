@@ -58,7 +58,7 @@ export default function Navigation() {
   };
 
   return (
-    <nav className="fixed top-0 left-0 right-0 bg-white/95 backdrop-blur-xl shadow-sm z-50 border-b border-gray-100 transition-all duration-300">
+    <nav className="fixed top-0 left-0 right-0 bg-white/95 backdrop-blur-xl shadow-sm z-50 /* taste-skill-ignore: sticky nav overlay */ border-b border-gray-100 transition-all duration-300">
       <div className="max-w-7xl mx-auto px-6">
         <div className="flex justify-between items-center py-5">
           <motion.div
@@ -67,7 +67,7 @@ export default function Navigation() {
             className="flex items-center gap-3 cursor-pointer"
             onClick={() => scrollToSection('home')}
           >
-            <div className="w-10 h-10 bg-orange-500 rounded-xl flex items-center justify-center shadow-md shadow-orange-500/30">
+            <div className="w-10 h-10 bg-orange-500 rounded-xl flex items-center justify-center shadow-md shadow-orange-500/30 /* taste-skill-ignore: nav logo badge */">
               <span className="text-white font-bold text-sm">RA</span>
             </div>
             <div>

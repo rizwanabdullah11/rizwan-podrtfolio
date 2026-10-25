@@ -23,7 +23,7 @@ export default function Education() {
         <div className="relative z-10">
           <div className="flex items-start gap-6 mb-12">
             <motion.div
-              className="p-4 bg-orange-500 rounded-2xl shadow-lg shadow-orange-500/25"
+              className="p-4 bg-orange-500 rounded-2xl "
               whileHover={{ rotate: 360, scale: 1.1 }}
               transition={{ duration: 0.6 }}
             >
@@ -40,14 +40,14 @@ export default function Education() {
           <div className="grid lg:grid-cols-2 gap-8">
             {/* Degree */}
             <motion.div 
-              className="relative group bg-gray-50 rounded-2xl p-6 sm:p-8 shadow-sm hover:shadow-md transition-all duration-300"
+              className="relative group bg-gray-50 rounded-2xl p-6 sm:p-8 transition-colors duration-200"
               whileHover={{ x: 6, scale: 1.01 }}
               initial={{ opacity: 0, x: -20 }}
               whileInView={{ opacity: 1, x: 0 }}
               transition={{ delay: 0.2, duration: 0.6 }}
             >
               <div className="flex items-start gap-4 mb-6">
-                <div className="w-14 h-14 bg-orange-500 rounded-xl flex items-center justify-center shadow-md shadow-orange-500/20 text-white flex-shrink-0">
+                <div className="w-14 h-14 bg-orange-500 rounded-xl flex items-center justify-center  text-white flex-shrink-0">
                   <GraduationCap className="w-7 h-7 text-white" />
                 </div>
                 <div className="flex-1">
@@ -64,7 +64,7 @@ export default function Education() {
                   </div>
                 </div>
                 <motion.div
-                  className="px-4 py-1.5 bg-black text-white rounded-full text-sm font-semibold shadow-md shadow-black/20"
+                  className="px-4 py-1.5 bg-black text-white rounded-full text-sm font-semibold shadow-black/20"
                   whileHover={{ scale: 1.05 }}
                 >
                   2020 - 2024
@@ -96,7 +96,7 @@ export default function Education() {
             {/* Certifications */}
             <div className="space-y-6">
               <motion.div
-                className="bg-gray-50 rounded-2xl p-6 shadow-sm hover:shadow-md transition-all duration-300 group"
+                className="bg-gray-50 rounded-2xl p-6 transition-colors duration-200 group"
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.3, duration: 0.6 }}
@@ -122,7 +122,7 @@ export default function Education() {
                   href="https://coursera.org/verify/PGS8NVNDM6UN"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 px-4 py-2 bg-black hover:bg-gray-900 text-white rounded-lg text-sm font-semibold shadow-md shadow-black/20 transition-all duration-300"
+                  className="inline-flex items-center gap-2 px-4 py-2 bg-black hover:bg-gray-900 text-white rounded-lg text-sm font-semibold shadow-black/20 transition-all duration-300"
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
                 >
@@ -132,7 +132,7 @@ export default function Education() {
               </motion.div>
 
               <motion.div
-                className="bg-gray-50 rounded-2xl p-6 shadow-sm hover:shadow-md transition-all duration-300 group"
+                className="bg-gray-50 rounded-2xl p-6 transition-colors duration-200 group"
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.4, duration: 0.6 }}
@@ -158,7 +158,7 @@ export default function Education() {
                   href="https://coursera.org/verify/L7HMA72GX8DU"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 px-4 py-2 bg-black hover:bg-gray-900 text-white rounded-lg text-sm font-semibold shadow-md shadow-black/20 transition-all duration-300"
+                  className="inline-flex items-center gap-2 px-4 py-2 bg-black hover:bg-gray-900 text-white rounded-lg text-sm font-semibold shadow-black/20 transition-all duration-300"
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
                 >
@@ -169,7 +169,7 @@ export default function Education() {
 
               {/* Continuous Learning */}
               <motion.div
-                className="bg-gray-50 rounded-2xl p-6 shadow-sm transition-colors"
+                className="bg-gray-50 rounded-2xl p-6 transition-colors"
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.5, duration: 0.6 }}
