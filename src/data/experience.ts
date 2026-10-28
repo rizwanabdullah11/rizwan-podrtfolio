@@ -18,28 +18,16 @@ export const experiences: Experience[] = [
   },
   {
     title: "Junior Software Developer",
-    company: "MUST Pvt Ltd",
+    company: "MUST Services Pvt Ltd",
     location: "MGC Complex G8 Markaz, Islamabad",
-    period: "May 2025 – Mar 2026",
+    period: "Feb 2025 – Mar 2026",
     gradient: "from-orange-500 to-amber-500" /* taste-skill-ignore */,
     bgGradient: "bg-white",
     borderColor: "border-0",
     achievements: [
-      "Working on full-stack web and mobile solutions for housing and real estate management systems.",
-      "Contributing to backend API development, front-end feature implementation, and cross-team code reviews."
-    ]
-  },
-  {
-    title: "Junior Software Engineer (Remote)",
-    company: "DragSense",
-    location: "Islamabad, Pakistan",
-    period: "Feb 2025 – Apr 2025",
-    gradient: "from-orange-500 to-amber-500" /* taste-skill-ignore */,
-    bgGradient: "bg-white",
-    borderColor: "border-0",
-    achievements: [
-      "Developed responsive UI components and integrated third-party APIs in a remote Agile environment.",
-      "Collaborated closely with design and backend teams to ship product features on schedule."
+      "Architected and delivered full-stack web and mobile applications for housing and real estate enterprise management systems.",
+      "Built responsive UI components, integrated third-party REST APIs, and contributed to backend services in an Agile workflow.",
+      "Collaborated closely with cross-functional design and backend teams to ship production features and conduct code reviews."
     ]
   },
   {
