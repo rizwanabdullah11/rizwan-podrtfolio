@@ -3,12 +3,12 @@ import { Project } from './types';
 export const projects: Project[] = [
   // ── Mobile Apps (React Native) ──────────────────────────────────────────────
   {
-    title: "Cross-Platform Mobile Banking App",
-    tech: "React Native, Redux, Firebase, Biometric Auth",
+    title: "Mmall E-Commerce Mobile App",
+    tech: "React Native, Redux Toolkit, Node.js, Stripe, Push Notifications",
     category: "React Native Mobile",
     description: [
-      "Built secure mobile banking application with biometric authentication, real-time transactions, and offline capabilities",
-      "Implemented push notifications, deep linking, and direct integration with banking APIs for iOS and Android platforms"
+      "Engineered full-featured e-commerce mobile application featuring product catalogs, advanced category filters, cart management, and secure multi-currency payment checkout",
+      "Integrated real-time order tracking, push notification alerts for discount deals, and biometric authentication for frictionless customer experience"
     ],
     gradient: "from-orange-500 to-amber-500" /* taste-skill-ignore */,
     isPrivate: true,
@@ -16,36 +16,37 @@ export const projects: Project[] = [
     type: "mobile"
   },
   {
-    title: "React Native E-Commerce Mobile App",
-    tech: "React Native, Redux Toolkit, Stripe, Push Notifications",
+    title: "AAN Television Mobile App",
+    tech: "React Native, HLS Video Streaming, Redux, Firebase Cloud Messaging",
     category: "React Native Mobile",
     description: [
-      "Developed full-featured e-commerce mobile app with product catalog, shopping cart, secure payments, and order tracking",
-      "Integrated real-time inventory management, push notifications for order updates, and one-step checkout flow"
+      "Developed live broadcast and on-demand streaming mobile app for AAN Television with adaptive HLS video playback and low-latency streaming",
+      "Implemented program guides (EPG), breaking news notifications, social show sharing, and background audio streaming across iOS and Android"
+    ],
+    gradient: "from-orange-500 to-amber-500" /* taste-skill-ignore */,
+    isPrivate: true,
+    featured: true,
+    type: "mobile"
+  },
+  {
+    title: "MNews News Channel Mobile App",
+    tech: "React Native, TypeScript, REST APIs, Offline Cache, Push Notifications",
+    category: "React Native Mobile",
+    description: [
+      "Built high-traffic news delivery mobile application with category browsing, breaking news ticker, video reporting, and offline article caching",
+      "Implemented personalized topic feeds, instant breaking news alert engine, and bookmarking for reading articles on-the-go"
     ],
     gradient: "from-orange-500 to-amber-500" /* taste-skill-ignore */,
     isPrivate: true,
     type: "mobile"
   },
   {
-    title: "React Native Food Delivery App",
-    tech: "React Native, Redux Toolkit, Google Maps API, Firebase",
+    title: "Grocery Delivery Mobile App",
+    tech: "React Native, Google Maps API, Redux Toolkit, Socket.io, Firebase",
     category: "React Native Mobile",
     description: [
-      "Built a real-time food delivery app with live order tracking, restaurant listings, and in-app payments",
-      "Integrated Google Maps for delivery tracking, push notifications for order status updates, and smooth animations"
-    ],
-    gradient: "from-orange-500 to-amber-500" /* taste-skill-ignore */,
-    isPrivate: true,
-    type: "mobile"
-  },
-  {
-    title: "React Native Chat Application",
-    tech: "React Native, Firebase, WebSocket, Push Notifications",
-    category: "React Native Mobile",
-    description: [
-      "Developed a real-time messaging app with one-on-one and group chat, media sharing, and read receipts",
-      "Implemented Firebase Realtime Database for instant messaging, push notifications, and online presence indicators"
+      "Developed on-demand hyperlocal grocery shopping and delivery app featuring store inventory browsing, real-time rider GPS tracking, and scheduled delivery slots",
+      "Integrated live order dispatching, digital wallet payments, push status updates, and customer support chat"
     ],
     gradient: "from-orange-500 to-amber-500" /* taste-skill-ignore */,
     isPrivate: true,
@@ -59,63 +60,66 @@ export const projects: Project[] = [
     tech: "Next.js, TypeScript, ShadCN UI, Tailwind CSS, Role-Based Access Control",
     category: "Enterprise RBAC",
     description: [
-      "Built an enterprise multi-tenant management portal inspired by ISSO standards with end-to-end Role-Based Access Control (RBAC)",
-      "Implemented dedicated workflows and permission tiers for Super Admin, Organization, Employee, and Compliance Auditor roles with audit logging and data analytics"
+      "Engineered an enterprise-grade administration and governance portal with multi-tenant architecture and fine-grained Role-Based Access Control (RBAC)",
+      "Implemented complete separation of duties across 4 distinct roles: Admin, Organization Manager, Staff Member, and Auditor with immutable audit logs",
+      "Built responsive analytical dashboards with data export (CSV/PDF), user session management, and automated security event tracking"
     ],
     gradient: "from-orange-500 to-amber-500" /* taste-skill-ignore */,
     featured: true,
     type: "web"
   },
   {
-    title: "WOW Gutters Ltd Service Platform",
+    title: "WOW Gutters Ltd (Live Commercial Platform)",
     url: "https://wowgutters.co.uk",
-    tech: "Next.js, TypeScript, Tailwind CSS, Technical SEO",
+    tech: "Next.js, TypeScript, Tailwind CSS, Technical & Local SEO",
     category: "Technical & Local SEO",
     description: [
-      "Built a high-performance commercial service platform for exterior cleaning and gutter maintenance in the UK",
-      "Engineered comprehensive SEO architecture with structured schema, automated quote generation, high Core Web Vitals scores, and top search engine rankings"
+      "Led end-to-end technical, on-page, and local SEO architecture for a leading UK gutter cleaning and repair service company",
+      "Implemented schema.org LocalBusiness structured data, optimized OpenGraph/Twitter cards, and established semantic heading hierarchy",
+      "Achieved sub-second Core Web Vitals (LCP < 1.2s, CLS 0), configured XML sitemaps, robots directives, and built high-converting quote request funnels"
     ],
     gradient: "from-orange-500 to-amber-500" /* taste-skill-ignore */,
     featured: true,
     type: "web"
   },
   {
-    title: "Birmingham Gutter Cleaning Services",
+    title: "Gutter Cleaning Birmingham Services",
     url: "http://guttercleaningbirmingham.services/",
-    tech: "Next.js, TypeScript, Tailwind CSS, Local SEO",
+    tech: "Next.js, Tailwind CSS, Local SEO, Schema Markup",
     category: "Technical & Local SEO",
     description: [
-      "Engineered a high-converting local service platform with automated quote calculation and instant customer booking",
-      "Executed comprehensive SEO architecture: local keyword targeting across 40+ West Midlands zones, schema markup, OpenGraph metadata, and Core Web Vitals optimization"
+      "Architected location-targeted SEO strategy targeting high-intent commercial keywords across Birmingham and West Midlands areas",
+      "Built geo-targeted landing page structure with embedded Google Maps optimization and location-specific service schemas",
+      "Optimized technical site architecture for maximum crawl efficiency, mobile usability, and direct call-to-action conversion paths"
     ],
     gradient: "from-orange-500 to-amber-500" /* taste-skill-ignore */,
     featured: true,
     type: "web"
   },
   {
-    title: "Grey Gutters Commercial & Domestic Services",
+    title: "Grey Gutters Commercial Platform",
     url: "https://greygutters.com/",
-    tech: "Next.js, TypeScript, Tailwind CSS, Technical SEO",
+    tech: "React.js, Next.js, Technical SEO, Performance Optimization",
     category: "Technical & Local SEO",
     description: [
-      "Developed a modern web application for residential & commercial gutter cleaning and exterior maintenance",
-      "Implemented end-to-end SEO strategy: semantic HTML, dynamic sitemaps, structured service data, fast SSR, and top organic SERP ranking performance"
+      "Delivered full SEO optimization package including keyword mapping, meta title & description engineering, and internal link graph restructuring",
+      "Improved mobile responsiveness, optimized asset delivery pipelines, and configured canonical tags to prevent duplicate content indexing",
+      "Established comprehensive search console monitoring, resolving crawl errors and boosting organic impressions"
     ],
     gradient: "from-orange-500 to-amber-500" /* taste-skill-ignore */,
-    featured: true,
     type: "web"
   },
   {
     title: "Prime Roof Works UK",
     url: "https://primeroofworks.co.uk/",
-    tech: "Next.js, TypeScript, Tailwind CSS, SEO Optimization",
+    tech: "Next.js, Tailwind CSS, Local SEO, Conversion Rate Optimization",
     category: "Technical & Local SEO",
     description: [
-      "Built a professional roofing and exterior renovation web platform featuring quotation inquiries and service galleries",
-      "Delivered complete SEO optimization: meta tags architecture, optimized image delivery, structured breadcrumbs, and local citation integration"
+      "Planned and executed local search engine optimization strategy for commercial roofing and repair services across the UK",
+      "Configured rich snippet markup, service area geo-coordinates, customer review schemas, and lightning-fast static page generation",
+      "Designed and developed responsive quote booking flows that dramatically increased organic mobile inquiry volume"
     ],
     gradient: "from-orange-500 to-amber-500" /* taste-skill-ignore */,
-    featured: true,
     type: "web"
   },
   {
